@@ -15,6 +15,10 @@ const hpp = require('hpp');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// CẤU HÌNH BẮT BUỘC KHI CHẠY TRÊN RENDER / CLOUDFLARE
+// Báo cho server biết nó đang đứng sau Proxy để nhận diện ĐÚNG địa chỉ IP thật của khách
+app.set('trust proxy', 1);
+
 // =============================================================
 // 🔒 TẦNG 1: BẢo MẬT HTTP HEADERS (Helmet)
 // Tự động gắn các HTTP Header bảo mật, chặn Clickjacking,
