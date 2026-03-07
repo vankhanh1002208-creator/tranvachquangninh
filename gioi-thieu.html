@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu | Trần Vách Quảng Ninh</title>
+    <meta name="description"
+        content="Tìm hiểu về Trần Vách Quảng Ninh – Lịch sử hình thành, tầm nhìn sứ mệnh, năng lực thi công và đội ngũ chuyên gia.">
+    <link rel="icon" href="/assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -16px;
+            right: -16px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .12);
+            text-align: center;
+        }
+
+        .about-badge strong {
+            display: block;
+            font-size: 28px;
+            font-weight: 900;
+            color: #0B3D8E;
+        }
+
+        .about-badge span {
+            font-size: 12px;
+            color: #64748B;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(26px, 3.5vw, 38px);
+            margin-bottom: 16px;
+        }
+
+        .about-text p {
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .about-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0F172A;
+        }
+
+        .about-check i {
+            color: #16a34a;
+            font-size: 16px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #0B3D8E, #F97316);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -32px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #0B3D8E;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(11, 61, 142, .2);
+        }
+
+        .timeline-year {
+            font-size: 12px;
+            font-weight: 800;
+            color: #F97316;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .timeline-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 6px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: #64748B;
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            padding: 36px 28px;
+            border-radius: 20px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #E2E8F0;
+        }
+
+        .value-card:nth-child(1) {
+            border-top: 4px solid #0B3D8E;
+        }
+
+        .value-card:nth-child(2) {
+            border-top: 4px solid #F97316;
+        }
+
+        .value-card:nth-child(3) {
+            border-top: 4px solid #16a34a;
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .value-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            font-size: 14px;
+            color: #64748B;
+            line-height: 1.7;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+            text-align: center;
+            transition: all .3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, .14);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #0B3D8E, #1a56c4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: #fff;
+        }
+
+        .team-body {
+            padding: 20px;
+        }
+
+        .team-body h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .team-body span {
+            font-size: 13px;
+            color: #F97316;
+            font-weight: 600;
+        }
+
+        .team-body p {
+            font-size: 12px;
+            color: #64748B;
+            margin-top: 8px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cert-item {
+            text-align: center;
+            padding: 28px 20px;
+            background: #F1F5F9;
+            border-radius: 16px;
+        }
+
+        .cert-item i {
+            font-size: 36px;
+            color: #0B3D8E;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .cert-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 6px;
+        }
+
+        .cert-item p {
+            font-size: 12px;
+            color: #64748B;
+        }
+
+        @media(max-width:1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img img {
+                height: 280px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-checks {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="/assets/images/logo.jpg" alt="Trần Vách Quảng Ninh">
+                    <div class="nav-logo-text">
+                        <span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng Ninh</span>
+                        <span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Trang Chủ</a>
+                    <a href="gioi-thieu.html" class="nav-link active">Giới Thiệu</a>
+                    <a href="dich-vu.html" class="nav-link">Dịch Vụ</a>
+                    <a href="du-an.html" class="nav-link">Dự Án</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-link">Báo Giá</a>
+                    <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
+                    <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> 0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-btn">Nhận Báo Giá</a>
+                </div>
+                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
+                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+            Trang Chủ</a>
+        <a href="gioi-thieu.html" class="mobile-nav-link"><i class="fa-solid fa-building"
+                style="color:#0B3D8E;width:20px"></i> Giới Thiệu</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+            Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+            Dự Án</a>
+        <a href="bao-gia-chi-tiet.html" class="mobile-nav-link"><i class="fa-solid fa-file-invoice"
+                style="color:#0B3D8E;width:20px"></i> Báo Giá</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
+                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
+                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content animate">
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><i
+                        class="fa-solid fa-chevron-right"></i><span>Giới Thiệu</span></div>
+                <h1>Về Chúng Tôi</h1>
+                <p>Hành trình hơn 10 năm kiến tạo không gian sống đẳng cấp cho hàng trăm khách hàng tại Quảng Ninh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate"><span class="stat-number" data-count="500">0</span>
+                    <div class="stat-label">+ Công Trình Hoàn Thành</div>
+                </div>
+                <div class="stat-item animate delay-1"><span class="stat-number" data-count="10">0</span>
+                    <div class="stat-label">+ Năm Kinh Nghiệm</div>
+                </div>
+                <div class="stat-item animate delay-2"><span class="stat-number" data-count="50">0</span>
+                    <div class="stat-label">+ Nhân Viên & Thợ Lành Nghề</div>
+                </div>
+                <div class="stat-item animate delay-3"><span class="stat-number" data-count="98">0</span>
+                    <div class="stat-label">% Khách Hàng Hài Lòng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img animate">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                        alt="Thi công trần thạch cao Quảng Ninh">
+                    <div class="about-badge"><strong>2014</strong><span>Năm thành lập</span></div>
+                </div>
+                <div class="about-text animate delay-2">
+                    <div class="section-tag">Câu chuyện của chúng tôi</div>
+                    <h2>Từ Niềm Đam Mê Đến <span style="color:#0B3D8E">Uy Tín Hàng Đầu</span></h2>
+                    <p>Trần Vách Quảng Ninh được thành lập năm 2014 bởi những người thợ lành nghề với hơn 15 năm kinh
+                        nghiệm trong ngành xây dựng hoàn thiện nội thất. Xuất phát từ niềm đam mê tạo ra những không
+                        gian sống đẹp và bền vững.</p>
+                    <p>Trải qua hơn 10 năm phát triển, chúng tôi tự hào đã hoàn thành hàng trăm công trình lớn nhỏ từ
+                        nhà ở dân dụng, chung cư cao tầng, văn phòng, nhà hàng đến các công trình công nghiệp như nhà
+                        máy, bệnh viện.</p>
+                    <div class="about-checks">
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Vật liệu chính hãng 100%</div>
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Bảo hành 10 năm</div>
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Không phát sinh chi phí</div>
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Đúng tiến độ cam kết</div>
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Khảo sát tận nơi miễn phí
+                        </div>
+                        <div class="about-check"><i class="fa-solid fa-check-circle"></i> Đội ngũ chuyên nghiệp</div>
+                    </div>
+                    <a href="bao-gia-chi-tiet.html" class="btn btn-primary btn-lg"><i
+                            class="fa-solid fa-file-invoice"></i> Nhận Báo Giá Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Giá trị cốt lõi</div>
+                <h2>Tầm Nhìn – Sứ Mệnh – <span>Giá Trị</span></h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card animate delay-1">
+                    <div class="value-icon">🎯</div>
+                    <h3>Tầm Nhìn</h3>
+                    <p>Trở thành đơn vị thi công trần vách thạch cao hàng đầu Quảng Ninh và khu vực phía Bắc, được khách
+                        hàng tin tưởng lựa chọn vì chất lượng và uy tín.</p>
+                </div>
+                <div class="value-card animate delay-2">
+                    <div class="value-icon">🤝</div>
+                    <h3>Sứ Mệnh</h3>
+                    <p>Cung cấp dịch vụ thi công chuyên nghiệp, chất lượng cao với mức giá hợp lý, giúp mọi khách hàng
+                        sở hữu không gian sống đẹp và bền vững.</p>
+                </div>
+                <div class="value-card animate delay-3">
+                    <div class="value-icon">💎</div>
+                    <h3>Giá Trị</h3>
+                    <p>Trung thực – Chuyên nghiệp – Tận tâm. Mỗi công trình là một cam kết, mỗi khách hàng là một người
+                        bạn đồng hành lâu dài.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY TIMELINE -->
+    <section class="section">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+                <div class="animate">
+                    <div class="section-tag">Hành trình phát triển</div>
+                    <h2
+                        style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,36px);margin-bottom:32px;line-height:1.25">
+                        Chúng Tôi Đã <span style="color:#0B3D8E">Lớn Lên</span> Như Thế Nào</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2014</div>
+                            <h3>Thành Lập Công Ty</h3>
+                            <p>Thành lập với đội ngũ 5 người, chuyên thi công trần thạch cao tại TP. Hạ Long, Quảng
+                                Ninh.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#F97316"></div>
+                            <div class="timeline-year">2016</div>
+                            <h3>Mở Rộng Dịch Vụ</h3>
+                            <p>Bổ sung dịch vụ vách thạch cao, trần trang trí. Đội ngũ tăng lên 20 người.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2018</div>
+                            <h3>100 Công Trình Đầu Tiên</h3>
+                            <p>Hoàn thành cột mốc 100 công trình. Bắt đầu nhận dự án công nghiệp quy mô lớn.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#F97316"></div>
+                            <div class="timeline-year">2020</div>
+                            <h3>Thêm Vách Panel & Phòng Sạch</h3>
+                            <p>Ra mắt dịch vụ panel cách âm, phòng sạch tiêu chuẩn phục vụ nhà máy, bệnh viện.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2024</div>
+                            <h3>500+ Công Trình – Uy Tín Hàng Đầu</h3>
+                            <p>Đội ngũ 50+ người, 500+ công trình hoàn thành, là đơn vị uy tín hàng đầu Quảng Ninh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate delay-2">
+                    <div class="section-tag orange">Năng lực thi công</div>
+                    <h2
+                        style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,36px);margin-bottom:32px;line-height:1.25">
+                        Năng Lực & <span style="color:#F97316">Thiết Bị</span></h2>
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+                        <div class="feature-card" style="padding:20px 24px;">
+                            <div style="display:flex;align-items:center;gap:14px;">
+                                <div class="feature-icon" style="width:48px;height:48px;font-size:20px;flex-shrink:0">🔧
+                                </div>
+                                <div>
+                                    <h3 style="font-size:15px;margin-bottom:4px">Máy Cân Bằng Laser 12 Tia</h3>
+                                    <p style="font-size:13px">Định vị chính xác tuyệt đối, đảm bảo không gian phẳng
+                                        chuẩn</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-card" style="padding:20px 24px;">
+                            <div style="display:flex;align-items:center;gap:14px;">
+                                <div class="feature-icon" style="width:48px;height:48px;font-size:20px;flex-shrink:0">
+                                    🏗️</div>
+                                <div>
+                                    <h3 style="font-size:15px;margin-bottom:4px">Đội Thợ 50+ Nhân Viên</h3>
+                                    <p style="font-size:13px">Được đào tạo chuyên sâu, có kinh nghiệm nhiều năm thực
+                                        chiến</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-card" style="padding:20px 24px;">
+                            <div style="display:flex;align-items:center;gap:14px;">
+                                <div class="feature-icon" style="width:48px;height:48px;font-size:20px;flex-shrink:0">🚛
+                                </div>
+                                <div>
+                                    <h3 style="font-size:15px;margin-bottom:4px">Xe Tải Vận Chuyển Chuyên Dụng</h3>
+                                    <p style="font-size:13px">Đội xe riêng, vận chuyển vật tư đến tận công trình nhanh
+                                        chóng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-card" style="padding:20px 24px;">
+                            <div style="display:flex;align-items:center;gap:14px;">
+                                <div class="feature-icon" style="width:48px;height:48px;font-size:20px;flex-shrink:0">📦
+                                </div>
+                                <div>
+                                    <h3 style="font-size:15px;margin-bottom:4px">Kho Vật Tư Đa Dạng</h3>
+                                    <p style="font-size:13px">Luôn sẵn hàng, cung cấp vật liệu chính hãng Vĩnh Tường,
+                                        Gyproc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Chứng nhận</div>
+                <h2>Chứng Nhận & <span>Đối Tác</span></h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-item animate delay-1"><i class="fa-solid fa-certificate"></i>
+                    <h4>Đại Lý Vĩnh Tường</h4>
+                    <p>Đại lý chính thức vật liệu Vĩnh Tường tại Quảng Ninh</p>
+                </div>
+                <div class="cert-item animate delay-2"><i class="fa-solid fa-shield-halved"></i>
+                    <h4>Bảo Hành 10 Năm</h4>
+                    <p>Cam kết bảo hành bằng văn bản, có giá trị pháp lý</p>
+                </div>
+                <div class="cert-item animate delay-3"><i class="fa-solid fa-building-columns"></i>
+                    <h4>Đăng Ký Kinh Doanh</h4>
+                    <p>MST: 5702148694 – SKHĐT Quảng Ninh cấp phép</p>
+                </div>
+                <div class="cert-item animate delay-4"><i class="fa-solid fa-star"></i>
+                    <h4>Top 10 Thương Hiệu Uy Tín</h4>
+                    <p>Được bình chọn năm 2023 tại Quảng Ninh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Sẵn Sàng Hợp Tác Với Chúng Tôi?</h2>
+                    <p>Liên hệ ngay để được tư vấn miễn phí và nhận báo giá tốt nhất</p>
+                </div>
+                <div class="cta-btns">
+                    <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
+                            class="fa-solid fa-file-invoice"></i> Nhận Báo Giá</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                        <div class="footer-logo-text"><span class="name">Trần Vách Quảng Ninh</span><span
+                                class="sub">Thi Công Chuyên Nghiệp</span></div>
+                    </div>
+                    <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh.</p>
+                    <div class="footer-socials"><a href="#" class="footer-social"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Dịch Vụ</h4>
+                    <div class="footer-links"><a href="thi-cong-tran-thach-cao.html"><i
+                                class="fa-solid fa-chevron-right"></i> Trần Thạch Cao</a><a
+                            href="thi-cong-vach-thach-cao.html"><i class="fa-solid fa-chevron-right"></i> Vách Thạch
+                            Cao</a><a href="tran-trang-tri.html"><i class="fa-solid fa-chevron-right"></i> Trần Trang
+                            Trí</a><a href="phao-chi-pu.html"><i class="fa-solid fa-chevron-right"></i> Panel & Phòng
+                            Sạch</a><a href="vach-compact.html"><i class="fa-solid fa-chevron-right"></i> Vách Compact
+                            WC</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <div class="footer-links"><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Trang
+                            Chủ</a><a href="du-an.html"><i class="fa-solid fa-chevron-right"></i> Dự Án</a><a
+                            href="bao-gia-chi-tiet.html"><i class="fa-solid fa-chevron-right"></i> Báo Giá</a><a
+                            href="tin-tuc.html"><i class="fa-solid fa-chevron-right"></i> Tin Tức</a><a
+                            href="lien-he.html"><i class="fa-solid fa-chevron-right"></i> Liên Hệ</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i>
+                        <div><a href="tel:0837811188">0837.811.188</a></div>
+                    </div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Tổ 77B, Khu 5B, P.
+                            Hồng Gai, TP. Hạ Long, QN</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Trần Vách Quảng Ninh. All rights reserved.</p>
+                <p><a href="index.html">Trang chủ</a> | <a href="lien-he.html">Liên hệ</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="float-phone">
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
+            style="font-size:14px;font-weight:900">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+            class="fa-solid fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

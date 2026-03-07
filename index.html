@@ -4,888 +4,1251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thi Công Trần Vách Thạch Cao, Panel, Phòng Sạch, Compact WC</title>
+    <title>Trần Vách Quảng Ninh | Thi Công Trần Thạch Cao Chuyên Nghiệp</title>
     <meta name="description"
-        content="Chuyên thi công trần vách thạch cao, trần trang trí, trần vách Panel, phòng sạch, vách compact wc chuyên nghiệp, giá tốt.">
+        content="Trần Vách Quảng Ninh – Đơn vị thi công trần thạch cao, vách thạch cao, trần trang trí, vách panel phòng sạch, vách compact WC uy tín tại Quảng Ninh. Bảo hành 10 năm.">
     <meta name="keywords"
-        content="thi công trần thạch cao, vách thạch cao, trần trang trí, trần vách panel, phòng sạch, vách compact wc">
-    <meta property="og:title" content="Thi Công Trần & Vách Thạch Cao Chuyên Nghiệp">
-    <meta property="og:description" content="Bền Đẹp – Giá Tốt – Đúng Tiến Độ. Bảo hành 5 năm, không phát sinh">
-    <meta property="og:type" content="website">
-    <!-- TODO: Update canonical URL to your production domain before deploy -->
-    <link rel="canonical" href="/">
-
-    <!-- Open Graph / Social -->
-    <meta property="og:url" content="/">
+        content="thi công trần thạch cao Quảng Ninh, vách thạch cao, trần trang trí, panel phòng sạch, vách compact WC">
+    <meta property="og:title" content="Trần Vách Quảng Ninh – Thi Công Chuyên Nghiệp">
+    <meta property="og:description"
+        content="Đơn vị thi công trần vách uy tín số 1 Quảng Ninh. Bảo hành 10 năm – Không phát sinh – Đúng tiến độ.">
     <meta property="og:image" content="/assets/images/logo.jpg">
-
-    <!-- Favicons -->
+    <meta property="og:url" content="https://tranvachquangninh.indevs.in">
+    <link rel="canonical" href="https://tranvachquangninh.indevs.in">
     <link rel="icon" href="/assets/images/logo.jpg">
-
-    <!-- Performance: warm up font origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://plus.unsplash.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css?v=2">
-    <link rel="stylesheet" href="css/theme.css?v=2">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #061d4a 0%, #0B3D8E 55%, #1553ba 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
 
-    <!-- LocalBusiness schema (fill real data before deploy) -->
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0L80 12v2L54 40h-2zm4 0L80 16v2L58 40h-2zm4 0L80 20v2L62 40h-2zm4 0L80 24v2L66 40h-2zm4 0L80 28v2L70 40h-2zm4 0L80 32v2L74 40h-2zm4 0L80 36v2L78 40h-2zm4 0L80 40v0h-2l2-2v2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-shape {
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(249, 115, 22, .15) 0%, transparent 70%);
+        }
+
+        .hero-shape2 {
+            position: absolute;
+            left: -50px;
+            bottom: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, .05) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(249, 115, 22, .2);
+            border: 1px solid rgba(249, 115, 22, .4);
+            color: #fdba74;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 58px);
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: #fb923c;
+        }
+
+        .hero-desc {
+            color: rgba(255, 255, 255, .75);
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 36px;
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 44px;
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, .8);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .hero-trust-item i {
+            color: #4ade80;
+        }
+
+        .hero-img-wrap {
+            position: relative;
+        }
+
+        .hero-img-main {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-badge-icon {
+            width: 48px;
+            height: 48px;
+            background: #0B3D8E;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .hero-badge strong {
+            display: block;
+            font-size: 22px;
+            font-weight: 900;
+            color: #0B3D8E;
+        }
+
+        .hero-badge span {
+            font-size: 12px;
+            color: #64748B;
+        }
+
+        .hero-badge2 {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background: #F97316;
+            border-radius: 16px;
+            padding: 14px 18px;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, .4);
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-badge2 strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .hero-badge2 span {
+            font-size: 11px;
+            opacity: .9;
+        }
+
+        /* ===== WHY US ===== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+            border: 1px solid #E2E8F0;
+            transition: all .3s;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .12);
+            transform: translateY(-4px);
+        }
+
+        .why-card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(11, 61, 142, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #0B3D8E;
+            margin: 0 auto 16px;
+            transition: all .3s;
+        }
+
+        .why-card:hover .why-card-icon {
+            background: #0B3D8E;
+            color: #fff;
+        }
+
+        .why-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 13px;
+            color: #64748B;
+            line-height: 1.6;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-bg {
+            background: #F1F5F9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+            transition: all .3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, .14);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #0B3D8E, #1a56c4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            flex-shrink: 0;
+        }
+
+        .service-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(11, 61, 142, .1);
+            color: #0B3D8E;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        .service-body h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        .service-body p {
+            font-size: 14px;
+            color: #64748B;
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0B3D8E;
+        }
+
+        .service-link i {
+            transition: transform .2s;
+        }
+
+        .service-card:hover .service-link i {
+            transform: translateX(4px);
+        }
+
+        /* ===== PROJECTS ===== */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, .8) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-info h4 {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .project-info span {
+            color: rgba(255, 255, 255, .7);
+            font-size: 12px;
+        }
+
+        .project-item.large {
+            grid-row: span 2;
+            aspect-ratio: unset;
+        }
+
+        /* ===== PROCESS ===== */
+        .process-bg {
+            background: linear-gradient(135deg, #0B3D8E 0%, #061d4a 100%);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .proc-item {
+            text-align: center;
+            padding: 24px 12px;
+            position: relative;
+        }
+
+        .proc-item:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -8px;
+            top: 32px;
+            color: rgba(255, 255, 255, .3);
+            font-size: 20px;
+        }
+
+        .proc-num {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .15);
+            border: 2px solid rgba(249, 115, 22, .6);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+        }
+
+        .proc-item i {
+            font-size: 22px;
+            color: #fb923c;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .proc-item h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .proc-item p {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .55);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--accent);
+            padding: 72px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cta-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(26px, 4vw, 40px);
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .cta-text p {
+            color: rgba(255, 255, 255, .85);
+            font-size: 16px;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* ===== CONTACT QUICK ===== */
+        .contact-quick {
+            background: #F1F5F9;
+        }
+
+        .contact-quick-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-method-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: #0B3D8E;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-method-info strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .contact-method-info a,
+        .contact-method-info span {
+            font-size: 14px;
+            color: #64748B;
+            display: block;
+        }
+
+        .contact-method-info a {
+            color: #0B3D8E;
+            font-weight: 600;
+        }
+
+        .contact-form-box {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, .08);
+        }
+
+        .contact-form-box h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width:1024px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .proc-item:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width:768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-img-wrap {
+                display: none;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-item.large {
+                grid-row: span 1;
+                aspect-ratio: 4/3;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-quick-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width:480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Thạch Cao Pro Build",
-      "telephone": "+84-912-345-678",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "TP.HCM",
-        "addressCountry": "VN"
-      },
-      "areaServed": "TP.HCM",
-      "url": "/"
-    }
-    </script>
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Trần Vách Quảng Ninh",
+    "description":"Thi công trần thạch cao, vách thạch cao, trần trang trí, panel phòng sạch, vách compact WC tại Quảng Ninh",
+    "telephone":"+84-837-811-188",
+    "address":{"@type":"PostalAddress","addressLocality":"Quảng Ninh","addressCountry":"VN"},
+    "url":"https://tranvachquangninh.indevs.in",
+    "image":"/assets/images/logo.jpg",
+    "areaServed":"Quảng Ninh",
+    "priceRange":"$$"
+  }
+  </script>
 </head>
 
 <body>
 
-    <!-- Header (Desktop) -->
-    <header class="header-modern">
-        <div class="container header-content">
-            <a href="#" class="logo-modern">
-                <div class="logo-icon">🏗️</div>
-                <div class="logo-text">
-                    <span class="logo-brand">Văn Tiến Hùng Provipp</span>
-                    <span class="logo-tagline">Thạch Cao, Panel & Compact</span>
-                </div>
-            </a>
-            <div class="header-right">
-                <div class="header-trust-badge">
-                    <i class="fa-solid fa-certificate"></i>
-                    <span>10+ Năm Kinh Nghiệm</span>
-                </div>
-                <a href="tel:0912345678" class="hotline-modern">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="hotline-text">
-                        <span class="hotline-label">Hotline 24/7</span>
-                        <span class="hotline-number">0912.345.678</span>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar transparent" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="/assets/images/logo.jpg" alt="Logo Trần Vách Quảng Ninh">
+                    <div class="nav-logo-text">
+                        <span class="nav-logo-name">Trần Vách Quảng Ninh</span>
+                        <span class="nav-logo-sub">Thi Công Chuyên Nghiệp</span>
                     </div>
                 </a>
-                <a href="bao-gia-chi-tiet.html" class="btn btn-primary">Nhận Báo Giá</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Promotional Banner -->
-    <div class="promo-banner" id="promoBanner">
-        <div class="container promo-content">
-            <span>🎉 <strong>KHUYẾN MÃI THÁNG 2:</strong> Giảm 15% cho diện tích trên 50m² - Chỉ còn <span
-                    id="promoTimer">3 ngày</span></span>
-            <button onclick="closeBanner()" class="promo-close-btn">&times;</button>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero-modern">
-        <div class="container hero-content">
-            <div class="hero-main">
-                <h1><span class="hero-subtitle">Đơn Vị Thi Công Bền Vững & Chuyên Nghiệp</span>
-                    <span class="text-gradient">Thạch Cao, Panel, Phòng Sạch & Compact WC</span>
-                </h1>
-                <div class="hero-usps">
-                    <span class="usp-item">
-                        <i class="fa-solid fa-check-circle"></i>
-                        Vật liệu chính hãng Vĩnh Tường
-                    </span>
-                    <span class="usp-separator">•</span>
-                    <span class="usp-item">
-                        <i class="fa-solid fa-check-circle"></i>
-                        Bảo hành 8 năm
-                    </span>
-                    <span class="usp-separator">•</span>
-                    <span class="usp-item">
-                        <i class="fa-solid fa-check-circle"></i>
-                        Thi công đúng tiến độ
-                    </span>
-                </div>
-                <div class="hero-btns">
-                    <a href="tel:0912345678" class="btn btn-primary btn-lg">
-                        <i class="fa-solid fa-phone"></i>
-                        <span class="btn-text">
-                            <span class="btn-label">GỌI TƯ VẤN 24/7</span>
-                            <span class="btn-sublabel">0912.345.678</span>
-                        </span>
-                    </a>
-                    <a href="bao-gia-chi-tiet.html" class="btn btn-accent btn-lg">
-                        <i class="fa-solid fa-file-invoice"></i>
-                        NHẬN BÁO GIÁ CHI TIẾT
-                    </a>
-                </div>
-                <div class="hero-secondary-cta">
-                    <a href="#dat-lich-khao-sat" class="btn-link">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        Hoặc đặt lịch khảo sát tận nơi - MIỄN PHÍ →
-                    </a>
-                </div>
-            </div>
-            <!-- Trust Badges Bar -->
-            <div class="hero-trust-bar">
-                <div class="trust-badge-item">
-                    <i class="fa-solid fa-award"></i>
-                    <div class="trust-badge-text">
-                        <strong>10+</strong>
-                        <span>Năm Kinh Nghiệm</span>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Trang Chủ</a>
+                    <a href="gioi-thieu.html" class="nav-link">Giới Thiệu</a>
+                    <div class="nav-item">
+                        <a href="dich-vu.html" class="nav-link">Dịch Vụ <i class="fa-solid fa-chevron-down"
+                                style="font-size:10px"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="thi-cong-tran-thach-cao.html"><i class="fa-solid fa-layer-group"></i> Trần Thạch
+                                Cao</a>
+                            <a href="thi-cong-vach-thach-cao.html"><i class="fa-solid fa-border-all"></i> Vách Thạch
+                                Cao</a>
+                            <a href="tran-trang-tri.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Trần Trang
+                                Trí</a>
+                            <a href="phao-chi-pu.html"><i class="fa-solid fa-building-user"></i> Panel & Phòng Sạch</a>
+                            <a href="vach-compact.html"><i class="fa-solid fa-restroom"></i> Vách Compact WC</a>
+                        </div>
                     </div>
+                    <a href="du-an.html" class="nav-link">Dự Án</a>
+                    <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
+                    <a href="lien-he.html" class="nav-link">Liên Hệ</a>
                 </div>
-                <div class="trust-badge-item">
-                    <i class="fa-solid fa-building"></i>
-                    <div class="trust-badge-text">
-                        <strong>500+</strong>
-                        <span>Công Trình</span>
-                    </div>
+                <div class="nav-cta">
+                    <a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> 0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-btn">Nhận Báo Giá</a>
                 </div>
-                <div class="trust-badge-item">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <div class="trust-badge-text">
-                        <strong>8 Năm</strong>
-                        <span>Bảo Hành</span>
-                    </div>
-                </div>
-                <div class="trust-badge-item">
-                    <i class="fa-solid fa-star"></i>
-                    <div class="trust-badge-text">
-                        <strong>4.8/5</strong>
-                        <span>Đánh Giá</span>
-                    </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Social Proof Counter -->
-    <div class="social-proof-bar">
-        <div class="container">
-            <div class="proof-stats">
-                <div class="stat-item">
-                    <i class="fa-solid fa-eye"></i>
-                    <span><strong id="viewCount">127</strong> người đang xem trang này</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span><strong id="callToday">8</strong> cuộc gọi hôm nay</span>
-                </div>
-            </div>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+            Trang Chủ</a>
+        <a href="gioi-thieu.html" class="mobile-nav-link"><i class="fa-solid fa-building"
+                style="color:#0B3D8E;width:20px"></i> Giới Thiệu</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+            Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+            Dự Án</a>
+        <a href="bao-gia-chi-tiet.html" class="mobile-nav-link"><i class="fa-solid fa-file-invoice"
+                style="color:#0B3D8E;width:20px"></i> Báo Giá</a>
+        <a href="tin-tuc.html" class="mobile-nav-link"><i class="fa-solid fa-newspaper"
+                style="color:#0B3D8E;width:20px"></i> Tin Tức</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
+                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta">
+            <a href="tel:0837811188" class="btn btn-accent" style="width:100%;justify-content:center"><i
+                    class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a>
         </div>
     </div>
 
-    <!-- Intro -->
-    <section class="intro">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-shape"></div>
+        <div class="hero-shape2"></div>
         <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>VỀ CHÚNG TÔI</h2>
-                <p>Đơn vị thi công uy tín với hơn 10 năm kinh nghiệm • Hơn <strong>500+ công trình hoàn thành</strong>
-                </p>
-            </div>
-            <div class="intro-grid">
-                <div class="intro-item animate-on-scroll delay-100">
-                    <div class="intro-icon"><i class="fa-solid fa-medal"></i></div>
-                    <h3>10+ Năm Kinh Nghiệm</h3>
-                    <p>Đội ngũ thợ lành nghề, thi công hàng nghìn công trình lớn nhỏ.</p>
-                </div>
-                <div class="intro-item animate-on-scroll delay-200">
-                    <div class="intro-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                    <h3>Phủ Sóng Rộng Khắp</h3>
-                    <p>Thi công nhanh chóng tại TP.HCM và các tỉnh lân cận.</p>
-                </div>
-                <div class="intro-item animate-on-scroll delay-300">
-                    <div class="intro-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3>Cam Kết Vàng</h3>
-                    <p>Không phát sinh chi phí - Bảo hành dài hạn bằng văn bản.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="dich-vu">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>DỊCH VỤ CUNG CẤP</h2>
-            </div>
-            <div class="service-grid">
-                <!-- Service 1 -->
-                <div class="service-card animate-on-scroll delay-100">
-                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3>Trần, Vách Thạch Cao</h3>
-                    <p>Thi công trần chìm, trần giật cấp, vách ngăn cho nhà phố, chung cư, biệt thự. Mẫu mã hiện đại.
-                    </p>
-                    <a href="thi-cong-tran-thach-cao.html" class="service-cta">Xem Trọn Gói <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <!-- Service 2 -->
-                <div class="service-card animate-on-scroll delay-200">
-                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Trần Trang Trí</h3>
-                    <p>Trần thạch cao tân cổ điển, hiện đại kết hợp phào chỉ PU/PS, mang lại vẻ đẹp đẳng cấp cho không
-                        gian.</p>
-                    <a href="phao-chi-pu.html" class="service-cta">Xem Chi Tiết <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card animate-on-scroll delay-300">
-                    <div class="service-icon"><i class="fa-solid fa-building-user"></i></div>
-                    <h3>Trần Vách Panel & Phòng Sạch</h3>
-                    <p>Cung cấp giải pháp thi công Panel cách âm, cách nhiệt, phòng sạch tiêu chuẩn cho nhà máy, bệnh
-                        viện.</p>
-                    <a href="tel:0912345678" class="service-cta">Tư Vấn Chuyên Sâu <i class="fa-solid fa-phone"></i></a>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card animate-on-scroll delay-100">
-                    <div class="service-icon"><i class="fa-solid fa-restroom"></i></div>
-                    <h3>Vách Compact WC</h3>
-                    <p>Thi công vách ngăn vệ sinh Compact HPL siêu bền, chịu nước 100%, thiết kế thẩm mỹ cho công trình.
-                    </p>
-                    <a href="tel:0912345678" class="service-cta">Gọi Hotline <i class="fa-solid fa-phone"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Standards (New) -->
-
-    <section class="standards">
-        <div class="container">
-            <div class="section-title">
-                <h2>TIÊU CHUẨN THI CÔNG & VẬT TƯ</h2>
-                <p>Chúng tôi chỉ sử dụng vật liệu chính hãng và tuân thủ quy trình kỹ thuật nghiêm ngặt</p>
-            </div>
-            <div class="standards-grid">
-                <div class="standard-item">
-                    <div class="standard-icon-wrapper">
-                        <i class="fa-solid fa-ruler-combined fa-xl"></i>
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-eyebrow"><i class="fa-solid fa-star"></i> Uy Tín · Bền Đẹp · Đúng Tiến Độ</div>
+                    <h1 class="hero-title">
+                        Thi Công <span>Trần Vách</span><br>Thạch Cao Quảng Ninh
+                    </h1>
+                    <p class="hero-desc">Đơn vị thi công trần thạch cao, vách thạch cao, phòng sạch và vách compact
+                        chuyên nghiệp tại Quảng Ninh. Vật liệu chính hãng, thợ lành nghề, bảo hành 10 năm.</p>
+                    <div class="hero-btns">
+                        <a href="tel:0837811188" class="btn btn-accent btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                            Gọi Tư Vấn Ngay</a>
+                        <a href="bao-gia-chi-tiet.html" class="btn btn-outline btn-lg"><i
+                                class="fa-solid fa-file-invoice"></i> Nhận Báo Giá</a>
                     </div>
-                    <div>
-                        <h3>Đo Đạc Laser Chính Xác</h3>
-                        <p>Sử dụng máy cân bằng laser 12 tia để xác định cốt trần, đảm bảo độ phẳng tuyệt đối 100%.</p>
+                    <div class="hero-trust">
+                        <div class="hero-trust-item"><i class="fa-solid fa-check-circle"></i> Không phát sinh chi phí
+                        </div>
+                        <div class="hero-trust-item"><i class="fa-solid fa-check-circle"></i> Bảo hành 10 năm</div>
+                        <div class="hero-trust-item"><i class="fa-solid fa-check-circle"></i> Khảo sát miễn phí</div>
                     </div>
                 </div>
-                <div class="standard-item">
-                    <div class="standard-icon-wrapper">
-                        <i class="fa-solid fa-layer-group fa-xl"></i>
-                    </div>
-                    <div>
-                        <h3>Khung Xương Vĩnh Tường</h3>
-                        <p>Cam kết sử dụng khung xương Vĩnh Tường (BASI, TIKA, ECO) hoặc Hà Nội chính hãng. Không pha
-                            trộn hàng kém chất lượng.</p>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <div class="standard-icon-wrapper">
-                        <i class="fa-solid fa-screwdriver fa-xl"></i>
-                    </div>
-                    <div>
-                        <h3>Khoảng Cách Tiêu Chuẩn</h3>
-                        <p>Khoảng cách ty treo: 80cm - 100cm. Khoảng cách xương chính: 80cm. Khoảng cách xương phụ:
-                            40cm.</p>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <div class="standard-icon-wrapper">
-                        <i class="fa-solid fa-paint-roller fa-xl"></i>
-                    </div>
-
-                    <div>
-                        <h3>Xử Lý Mối Nối Đỉnh Cao</h3>
-                        <p>Dán băng keo lưới chuyên dụng và xử lý 3 lớp bột bả tại các mối nối, cam kết không nứt trần
-                            sau thời gian sử dụng.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="process">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>QUY TRÌNH THI CÔNG CHI TIẾT</h2>
-                <p>6 Bước chuẩn hóa để tạo nên một công trình hoàn hảo</p>
-            </div>
-            <div class="process-grid">
-                <div class="process-card animate-on-scroll delay-100">
-                    <div class="process-step">1</div>
-                    <h3><i class="fa-solid fa-compass-drafting"></i> Khảo Sát & Tư Vấn</h3>
-                    <p>Đến tận nơi đo đạc, tư vấn mẫu mã, giải pháp vật tư (chống ẩm, tiêu âm) phù hợp ngân sách.</p>
-                </div>
-                <div class="process-card animate-on-scroll delay-200">
-                    <div class="process-step">2</div>
-                    <h3><i class="fa-solid fa-crosshairs"></i> Cân Chỉnh Cốt Trần</h3>
-                    <p>Xác định độ cao trần bằng máy Laser, bật mực tường, khoan định vị và lắp đặt hệ ty treo chịu lực.
-                    </p>
-                </div>
-                <div class="process-card animate-on-scroll delay-300">
-                    <div class="process-step">3</div>
-                    <h3><i class="fa-solid fa-hammer"></i> Lắp Đặt Khung Xương</h3>
-                    <p>Lắp đặt thanh chính, thanh phụ theo khoảng cách tiêu chuẩn (800-1000mm). Căn chỉnh khung xương
-                        phẳng tuyệt đối.</p>
-                </div>
-                <div class="process-card animate-on-scroll delay-100">
-                    <div class="process-step">4</div>
-                    <h3><i class="fa-solid fa-vector-square"></i> Bắn Tấm Thạch Cao</h3>
-                    <p>Lắp đặt tấm trần (Gyproc/Boral 9mm) lên khung xương. Các tấm lắp so le nhau để tăng khả năng chịu
-                        lực và chống nứt.</p>
-                </div>
-                <div class="process-card animate-on-scroll delay-200">
-                    <div class="process-step">5</div>
-                    <h3><i class="fa-solid fa-fill-drip"></i> Xử Lý Nối & Sơn Bả</h3>
-                    <p>Dán băng keo lưới, trét bột xử lý mối nối. Tiến hành bả matit 2 lớp và sơn hoàn thiện
-                        (Dulux/Jotun/Maxilite).</p>
-                </div>
-                <div class="process-card animate-on-scroll delay-300">
-                    <div class="process-step">6</div>
-                    <h3><i class="fa-solid fa-clipboard-check"></i> Nghiệm Thu & Bàn Giao</h3>
-                    <p>Vệ sinh sạch sẽ, kiểm tra độ phẳng, độ đều màu sơn. Bàn giao công trình và phiếu bảo hành cho gia
-                        chủ.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects (Gallery) -->
-    <section class="gallery">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>CÔNG TRÌNH TIÊU BIỂU</h2>
-            </div>
-            <div class="gallery-grid">
-                <!-- Using placeholders/generated images. Since I have 3 generated, I'll repeat or use placeholders for others -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
-                        alt="Thi công trần phòng ngủ" loading="lazy" decoding="async">
-                    <div class="gallery-caption">Trần Giật Cấp - Phòng Ngủ Master</div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop"
-                        alt="Vách ngăn văn phòng">
-                    <div class="gallery-caption">Vách Ngăn Kính & Thạch Cao - Văn Phòng Quận 1</div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="hero-img-wrap">
                     <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
-                        alt="Trần thạch cao phòng khách">
-                    <div class="gallery-caption">Trần Tân Cổ Điển - Biệt Thự Quận 7</div>
-                </div>
-                <!-- Repeats for demo purposes in a real list I'd use unique ones -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop"
-                        alt="Thi công thô">
-                    <div class="gallery-caption">Khung Xương Vĩnh Tường - Đang Thi Công</div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=600&auto=format&fit=crop"
-                        alt="Hoàn thiện sơn bả">
-                    <div class="gallery-caption">Hoàn Thiện Sơn Bả - Chung Cư Vinhome</div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=600&auto=format&fit=crop"
-                        alt="Vách ngăn phòng họp">
-                    <div class="gallery-caption">Vách Cách Âm - Phòng Họp</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>XEM QUY TRÌNH THI CÔNG THỰC TỂ</h2>
-                <p>Video 360° thi công thực tế tại công trường</p>
-            </div>
-            <div class="video-wrapper">
-                <div class="video-placeholder animate-on-scroll delay-100" onclick="playVideo()">
-                    <img src="https://plus.unsplash.com/premium_photo-1682145181754-019685db5774?q=80&w=800&auto=format&fit=crop"
-                        alt="Video thumbnail">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                        alt="Thi công trần thạch cao Quảng Ninh" class="hero-img-main">
+                    <div class="hero-badge">
+                        <div class="hero-badge-icon"><i class="fa-solid fa-building"></i></div>
+                        <div><strong>500+</strong><span>Công trình hoàn thành</span></div>
                     </div>
-                </div>
-                <div id="videoModal" class="video-modal hidden">
-                    <div class="video-modal-content">
-                        <span class="close-video" onclick="closeVideo()">&times;</span>
-                        <iframe id="videoFrame" width="100%" height="100%" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen title="Video thi công thực tế"></iframe>
+                    <div class="hero-badge2">
+                        <strong>10+</strong>
+                        <span>Năm kinh nghiệm</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- ===== STATS ===== -->
+    <section class="stats-bar">
         <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate-on-scroll delay-100">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Đội thi công rất chuyên nghiệp, làm việc sạch sẽ. Trần nhà em làm xong đẹp hơn mong đợi. Giá cả
-                        hợp lý, không phát sinh."</p>
-                    <div class="author">
-                        <strong>Chị Nguyễn Thu Hà</strong><br>
-                        <small>Chung cư Vinhomes, Q.9</small>
-                    </div>
+            <div class="stats-grid">
+                <div class="stat-item animate">
+                    <span class="stat-number" data-count="500">0</span>
+                    <div class="stat-label">+ Công Trình Hoàn Thành</div>
                 </div>
-                <div class="testimonial-card animate-on-scroll delay-200">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Tư vấn nhiệt tình, báo giá rõ ràng. Thi công đúng tiến độ cam kết. Văn phòng mình làm vách ngăn
-                        cách âm rất tốt."</p>
-                    <div class="author">
-                        <strong>Anh Trần Minh Tuấn</strong><br>
-                        <small>Văn phòng Quận 1</small>
-                    </div>
+                <div class="stat-item animate delay-1">
+                    <span class="stat-number" data-count="10">0</span>
+                    <div class="stat-label">+ Năm Kinh Nghiệm</div>
                 </div>
-                <div class="testimonial-card animate-on-scroll delay-300">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Từ khảo sát đến hoàn thiện đều ổn. Thợ tay nghề cao, sửa chữa trần cũ thành trần mới đẹp lung
-                        linh. Rất hài lòng!"</p>
-                    <div class="author">
-                        <strong>Chị Phạm Lan Anh</strong><br>
-                        <small>Biệt thự Quận 7</small>
-                    </div>
+                <div class="stat-item animate delay-2">
+                    <span class="stat-number" data-count="98">0</span>
+                    <div class="stat-label">% Khách Hàng Hài Lòng</div>
+                </div>
+                <div class="stat-item animate delay-3">
+                    <span class="stat-number" data-count="10">0</span>
+                    <div class="stat-label">Năm Bảo Hành</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+    <!-- ===== WHY US ===== -->
+    <section class="section">
         <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>TẠI SAO CHỌN CHÚNG TÔI?</h2>
+            <div class="section-title animate">
+                <div class="section-tag">Điểm khác biệt</div>
+                <h2>Tại Sao Chọn <span>Trần Vách Quảng Ninh</span>?</h2>
+                <p>Chúng tôi không chỉ thi công – chúng tôi kiến tạo không gian sống đẳng cấp cho bạn</p>
             </div>
             <div class="why-grid">
-                <div class="why-item animate-on-scroll delay-100">
-                    <i class="fa-solid fa-tags fa-3x why-icon"></i>
-                    <h4>Giá Cả Rõ Ràng</h4>
-                    <p>Báo giá trọn gói, cam kết không phát sinh chi phí sau khi chốt.</p>
+                <div class="why-card animate delay-1">
+                    <div class="why-card-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Giá Rõ Ràng – Không Phát Sinh</h3>
+                    <p>Báo giá trọn gói chi tiết từng hạng mục. Cam kết không phát sinh thêm chi phí sau khi ký hợp
+                        đồng.</p>
                 </div>
-                <div class="why-item animate-on-scroll delay-200">
-                    <i class="fa-solid fa-helmet-safety fa-3x why-icon"></i>
-                    <h4>Thợ Tay Nghề Cao</h4>
-                    <p>Đội ngũ thợ giàu kinh nghiệm, thi công tỉ mỉ, sắc nét từng chi tiết.</p>
+                <div class="why-card animate delay-2">
+                    <div class="why-card-icon"><i class="fa-solid fa-medal"></i></div>
+                    <h3>Thợ Tay Nghề Cao</h3>
+                    <p>Đội ngũ thợ được đào tạo chuyên sâu, thi công tỉ mỉ từng mối nối, từng góc cạnh hoàn hảo.</p>
                 </div>
-                <div class="why-item animate-on-scroll delay-300">
-                    <i class="fa-solid fa-clock fa-3x why-icon"></i>
-                    <h4>Đúng Tiến Độ</h4>
-                    <p>Cam kết hoàn thành đúng thời hạn đã thỏa thuận trong hợp đồng.</p>
+                <div class="why-card animate delay-3">
+                    <div class="why-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Bảo Hành 10 Năm</h3>
+                    <p>Cam kết bảo hành bằng văn bản lên đến 10 năm. Phát sinh lỗi – sửa ngay, không tính phí.</p>
                 </div>
-                <div class="why-item animate-on-scroll delay-100">
-                    <i class="fa-solid fa-file-contract fa-3x why-icon"></i>
-                    <h4>Bảo Hành Uy Tín</h4>
-                    <p>Bảo hành công trình lên đến 5 năm, hỗ trợ kỹ thuật 24/7.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>BẢNG BÁO GIÁ THI CÔNG TRẦN THẠCH CAO 2024</h2>
-                <p class="pricing-subtitle">DỊCH VỤ CHUYÊN NGHIỆP – GIÁ CẢ CẠNH TRANH</p>
-            </div>
-
-            <!-- Tab Switching (Simple implementation via CSS/Radio or just two tables. For now, separate tables) -->
-
-            <h3 class="pricing-header animate-on-scroll delay-100">1. Báo Giá Phần Thô (Chưa Sơn Bả)</h3>
-            <div class="pricing-table-wrapper animate-on-scroll delay-100">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Loại Trần</th>
-                            <th>Khung Xương</th>
-                            <th>Tấm Thạch Cao</th>
-                            <th>Đơn Giá / m²</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2"><strong>Trần phẳng</strong></td>
-                            <td>Hà Nội / Vĩnh Tường Eco</td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">155.000đ - 165.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">175.000đ - 185.000đ</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2"><strong>Trần giật cấp</strong></td>
-                            <td>Hà Nội / Vĩnh Tường Eco</td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">165.000đ - 175.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">185.000đ - 195.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Trần thả (60x60)</strong></td>
-                            <td>Vĩnh Tường (TopLINE)</td>
-                            <td>Tấm phủ nhựa PVC</td>
-                            <td class="price-highlight">150.000đ - 165.000đ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="pricing-header-secondary animate-on-scroll delay-200">2. Báo Giá Sơn Bả Hoàn Thiện (Cộng thêm)
-            </h3>
-            <div class="pricing-table-wrapper animate-on-scroll delay-200">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Hạng Mục</th>
-                            <th>Vật Tư Sơn</th>
-                            <th>Đơn Giá / m²</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Sơn Kinh Tế</strong></td>
-                            <td>Bột bả thạch cao + Sơn Maxilite/Vatex (Trắng)</td>
-                            <td class="price-highlight">60.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sơn Cao Cấp</strong></td>
-                            <td>Bột bả thạch cao + Sơn Dulux/Jotun (Trắng)</td>
-                            <td class="price-highlight">80.000đ - 90.000đ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="pricing-notes">
-                <h3><i class="fa-solid fa-info-circle"></i> Lưu Ý Quan Trọng:</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> <strong>Tấm chống ẩm</strong> (Gyproc Xanh): Cộng thêm
-                        20.000đ/m²</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Tấm siêu bảo vệ/chống cháy</strong>: Báo giá riêng
-                        theo thực tế.</li>
-                    <li><i class="fa-solid fa-check"></i> Đơn giá áp dụng cho công trình >30m². Dưới 30m² thỏa thep thực
-                        tế.</li>
-                    <li><i class="fa-solid fa-check"></i> Giá đã bao gồm vận chuyển và thi công lắp đặt tại TP.HCM.</li>
-                    <li><i class="fa-solid fa-check"></i> Bảo hành khung xương Vĩnh Tường <strong>10 năm</strong>.</li>
-                </ul>
-                <div class="pricing-cta">
-                    <p class="pricing-incentive">
-                        <i class="fa-solid fa-gift"></i>
-                        <strong>Ưu đãi:</strong> Giảm 5% tổng giá trị hợp đồng cho khách hàng chốt lịch online hôm nay!
-                    </p>
-                    <a href="tel:0912345678" class="btn btn-primary btn-lg">
-                        <i class="fa-solid fa-phone"></i>
-                        GỌI TƯ VẤN NGAY
-                    </a>
+                <div class="why-card animate delay-4">
+                    <div class="why-card-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Đúng Tiến Độ</h3>
+                    <p>Ký hợp đồng rõ ràng, cam kết hoàn thành đúng thời hạn, không để khách hàng phải chờ đợi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Đặt Lịch Khảo Sát Section -->
-    <section id="dat-lich-khao-sat" class="survey-booking">
+    <!-- ===== SERVICES ===== -->
+    <section class="section services-bg">
         <div class="container">
-            <div class="section-title">
-                <h2>ĐẶT LỊCH KHẢO SÁT TẬN NƠI</h2>
-                <p>Kỹ thuật viên đến tận nơi, đo đạc và tư vấn chi tiết - <strong class="text-accent">MIỄN PHÍ
-                        100%</strong></p>
+            <div class="section-title animate">
+                <div class="section-tag orange">Dịch vụ</div>
+                <h2>Dịch Vụ <span>Thi Công</span> Của Chúng Tôi</h2>
+                <p>Cung cấp đầy đủ các giải pháp trần vách chuyên nghiệp cho mọi loại công trình</p>
             </div>
-            <div class="survey-content">
-                <div class="survey-benefits">
-                    <h3><i class="fa-solid fa-gift"></i> Bạn Nhận Được Gì?</h3>
-                    <ul class="benefit-list">
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <span><strong>Tư vấn chuyên sâu</strong> về thiết kế, vật liệu phù hợp</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <span><strong>Đo đạc chính xác</strong> diện tích, đánh giá kết cấu</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <span><strong>Báo giá chi tiết</strong> từng hạng mục công việc</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <span><strong>Giải đáp mọi thắc mắc</strong> trực tiếp tại công trình</span>
-                        </li>
-                    </ul>
+            <div class="services-grid">
+                <div class="service-card animate delay-1">
+                    <div class="service-img">🏛️</div>
+                    <div class="service-body">
+                        <span class="service-tag">Phổ biến nhất</span>
+                        <h3>Trần Thạch Cao</h3>
+                        <p>Thi công trần phẳng, trần giật cấp, trần thạch cao chìm cho nhà phố, chung cư, biệt thự.
+                            Khung xương Vĩnh Tường chính hãng.</p>
+                        <a href="thi-cong-tran-thach-cao.html" class="service-link">Xem chi tiết <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="survey-form-container">
-                    <form id="surveyForm" class="survey-form">
-                        <div class="form-group">
-                            <label for="survey-name">Họ và Tên *</label>
-                            <input type="text" id="survey-name" class="form-control" placeholder="Nguyễn Văn A"
-                                required>
+                <div class="service-card animate delay-2">
+                    <div class="service-img">🧱</div>
+                    <div class="service-body">
+                        <span class="service-tag">Tiết kiệm</span>
+                        <h3>Vách Thạch Cao</h3>
+                        <p>Thi công vách ngăn thạch cao linh hoạt, cách âm tốt, tạo không gian sử dụng hiệu quả và hiện
+                            đại.</p>
+                        <a href="thi-cong-vach-thach-cao.html" class="service-link">Xem chi tiết <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate delay-3">
+                    <div class="service-img">✨</div>
+                    <div class="service-body">
+                        <span class="service-tag">Sang trọng</span>
+                        <h3>Trần Trang Trí</h3>
+                        <p>Trần tân cổ điển, hiện đại với phào chỉ PU/PS cao cấp. Mang lại vẻ đẹp đẳng cấp cho không
+                            gian.</p>
+                        <a href="tran-trang-tri.html" class="service-link">Xem chi tiết <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate delay-1">
+                    <div class="service-img">🏭</div>
+                    <div class="service-body">
+                        <span class="service-tag">Công nghiệp</span>
+                        <h3>Vách Panel & Phòng Sạch</h3>
+                        <p>Cung cấp giải pháp thi công panel cách âm, cách nhiệt, phòng sạch tiêu chuẩn cho nhà máy,
+                            bệnh viện.</p>
+                        <a href="phao-chi-pu.html" class="service-link">Xem chi tiết <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate delay-2">
+                    <div class="service-img">🚽</div>
+                    <div class="service-body">
+                        <span class="service-tag">Siêu bền</span>
+                        <h3>Vách Compact WC</h3>
+                        <p>Thi công vách compact HPL siêu bền, chịu nước 100%, thẩm mỹ cao cho nhà vệ sinh thương mại và
+                            dân dụng.</p>
+                        <a href="vach-compact.html" class="service-link">Xem chi tiết <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate delay-3"
+                    style="background:linear-gradient(135deg,#0B3D8E,#061d4a);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;">
+                    <i class="fa-solid fa-phone-volume" style="font-size:48px;color:#fb923c;margin-bottom:20px"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:12px">Cần Tư Vấn?</h3>
+                    <p style="color:rgba(255,255,255,.75);margin-bottom:24px">Gọi ngay để được tư vấn miễn phí và nhận
+                        báo giá tốt nhất</p>
+                    <a href="tel:0837811188" class="btn btn-accent">Gọi: 0837.811.188</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Công trình</div>
+                <h2>Dự Án <span>Tiêu Biểu</span></h2>
+                <p>Hàng trăm công trình đã hoàn thành với chất lượng được khách hàng xác nhận</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-item large animate">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
+                        alt="Trần thạch cao phòng khách">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h4>Trần Giật Cấp – Biệt Thự</h4>
+                            <span>Quảng Ninh • 120m²</span>
                         </div>
-                        <div class="form-group">
-                            <label for="survey-phone">Số Điện Thoại *</label>
-                            <input type="tel" id="survey-phone" class="form-control" placeholder="0912 345 678"
-                                required>
+                    </div>
+                </div>
+                <div class="project-item animate delay-1">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=crop"
+                        alt="Thi công trần phòng ngủ">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h4>Trần Phẳng – Chung Cư</h4>
+                            <span>Hạ Long • 80m²</span>
                         </div>
+                    </div>
+                </div>
+                <div class="project-item animate delay-2">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=600&auto=format&fit=crop"
+                        alt="Vách ngăn văn phòng">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h4>Vách Ngăn – Văn Phòng</h4>
+                            <span>Cẩm Phả • 200m²</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item animate delay-1">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop"
+                        alt="Thi công khung xương">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h4>Khung Xương – Nhà Máy</h4>
+                            <span>Đông Triều • 500m²</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item animate delay-2">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=600&auto=format&fit=crop"
+                        alt="Trần trang trí cao cấp">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h4>Trần Trang Trí – Nhà Hàng</h4>
+                            <span>Hạ Long • 300m²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px">
+                <a href="du-an.html" class="btn btn-outline-dark btn-lg"><i class="fa-solid fa-images"></i> Xem Tất Cả
+                    Dự Án</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="section process-bg">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag" style="background:rgba(249,115,22,.2);color:#fb923c">Quy trình</div>
+                <h2 style="color:#fff">Quy Trình Thi Công <span style="color:#fb923c">6 Bước</span></h2>
+                <p style="color:rgba(255,255,255,.65)">Chuẩn hóa từng bước để đảm bảo chất lượng tốt nhất</p>
+            </div>
+            <div class="process-grid">
+                <div class="proc-item animate delay-1">
+                    <div class="proc-num">1</div>
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h4>Khảo Sát</h4>
+                    <p>Đến tận nơi đo đạc, tư vấn miễn phí</p>
+                </div>
+                <div class="proc-item animate delay-2">
+                    <div class="proc-num">2</div>
+                    <i class="fa-solid fa-file-contract"></i>
+                    <h4>Ký Hợp Đồng</h4>
+                    <p>Báo giá rõ ràng, ký hợp đồng bảo vệ quyền lợi</p>
+                </div>
+                <div class="proc-item animate delay-3">
+                    <div class="proc-num">3</div>
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <h4>Bật Mực – Định Vị</h4>
+                    <p>Máy Laser 12 tia, chính xác tuyệt đối</p>
+                </div>
+                <div class="proc-item animate delay-1">
+                    <div class="proc-num">4</div>
+                    <i class="fa-solid fa-hammer"></i>
+                    <h4>Lắp Khung Xương</h4>
+                    <p>Vĩnh Tường chính hãng, đúng chuẩn kỹ thuật</p>
+                </div>
+                <div class="proc-item animate delay-2">
+                    <div class="proc-num">5</div>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Bắn Tấm & Xử Lý Nối</h4>
+                    <p>3 lớp bột bả, chống nứt tối ưu</p>
+                </div>
+                <div class="proc-item animate delay-3">
+                    <div class="proc-num">6</div>
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h4>Nghiệm Thu & Bàn Giao</h4>
+                    <p>Kiểm tra kỹ lưỡng, bàn giao phiếu bảo hành</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Đánh giá</div>
+                <h2>Khách Hàng Nói Gì Về <span>Chúng Tôi</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate delay-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Đội thi công rất nhiệt tình và chuyên nghiệp. Trần nhà tôi làm xong rất
+                        đẹp, thợ làm sạch sẽ, không để lại rác bụi. Giá cả hợp lý, không phát sinh thêm xu nào."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">H</div>
+                        <div class="testimonial-author-info">
+                            <strong>Chị Nguyễn Bích Hoa</strong>
+                            <span>Chung cư Vinhomes Hạ Long</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Mình thuê thi công vách ngăn văn phòng, kết quả rất tốt. Cách âm tốt,
+                        hoàn thiện đẹp. Đặc biệt là thời gian thi công nhanh, không ảnh hưởng đến công việc."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#F97316,#ea6000)">T
+                        </div>
+                        <div class="testimonial-author-info">
+                            <strong>Anh Trần Minh Tuấn</strong>
+                            <span>Văn phòng tại Cẩm Phả</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Lần đầu làm nhà, được tư vấn rất tận tình từ A đến Z. Phòng sạch của
+                        nhà máy mình hoàn thành đúng tiến độ, chất lượng đạt chuẩn ISO. Cảm ơn team rất nhiều!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">L
+                        </div>
+                        <div class="testimonial-author-info">
+                            <strong>Anh Phạm Văn Long</strong>
+                            <span>Nhà máy tại Đông Triều</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Sẵn Sàng Thi Công Công Trình Của Bạn?</h2>
+                    <p>Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết trong vòng 24h</p>
+                </div>
+                <div class="cta-btns">
+                    <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
+                            class="fa-solid fa-file-invoice"></i> Nhận Báo Giá</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT QUICK ===== -->
+    <section class="section contact-quick">
+        <div class="container">
+            <div class="contact-quick-inner">
+                <div>
+                    <div class="section-tag" style="margin-bottom:16px">Liên hệ nhanh</div>
+                    <h2
+                        style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);margin-bottom:20px;line-height:1.25">
+                        Khảo Sát Miễn Phí – <span style="color:#0B3D8E">Tư Vấn Ngay</span></h2>
+                    <p style="color:#64748B;margin-bottom:36px">Chúng tôi sẵn sàng lắng nghe và đưa ra giải pháp tốt
+                        nhất cho công trình của bạn</p>
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-method-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-method-info">
+                                <strong>Hotline (24/7)</strong>
+                                <a href="tel:0837811188">0837.811.188</a>
+                                <a href="tel:0912345678">0912.345.678</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-method-info">
+                                <strong>Địa chỉ</strong>
+                                <span>Tổ 77B, Khu 5B, Phường Hồng Gai, TP. Hạ Long, Quảng Ninh</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="contact-method-info">
+                                <strong>Giờ làm việc</strong>
+                                <span>Thứ 2 – Thứ 7: 7:00 – 18:00</span>
+                                <span>Chủ nhật: 8:00 – 12:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-box animate">
+                    <h3>📋 Để Lại Thông Tin</h3>
+                    <form id="quoteForm">
                         <div class="form-group">
-                            <label for="survey-address">Địa Chỉ Công Trình *</label>
-                            <input type="text" id="survey-address" class="form-control"
-                                placeholder="123 Đường ABC, Quận X, TP.HCM" required>
+                            <label class="form-label">Họ và Tên <span>*</span></label>
+                            <input type="text" id="name" class="form-control" placeholder="Nguyễn Văn A" required>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="survey-time">Thời Gian Mong Muốn</label>
-                                <select id="survey-time" class="form-control">
-                                    <option value="">Chọn khung giờ</option>
-                                    <option value="morning">Sáng (8h - 12h)</option>
-                                    <option value="afternoon">Chiều (13h - 17h)</option>
-                                    <option value="evening">Tối (18h - 20h)</option>
-                                    <option value="weekend">Cuối tuần</option>
-                                </select>
+                                <label class="form-label">Số Điện Thoại <span>*</span></label>
+                                <input type="tel" id="phone" class="form-control" placeholder="0912 345 678" required>
                             </div>
                             <div class="form-group">
-                                <label for="survey-area">Diện Tích (m²)</label>
-                                <input type="number" id="survey-area" class="form-control" placeholder="Vd: 30" min="5"
-                                    max="500">
+                                <label class="form-label">Dịch Vụ</label>
+                                <select id="service" class="form-control">
+                                    <option value="">Chọn dịch vụ</option>
+                                    <option>Trần thạch cao</option>
+                                    <option>Vách thạch cao</option>
+                                    <option>Trần trang trí</option>
+                                    <option>Panel & Phòng sạch</option>
+                                    <option>Vách compact WC</option>
+                                </select>
                             </div>
                         </div>
-                        <!-- Honeypot -->
-                        <input type="text" name="website" id="survey-website" class="hidden" tabindex="-1"
-                            autocomplete="off" aria-label="Bot field">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Đặt Lịch Miễn Phí
+                        <div class="form-group">
+                            <label class="form-label">Mô tả công trình</label>
+                            <textarea id="message" class="form-control"
+                                placeholder="VD: Trần phòng khách 30m², cần tư vấn mẫu..."
+                                style="min-height:100px"></textarea>
+                        </div>
+                        <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off">
+                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
+                            <i class="fa-solid fa-paper-plane"></i> Gửi Yêu Cầu Tư Vấn
                         </button>
-                        <p class="form-note">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            Hoàn toàn miễn phí, không ràng buộc. Huỷ bất cứ lúc nào.
-                        </p>
+                        <p style="margin-top:12px;font-size:12px;color:#94a3b8;text-align:center"><i
+                                class="fa-solid fa-lock"></i> Thông tin của bạn được bảo mật tuyệt đối</p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>CÂU HỎI THƯỜNG GẶP</h2>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h3>Trần thạch cao có bị nứt không? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p class="faq-answer">Trần thạch cao có thể bị nứt ở mối nối nếu thi công không đúng kỹ thuật. Chúng
-                        tôi sử dụng băng keo lưới chuyên dụng và xử lý mối nối 3 lớp bột bả, cùng hệ khung xương Vĩnh
-                        Tường chắc chắn để triệt tiêu nguy cơ này. Cam kết bảo hành nứt trần.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Có phát sinh chi phí không? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p class="faq-answer">Chúng tôi cam kết KHÔNG phát sinh chi phí nếu không có thay đổi từ phía chủ
-                        nhà. Báo giá ban đầu là trọn gói theo khối lượng thực tế.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Trần thạch cao có chịu nước không? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p class="faq-answer">Thạch cao tiêu chuẩn kỵ nước. Với khu vực ẩm thấp (nhà vệ sinh, bếp), chúng
-                        tôi tư vấn sử dụng <strong>Tấm thạch cao chịu ẩm (lõi xanh)</strong> hoặc tấm Duraflex chịu nước
-                        tuyệt đối để đảm bảo độ bền.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Thi công trong bao lâu thì xong? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p class="faq-answer">Tùy vào diện tích. Ví dụ: Phòng khách 30m2 thường hoàn thiện phần thô trong 1
-                        ngày và sơn bả trong 1 ngày tiếp theo (chờ bột khô).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="contact-section" id="bao-gia">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="text-white">ĐĂNG KÝ NHẬN BÁO GIÁ</h2>
-                <p class="text-light-gray">Để lại thông tin, kỹ thuật viên sẽ gọi lại tư vấn trong 5-10 phút.</p>
-            </div>
-            <div class="form-container">
-                <form id="quoteForm">
-                    <div class="form-group">
-                        <label for="name">Họ và Tên *</label>
-                        <input type="text" id="name" class="form-control" placeholder="Nhập tên của bạn" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Số Điện Thoại *</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="Nhập số điện thoại" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Công trình của bạn <span class="optional-label">(tùy chọn)</span></label>
-                        <textarea id="message" class="form-control"
-                            placeholder="VD: Trần phòng khách 30m² | Vách ngăn phòng ngủ"></textarea>
-                    </div>
-                    <!-- Honeypot anti-spam -->
-                    <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off"
-                        aria-label="Bot field">
-                    <button type="submit" class="btn btn-primary btn-full-width">Nhận Tư Vấn & Báo
-                        Giá</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>CÔNG TY TNHH XD & TM DL QUẢNG NINH</h3>
-                    <p class="footer-tagline">"KIẾN TẠO KHÔNG GIAN - MANG LẠI HẠNH PHÚC"</p>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-user-tie"></i>
-                            <div>
-                                <strong>Đại diện:</strong> Bà Nguyễn Thị Bích Hằng (Giám đốc)
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <div>
-                                <strong>Mã số thuế:</strong> 5702148694
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-building-columns"></i>
-                            <div>
-                                <strong>Tài khoản:</strong> 5702148694<br>EXIMBANK – CN Quảng Ninh
-                            </div>
-                        </li>
-                    </ul>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/assets/images/logo.jpg" alt="Trần Vách Quảng Ninh">
+                        <div class="footer-logo-text">
+                            <span class="name">Trần Vách Quảng Ninh</span>
+                            <span class="sub">Thi Công Chuyên Nghiệp</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh. Bảo
+                        hành 10 năm, không phát sinh, đúng tiến độ.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="footer-social"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://zalo.me/0837811188" class="footer-social"
+                            style="font-weight:900;font-size:12px">Zalo</a>
+                    </div>
                 </div>
-
-                <div class="footer-section">
-                    <h4>LIÊN HỆ</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <strong>Địa chỉ:</strong><br>
-                                Tổ 77B, khu 5B, phường Hồng Gai, tỉnh Quảng Ninh
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <div>
-                                <strong>Hotline:</strong><br>
-                                <a href="tel:0912345678">0912.345.678</a> -
-                                <a href="tel:0837811188">0837.811.188</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <strong>Email:</strong><br>
-                                <a href="mailto:contact@thachcaopro.vn">contact@thachcaopro.vn</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="footer-col">
+                    <h4>Dịch Vụ</h4>
+                    <div class="footer-links">
+                        <a href="thi-cong-tran-thach-cao.html"><i class="fa-solid fa-chevron-right"></i> Trần Thạch
+                            Cao</a>
+                        <a href="thi-cong-vach-thach-cao.html"><i class="fa-solid fa-chevron-right"></i> Vách Thạch
+                            Cao</a>
+                        <a href="tran-trang-tri.html"><i class="fa-solid fa-chevron-right"></i> Trần Trang Trí</a>
+                        <a href="phao-chi-pu.html"><i class="fa-solid fa-chevron-right"></i> Panel & Phòng Sạch</a>
+                        <a href="vach-compact.html"><i class="fa-solid fa-chevron-right"></i> Vách Compact WC</a>
+                    </div>
                 </div>
-
-                <div class="footer-section">
-                    <h4>DỊCH VỤ</h4>
-                    <ul class="footer-links">
-                        <li><a href="thi-cong-tran-thach-cao.html">Thi công trần, vách thạch cao</a></li>
-                        <li><a href="phao-chi-pu.html">Trần trang trí</a></li>
-                        <li><a href="tel:0912345678">Trần vách Panel, phòng sạch</a></li>
-                        <li><a href="tel:0912345678">Vách compact wc</a></li>
-                    </ul>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <div class="footer-links">
+                        <a href="gioi-thieu.html"><i class="fa-solid fa-chevron-right"></i> Giới Thiệu</a>
+                        <a href="du-an.html"><i class="fa-solid fa-chevron-right"></i> Dự Án Tiêu Biểu</a>
+                        <a href="bao-gia-chi-tiet.html"><i class="fa-solid fa-chevron-right"></i> Bảng Báo Giá</a>
+                        <a href="tin-tuc.html"><i class="fa-solid fa-chevron-right"></i> Tin Tức</a>
+                        <a href="lien-he.html"><i class="fa-solid fa-chevron-right"></i> Liên Hệ</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i>
+                        <div><a href="tel:0837811188">0837.811.188</a><br><a href="tel:0912345678">0912.345.678</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Tổ 77B, Khu 5B, P.
+                            Hồng Gai, TP. Hạ Long, Quảng Ninh</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>T2–T7: 7:00–18:00 | CN:
+                            8:00–12:00</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-file-invoice-dollar"></i><span>MST:
+                            5702148694<br>EXIM BANK – CN Quảng Ninh</span></div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2024 Văn Tiến Hùng Provipp. All rights reserved.</p>
-                <p class="footer-disclaimer">
-                    Website đang trong giai đoạn hoàn thiện. Thông tin có thể thay đổi.
-                </p>
+                <p>© 2026 Trần Vách Quảng Ninh. All rights reserved.</p>
+                <p>Thiết kế bởi <a href="#">Web Studio</a> | <a href="#">Chính sách bảo mật</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Bottom Bar -->
-    <div class="mobile-bottom-bar">
-        <a href="tel:0912345678" class="btn btn-primary"><i class="fa-solid fa-phone"></i> GỌI</a>
-        <a href="https://zalo.me/0912345678" target="_blank" rel="noopener" class="btn btn-zalo-mobile"><i
-                class="fa-brands fa-yahoo"></i> ZALO</a>
-        <a href="#bao-gia" class="btn btn-success"><i class="fa-regular fa-comment-dots"></i> BÁO GIÁ</a>
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <div class="float-phone">
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn" title="Chat Zalo"
+            style="font-size:16px;font-weight:900">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn" title="Gọi ngay"><i
+                class="fa-solid fa-phone"></i></a>
     </div>
 
-    <!-- Floating Contact Buttons (Desktop) -->
-    <div class="floating-contacts">
-        <a href="https://wa.me/84912345678" target="_blank" rel="noopener" class="whatsapp-float" title="Chat WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://zalo.me/0912345678" target="_blank" rel="noopener" class="zalo-float" title="Chat Zalo">
-            <i class="fa-brands fa-yahoo"></i>
-        </a>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="scroll-top" title="Lên đầu trang">
-        <i class="fa-solid fa-arrow-up"></i>
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <!-- Success Modal -->
-    <div id="successModal" class="success-modal hidden">
-        <div class="success-modal-content">
-            <div class="success-icon">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <h3>Gửi Yêu Cầu Thành Công!</h3>
-            <p>Cảm ơn bạn đã quan tâm đến dịch vụ của chúng tôi.</p>
-            <div class="success-steps">
-                <div class="step">
-                    <i class="fa-solid fa-1"></i>
-                    <span>Yêu cầu đã được ghi nhận</span>
-                </div>
-                <div class="step">
-                    <i class="fa-solid fa-2"></i>
-                    <span>Kỹ thuật viên sẽ gọi trong <strong>5-10 phút</strong></span>
-                </div>
-                <div class="step">
-                    <i class="fa-solid fa-3"></i>
-                    <span>Nhận tư vấn & báo giá chi tiết</span>
-                </div>
-            </div>
-            <div class="success-actions">
-                <button onclick="closeSuccessModal()" class="btn btn-primary">Đóng</button>
-                <a href="tel:0912345678" class="btn btn-accent">
-                    <i class="fa-solid fa-phone"></i> Hoặc Gọi Ngay
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox-overlay">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" class="lightbox-image" alt="Lightbox Image">
-    </div>
-
-    <script src="js/autonomous-agent.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/script.js"></script>
 </body>
 
