@@ -4,214 +4,769 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo Giá Thi Công Trần Thạch Cao 2024 | Văn Tiến Hùng Provipp</title>
+    <title>Bảng Báo Giá Thi Công | Trần Vách Quảng Ninh</title>
     <meta name="description"
-        content="Bảng báo giá trần thạch cao trọn gói 2024. Giá trần thả, trần chìm Vĩnh Tường, Hà Nội. Cam kết không phát sinh.">
+        content="Bảng báo giá thi công trần thạch cao, vách thạch cao, trần trang trí Quảng Ninh 2025. Giá trọn gói, rõ ràng, không phát sinh. Nhận báo giá miễn phí ngay!">
+    <link rel="icon" href="/assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .pricing-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .pricing-content {}
+
+        .pricing-sidebar {
+            position: sticky;
+            top: 96px;
+        }
+
+        .price-block {
+            margin-bottom: 48px;
+        }
+
+        .price-block-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .price-block-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .price-block-icon.blue {
+            background: rgba(11, 61, 142, .1);
+            color: #0B3D8E;
+        }
+
+        .price-block-icon.orange {
+            background: rgba(249, 115, 22, .1);
+            color: #F97316;
+        }
+
+        .price-block-icon.green {
+            background: rgba(22, 163, 74, .1);
+            color: #16a34a;
+        }
+
+        .price-block-title h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 2px;
+        }
+
+        .price-block-title p {
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        .price-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, .07);
+            border: 1px solid #E2E8F0;
+            margin-bottom: 16px;
+        }
+
+        .price-tbl thead tr {
+            background: linear-gradient(90deg, #0B3D8E, #1553ba);
+        }
+
+        .price-tbl th {
+            color: #fff;
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .price-tbl td {
+            padding: 13px 18px;
+            font-size: 14px;
+            border-bottom: 1px solid #F1F5F9;
+            color: #334155;
+            vertical-align: top;
+        }
+
+        .price-tbl tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-tbl tr:hover td {
+            background: #F8FAFC;
+        }
+
+        .ph {
+            font-weight: 800;
+            color: #F97316;
+            white-space: nowrap;
+        }
+
+        .price-note {
+            background: #FFF7ED;
+            border: 1px solid #FED7AA;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 13px;
+            color: #92400E;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .price-note i {
+            color: #F97316;
+            font-size: 16px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+
+        /* SIDEBAR FORM */
+        .sidebar-form-box {
+            background: #fff;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, .12);
+            border: 2px solid #E2E8F0;
+        }
+
+        .sidebar-form-box h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 6px;
+        }
+
+        .sidebar-form-box p {
+            font-size: 13px;
+            color: #64748B;
+            margin-bottom: 24px;
+        }
+
+        .calc-box {
+            background: #F8FAFC;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .calc-box h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .calc-result {
+            background: #0B3D8E;
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .calc-result strong {
+            display: block;
+            font-size: 22px;
+            font-weight: 900;
+            color: #fb923c;
+        }
+
+        .calc-result span {
+            font-size: 12px;
+            opacity: .8;
+        }
+
+        /* GUARANTEE CARDS */
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .guarantee-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .guarantee-item i {
+            font-size: 32px;
+            color: #0B3D8E;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .guarantee-item h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .guarantee-item p {
+            font-size: 11px;
+            color: #64748B;
+        }
+
+        @media(max-width:1024px) {
+            .pricing-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-sidebar {
+                position: static;
+            }
+
+            .guarantee-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:768px) {
+            .price-tbl {
+                font-size: 12px;
+            }
+
+            .price-tbl th,
+            .price-tbl td {
+                padding: 10px 12px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .guarantee-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header-modern">
-        <div class="container header-content">
-            <a href="index.html" class="logo-modern">
-                <i class="fa-solid fa-layer-group logo-icon"></i>
-                <div class="logo-text">
-                    <span class="logo-brand">Văn Tiến Hùng <span class="text-accent">Provipp</span></span>
-                    <span class="logo-tagline">Thạch Cao, Panel & Compact</span>
-                </div>
-            </a>
-            <div class="header-right">
-                <div class="header-trust-badge"><i class="fa-solid fa-shield-halved"></i> <span>Bảo Hành 5 Năm</span>
-                </div>
-                <a href="tel:0912345678" class="hotline-modern">
-                    <div class="hotline-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                    <div class="hotline-text"><span class="hotline-label">Tư vấn miễn phí</span><span
-                            class="hotline-number">0912.345.678</span></div>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                    <div class="nav-logo-text"><span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng
+                            Ninh</span><span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    </div>
                 </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Trang Chủ</a>
+                    <a href="gioi-thieu.html" class="nav-link">Giới Thiệu</a>
+                    <a href="dich-vu.html" class="nav-link">Dịch Vụ</a>
+                    <a href="du-an.html" class="nav-link">Dự Án</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-link active">Báo Giá</a>
+                    <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
+                    <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+                </div>
+                <div class="nav-cta"><a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a><a href="#form-baogía" class="nav-btn">Nhận Báo Giá</a></div>
+                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
+                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
             </div>
         </div>
-    </header>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+            Trang Chủ</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+            Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+            Dự Án</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
+                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
+                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+    </div>
 
-    <!-- Page Header -->
-    <div class="page-header bg-project2">
+    <section class="page-hero">
         <div class="container">
-            <h1>BẢNG BÁO GIÁ THI CÔNG TRỌN GÓI 2024</h1>
-            <p>Minh bạch - Cạnh tranh - Không phát sinh</p>
+            <div class="page-hero-content animate">
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><i
+                        class="fa-solid fa-chevron-right"></i><span>Báo Giá</span></div>
+                <h1>Bảng Báo Giá 2025</h1>
+                <p>Đơn giá rõ ràng – Trọn gói vật tư & nhân công – Không phát sinh – Bảo hành 10 năm</p>
+                <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:24px">
+                    <div
+                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
+                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Giá cập nhật tháng 3/2025</div>
+                    <div
+                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
+                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Áp dụng tại Quảng Ninh & lân cận
+                    </div>
+                    <div
+                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
+                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Tư vấn và báo giá miễn phí</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <div style="background:#0F172A;padding:40px 0">
+        <div class="container">
+            <div class="guarantee-grid">
+                <div class="guarantee-item animate delay-1"><i class="fa-solid fa-tags"></i>
+                    <h4>Giá Trọn Gói</h4>
+                    <p>Bao gồm vật tư + nhân công + bảo hành</p>
+                </div>
+                <div class="guarantee-item animate delay-2"><i class="fa-solid fa-ban"></i>
+                    <h4>Không Phát Sinh</h4>
+                    <p>Cam kết theo hợp đồng đã ký</p>
+                </div>
+                <div class="guarantee-item animate delay-3"><i class="fa-solid fa-shield-halved"></i>
+                    <h4>Bảo Hành 10 Năm</h4>
+                    <p>Bằng văn bản có giá trị pháp lý</p>
+                </div>
+                <div class="guarantee-item animate delay-4"><i class="fa-solid fa-plane-arrival"></i>
+                    <h4>Miễn Phí Vận Chuyển</h4>
+                    <p>Trong phạm vi TP. Hạ Long và lân cận</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="container detail-content">
+    <!-- MAIN PRICING -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="pricing-layout">
 
-        <div class="pricing-section">
-            <h2 class="pricing-header">1. Báo Giá Phần Thô (Chưa Sơn Bả)</h2>
-            <div class="pricing-table-wrapper">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Loại Trần</th>
-                            <th>Khung Xương</th>
-                            <th>Tấm Thạch Cao</th>
-                            <th>Đơn Giá / m²</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2"><strong>Trần phẳng</strong></td>
-                            <td>Hà Nội / Vĩnh Tường Eco</td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">155.000đ - 165.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">175.000đ - 185.000đ</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2"><strong>Trần giật cấp</strong></td>
-                            <td>Hà Nội / Vĩnh Tường Eco</td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">165.000đ - 175.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
-                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
-                            <td class="price-highlight">185.000đ - 195.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Trần thả (60x60)</strong></td>
-                            <td>Vĩnh Tường (TopLINE)</td>
-                            <td>Tấm phủ nhựa PVC</td>
-                            <td class="price-highlight">150.000đ - 165.000đ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <!-- TABLES -->
+                <div class="pricing-content">
 
-            <h2 class="pricing-header-secondary">2. Báo Giá Sơn Bả Hoàn Thiện (Cộng thêm)</h2>
-            <div class="pricing-table-wrapper">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Hạng Mục</th>
-                            <th>Vật Tư Sơn</th>
-                            <th>Đơn Giá / m²</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Sơn Kinh Tế</strong></td>
-                            <td>Bột bả thạch cao + Sơn Maxilite/Vatex (Trắng)</td>
-                            <td class="price-highlight">60.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sơn Cao Cấp</strong></td>
-                            <td>Bột bả thạch cao + Sơn Dulux/Jotun (Trắng)</td>
-                            <td class="price-highlight">80.000đ - 90.000đ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <!-- TRẦN THẠCH CAO -->
+                    <div class="price-block animate">
+                        <div class="price-block-title">
+                            <div class="price-block-icon blue"><i class="fa-solid fa-layer-group"></i></div>
+                            <div>
+                                <h3>Trần Thạch Cao</h3>
+                                <p>Giá chưa gồm sơn bả · Áp dụng diện tích > 30m²</p>
+                            </div>
+                        </div>
+                        <table class="price-tbl">
+                            <thead>
+                                <tr>
+                                    <th>Loại Trần</th>
+                                    <th>Khung Xương</th>
+                                    <th>Tấm TC</th>
+                                    <th>Đơn Giá /m²</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Trần phẳng</strong></td>
+                                    <td>Hà Nội / VT Eco</td>
+                                    <td>Gyproc 9mm</td>
+                                    <td class="ph">155.000 – 165.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trần phẳng cao cấp</strong></td>
+                                    <td>Vĩnh Tường Basi/Tika</td>
+                                    <td>Gyproc 9mm</td>
+                                    <td class="ph">175.000 – 185.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trần giật cấp</strong></td>
+                                    <td>VT Eco</td>
+                                    <td>Gyproc 9mm</td>
+                                    <td class="ph">165.000 – 175.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trần giật cấp cao cấp</strong></td>
+                                    <td>Vĩnh Tường Basi/Tika</td>
+                                    <td>Gyproc 9mm</td>
+                                    <td class="ph">185.000 – 200.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trần chống ẩm</strong></td>
+                                    <td>Vĩnh Tường Basi/Tika</td>
+                                    <td>Gyproc AQUA lõi xanh</td>
+                                    <td class="ph">200.000 – 220.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trần thả (60x60)</strong></td>
+                                    <td>VT TopLine</td>
+                                    <td>Tấm phủ nhựa PVC</td>
+                                    <td class="ph">150.000 – 165.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="price-note"><i class="fa-solid fa-circle-info"></i>
+                            <div>Tấm thạch cao chống cháy (lõi hồng): cộng thêm 30.000đ/m². Dưới 30m²: thương lượng theo
+                                thực tế. Giá chưa bao gồm VAT.</div>
+                        </div>
+                    </div>
 
-            <div class="pricing-note">
-                <h3><i class="fa-solid fa-circle-info"></i> Ghi Chú Quan Trọng:</h3>
-                <ul>
-                    <li>Giá trên chưa bao gồm thuế VAT (10%).</li>
-                    <li>Đơn giá áp dụng cho công trình tại khu vực TP.HCM.</li>
-                    <li>Đối với công trình có diện tích < 30m², giá sẽ được thỏa thuận theo thực tế.</li>
-                    <li>Bảo hành khung xương vĩnh viễn, tấm thạch cao theo tiêu chuẩn nhà sản xuất.</li>
-                </ul>
-            </div>
+                    <!-- SƠN BẢ -->
+                    <div class="price-block animate">
+                        <div class="price-block-title">
+                            <div class="price-block-icon orange"><i class="fa-solid fa-paint-roller"></i></div>
+                            <div>
+                                <h3>Sơn Bả Hoàn Thiện</h3>
+                                <p>Cộng thêm vào đơn giá trần thô · Giá /m² trần</p>
+                            </div>
+                        </div>
+                        <table class="price-tbl">
+                            <thead>
+                                <tr>
+                                    <th>Gói Sơn</th>
+                                    <th>Vật Tư Sư Dụng</th>
+                                    <th>Đơn Giá /m²</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Gói Kinh Tế</strong></td>
+                                    <td>Bột bả thạch cao + Sơn Maxilite trắng 2 lớp</td>
+                                    <td class="ph">60.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gói Tiêu Chuẩn</strong></td>
+                                    <td>Bột bả + Sơn Vatex/Mykolor trắng</td>
+                                    <td class="ph">70.000 – 75.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gói Cao Cấp</strong></td>
+                                    <td>Bột bả + Sơn Dulux WeatherShield trắng</td>
+                                    <td class="ph">80.000 – 90.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gói Premium</strong></td>
+                                    <td>Bột bả + Sơn Jotun Majestic trắng/màu</td>
+                                    <td class="ph">90.000 – 110.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-            <div class="pricing-cta-container">
-                <a href="tel:0912345678" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> GỌI TƯ VẤN
-                    NGAY</a>
+                    <!-- VÁCH THẠCH CAO -->
+                    <div class="price-block animate">
+                        <div class="price-block-title">
+                            <div class="price-block-icon blue"><i class="fa-solid fa-border-all"></i></div>
+                            <div>
+                                <h3>Vách Thạch Cao</h3>
+                                <p>Đơn giá /m² vách đứng · Chưa bao gồm sơn bả</p>
+                            </div>
+                        </div>
+                        <table class="price-tbl">
+                            <thead>
+                                <tr>
+                                    <th>Loại Vách</th>
+                                    <th>Cấu Tạo</th>
+                                    <th>Đơn Giá /m²</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Vách đơn 75mm</strong></td>
+                                    <td>1 lớp thạch cao mỗi mặt + khung 75mm</td>
+                                    <td class="ph">190.000 – 210.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vách đôi 125mm</strong></td>
+                                    <td>2 lớp thạch cao mỗi mặt + khung 125mm</td>
+                                    <td class="ph">230.000 – 260.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vách cách âm</strong></td>
+                                    <td>Vách đôi + bông thủy tinh 50mm</td>
+                                    <td class="ph">280.000 – 320.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vách chống ẩm (WC)</strong></td>
+                                    <td>Thạch cao lõi xanh + khung inox</td>
+                                    <td class="ph">250.000 – 280.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- VÁCH COMPACT -->
+                    <div class="price-block animate">
+                        <div class="price-block-title">
+                            <div class="price-block-icon orange"><i class="fa-solid fa-restroom"></i></div>
+                            <div>
+                                <h3>Vách Compact WC</h3>
+                                <p>Giá trọn bộ 01 cabin WC · Bao gồm cánh + vách + phụ kiện inox</p>
+                            </div>
+                        </div>
+                        <table class="price-tbl">
+                            <thead>
+                                <tr>
+                                    <th>Loại</th>
+                                    <th>Độ Dày</th>
+                                    <th>Phụ Kiện</th>
+                                    <th>Giá/Cabin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Compact tiêu chuẩn</strong></td>
+                                    <td>13mm HPL</td>
+                                    <td>Inox 304 mờ</td>
+                                    <td class="ph">Liên hệ báo giá</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Compact compact cao cấp</strong></td>
+                                    <td>13mm HPL</td>
+                                    <td>Inox 316 bóng</td>
+                                    <td class="ph">Liên hệ báo giá</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="price-note"><i class="fa-solid fa-circle-info"></i>
+                            <div>Giá vách compact phụ thuộc vào số cabin, kích thước, màu sắc và phụ kiện. Liên hệ để
+                                nhận báo giá chi tiết nhất.</div>
+                        </div>
+                    </div>
+
+                </div><!-- /pricing-content -->
+
+                <!-- SIDEBAR FORM -->
+                <div class="pricing-sidebar" id="form-baogía">
+                    <div class="sidebar-form-box animate delay-1">
+                        <h3>📋 Nhận Báo Giá Ngay</h3>
+                        <p>Điền thông tin để nhận báo giá chi tiết trong 30 phút</p>
+
+                        <!-- QUICK CALCULATOR -->
+                        <div class="calc-box">
+                            <h4><i class="fa-solid fa-calculator" style="color:#0B3D8E"></i> Ước Tính Nhanh</h4>
+                            <div class="form-group" style="margin-bottom:12px">
+                                <label class="form-label" style="font-size:12px">Diện tích (m²)</label>
+                                <input type="number" id="calcArea" class="form-control" placeholder="Vd: 50" min="1"
+                                    oninput="calcPrice()">
+                            </div>
+                            <div class="form-group" style="margin-bottom:12px">
+                                <label class="form-label" style="font-size:12px">Loại trần</label>
+                                <select id="calcType" class="form-control" onchange="calcPrice()">
+                                    <option value="0">-- Chọn loại --</option>
+                                    <option value="160">Trần phẳng (Eco)</option>
+                                    <option value="180">Trần phẳng (Basi/Tika)</option>
+                                    <option value="190">Trần giật cấp (Eco)</option>
+                                    <option value="192">Trần giật cấp (Basi/Tika)</option>
+                                    <option value="210">Trần chống ẩm</option>
+                                </select>
+                            </div>
+                            <div id="calcResult" class="calc-result">
+                                <span>Ước tính chi phí</span>
+                                <strong id="calcValue">0đ</strong>
+                                <span style="font-size:11px;opacity:.7">*Chưa tính sơn bả. Chỉ mang tính tham
+                                    khảo</span>
+                            </div>
+                        </div>
+
+                        <form id="quoteForm">
+                            <div class="form-group">
+                                <label class="form-label" style="font-size:13px">Họ và Tên <span>*</span></label>
+                                <input type="text" id="name" class="form-control" placeholder="Nguyễn Văn A" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-size:13px">Số Điện Thoại <span>*</span></label>
+                                <input type="tel" id="phone" class="form-control" placeholder="0912 345 678" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-size:13px">Dịch Vụ Cần Báo Giá</label>
+                                <select id="service" class="form-control">
+                                    <option value="">-- Chọn dịch vụ --</option>
+                                    <option>Trần thạch cao</option>
+                                    <option>Vách thạch cao</option>
+                                    <option>Trần trang trí</option>
+                                    <option>Panel & Phòng sạch</option>
+                                    <option>Vách compact WC</option>
+                                    <option>Nhiều dịch vụ</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-size:13px">Mô tả công trình</label>
+                                <textarea id="message" class="form-control" style="min-height:90px"
+                                    placeholder="Diện tích, địa chỉ, yêu cầu đặc biệt..."></textarea>
+                            </div>
+                            <input type="text" name="website" id="website" class="hidden" tabindex="-1"
+                                autocomplete="off">
+                            <button type="submit" class="btn btn-primary btn-lg"
+                                style="width:100%;justify-content:center"><i class="fa-solid fa-paper-plane"></i> Gửi
+                                Yêu Cầu Báo Giá</button>
+                        </form>
+                        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+                            <a href="tel:0837811188" class="btn btn-accent" style="justify-content:center"><i
+                                    class="fa-solid fa-phone"></i> Gọi Ngay: 0837.811.188</a>
+                            <a href="https://zalo.me/0837811188" class="btn"
+                                style="background:#0068FF;color:#fff;justify-content:center"><i
+                                    class="fa-brands fa-rocketchat"></i> Chat Zalo Ngay</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- FAQ PRICING -->
+    <section class="section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>CÔNG TY TNHH XD & TM DL QUẢNG NINH</h3>
-                    <p class="footer-tagline">"KIẾN TẠO KHÔNG GIAN - MANG LẠI HẠNH PHÚC"</p>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-user-tie"></i>
-                            <div>
-                                <strong>Đại diện:</strong> Bà Nguyễn Thị Bích Hằng (Giám đốc)
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <div>
-                                <strong>Mã số thuế:</strong> 5702148694
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-building-columns"></i>
-                            <div>
-                                <strong>Tài khoản:</strong> 5702148694<br>EXIMBANK – CN Quảng Ninh
-                            </div>
-                        </li>
-                    </ul>
+            <div class="section-title animate">
+                <div class="section-tag">Giải đáp</div>
+                <h2>Câu Hỏi Thường Gặp Về <span>Báo Giá</span></h2>
+            </div>
+            <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px">
+                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
+                    class="animate delay-1">
+                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
+                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Đơn giá đã bao gồm những
+                        gì?</h4>
+                    <p style="font-size:14px;color:#64748B;line-height:1.7">Đơn giá trọn gói bao gồm: toàn bộ vật tư
+                        (khung xương, tấm thạch cao, đinh vít, keo), nhân công thi công, bảo hành 10 năm. Không bao gồm
+                        sơn bả (có bảng giá riêng) và đèn chiếu sáng.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>LIÊN HỆ</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <strong>Địa chỉ:</strong><br>
-                                Tổ 77B, khu 5B, phường Hồng Gai, tỉnh Quảng Ninh
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <div>
-                                <strong>Hotline:</strong><br>
-                                <a href="tel:0912345678">0912.345.678</a> -
-                                <a href="tel:0837811188">0837.811.188</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <strong>Email:</strong><br>
-                                <a href="mailto:contact@thachcaopro.vn">contact@thachcaopro.vn</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
+                    class="animate delay-2">
+                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
+                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Công trình nhỏ hơn 30m² có
+                        được thi công không?</h4>
+                    <p style="font-size:14px;color:#64748B;line-height:1.7">Có! Nhưng đơn giá sẽ chênh hơn một chút do
+                        chi phí vận chuyển và thiết lập công trình không đổi. Liên hệ để được báo giá cụ thể theo thực
+                        tế.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>DỊCH VỤ</h4>
-                    <ul class="footer-links">
-                        <li><a href="thi-cong-tran-thach-cao.html">Thi công trần, vách thạch cao</a></li>
-                        <li><a href="phao-chi-pu.html">Trần trang trí</a></li>
-                        <li><a href="tel:0912345678">Trần vách Panel, phòng sạch</a></li>
-                        <li><a href="tel:0912345678">Vách compact wc</a></li>
-                    </ul>
+                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
+                    class="animate delay-3">
+                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
+                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Thanh toán theo tiến độ như
+                        thế nào?</h4>
+                    <p style="font-size:14px;color:#64748B;line-height:1.7">Thông thường: <strong>30%</strong> khi ký
+                        hợp đồng, <strong>50%</strong> khi hoàn thành 60% khối lượng, <strong>20%</strong> khi nghiệm
+                        thu bàn giao. Có thể thỏa thuận linh hoạt.</p>
+                </div>
+                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
+                    class="animate delay-4">
+                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
+                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Báo giá có mất phí không?
+                    </h4>
+                    <p style="font-size:14px;color:#64748B;line-height:1.7">HOÀN TOÀN MIỄN PHÍ. Khảo sát + tư vấn + báo
+                        giá đều không tốn bất kỳ chi phí nào. Chúng tôi chỉ nhận tiền khi bạn chính thức đồng ý ký hợp
+                        đồng thi công.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Vẫn Chưa Rõ Về Giá?</h2>
+                    <p>Gọi ngay để được chuyên gia tư vấn và báo giá CHÍNH XÁC theo công trình của bạn!</p>
+                </div>
+                <div class="cta-btns">
+                    <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a>
+                    <a href="lien-he.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
+                            class="fa-solid fa-envelope"></i> Gửi Yêu Cầu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                        <div class="footer-logo-text"><span class="name">Trần Vách Quảng Ninh</span><span
+                                class="sub">Thi Công Chuyên Nghiệp</span></div>
+                    </div>
+                    <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh. Bảo
+                        hành 10 năm.</p>
+                    <div class="footer-socials"><a href="#" class="footer-social"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Dịch Vụ</h4>
+                    <div class="footer-links"><a href="thi-cong-tran-thach-cao.html"><i
+                                class="fa-solid fa-chevron-right"></i> Trần Thạch Cao</a><a
+                            href="thi-cong-vach-thach-cao.html"><i class="fa-solid fa-chevron-right"></i> Vách Thạch
+                            Cao</a><a href="phao-chi-pu.html"><i class="fa-solid fa-chevron-right"></i> Panel & Phòng
+                            Sạch</a><a href="vach-compact.html"><i class="fa-solid fa-chevron-right"></i> Vách Compact
+                            WC</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <div class="footer-links"><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Trang
+                            Chủ</a><a href="gioi-thieu.html"><i class="fa-solid fa-chevron-right"></i> Giới Thiệu</a><a
+                            href="du-an.html"><i class="fa-solid fa-chevron-right"></i> Dự Án</a><a
+                            href="tin-tuc.html"><i class="fa-solid fa-chevron-right"></i> Tin Tức</a><a
+                            href="lien-he.html"><i class="fa-solid fa-chevron-right"></i> Liên Hệ</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i>
+                        <div><a href="tel:0837811188">0837.811.188</a><a href="tel:0912345678">0912.345.678</a></div>
+                    </div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Tổ 77B, Khu 5B, P.
+                            Hồng Gai, TP. Hạ Long, QN</span></div>
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 CÔNG TY TNHH XD & TM DL QUẢNG NINH. All rights reserved.</p>
-                <p class="footer-disclaimer">
-                    <a href="index.html" class="footer-back-link">Quay lại trang chủ</a>
-                </p>
+                <p>© 2026 Trần Vách Quảng Ninh. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <div class="float-phone">
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
+            style="font-size:14px;font-weight:900">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+            class="fa-solid fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+    <script>
+        function calcPrice() {
+            const area = parseFloat(document.getElementById('calcArea').value) || 0;
+            const price = parseFloat(document.getElementById('calcType').value) || 0;
+            const result = document.getElementById('calcResult');
+            const val = document.getElementById('calcValue');
+            if (area > 0 && price > 0) {
+                const total = area * price * 1000;
+                val.textContent = total.toLocaleString('vi-VN') + 'đ';
+                result.style.display = 'block';
+            } else {
+                result.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>

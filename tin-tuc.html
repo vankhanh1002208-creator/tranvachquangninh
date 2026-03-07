@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức & Kiến Thức | Trần Vách Quảng Ninh</title>
+    <meta name="description"
+        content="Kiến thức về thi công trần thạch cao, cách chọn vật liệu, bảng giá tham khảo và các tips hữu ích từ chuyên gia Trần Vách Quảng Ninh.">
+    <link rel="icon" href="/assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+        }
+
+        .blog-main {}
+
+        .blog-sidebar {}
+
+        .article-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+            margin-bottom: 32px;
+            transition: all .3s;
+            border: 1px solid #E2E8F0;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .14);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s;
+        }
+
+        .article-card:hover .article-img {
+            transform: scale(1.03);
+        }
+
+        .article-img-wrap {
+            overflow: hidden;
+        }
+
+        .article-body {
+            padding: 28px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .article-cat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(11, 61, 142, .1);
+            color: #0B3D8E;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+        }
+
+        .article-date {
+            font-size: 12px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-body h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+
+        .article-body h2 a {
+            color: inherit;
+            transition: color .2s;
+        }
+
+        .article-body h2 a:hover {
+            color: #0B3D8E;
+        }
+
+        .article-body p {
+            color: #64748B;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .article-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0B3D8E;
+        }
+
+        .article-read i {
+            transition: transform .2s;
+        }
+
+        .article-card:hover .article-read i {
+            transform: translateX(4px);
+        }
+
+        .article-read-time {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* FEATURED POST */
+        .post-featured {
+            background: linear-gradient(135deg, #0B3D8E, #061d4a);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-featured::before {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(249, 115, 22, .15);
+        }
+
+        .post-featured-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(249, 115, 22, .2);
+            color: #fb923c;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(249, 115, 22, .3);
+        }
+
+        .post-featured h2 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .post-featured p {
+            color: rgba(255, 255, 255, .75);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .post-featured .btn {
+            font-size: 13px;
+        }
+
+        /* SIDEBAR */
+        .sidebar-widget {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F1F5F9;
+        }
+
+        .sidebar-post {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
+        .sidebar-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .sidebar-post-img {
+            width: 72px;
+            height: 64px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .sidebar-post-info h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0F172A;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-post-info h4 a {
+            color: inherit;
+        }
+
+        .sidebar-post-info h4 a:hover {
+            color: #0B3D8E;
+        }
+
+        .sidebar-post-info span {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-item {
+            padding: 6px 14px;
+            background: #F1F5F9;
+            color: #475569;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all .2s;
+        }
+
+        .tag-item:hover {
+            background: #0B3D8E;
+            color: #fff;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, #F97316, #ea6000);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .sidebar-cta h3 {
+            border: none;
+            padding: 0;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-cta p {
+            color: rgba(255, 255, 255, .85);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        @media(max-width:900px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                    <div class="nav-logo-text"><span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng
+                            Ninh</span><span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Trang Chủ</a>
+                    <a href="gioi-thieu.html" class="nav-link">Giới Thiệu</a>
+                    <a href="dich-vu.html" class="nav-link">Dịch Vụ</a>
+                    <a href="du-an.html" class="nav-link">Dự Án</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-link">Báo Giá</a>
+                    <a href="tin-tuc.html" class="nav-link active">Tin Tức</a>
+                    <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+                </div>
+                <div class="nav-cta"><a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a><a href="bao-gia-chi-tiet.html" class="nav-btn">Nhận Báo Giá</a></div>
+                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
+                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+            Trang Chủ</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+            Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+            Dự Án</a>
+        <a href="tin-tuc.html" class="mobile-nav-link"><i class="fa-solid fa-newspaper"
+                style="color:#0B3D8E;width:20px"></i> Tin Tức</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
+                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
+                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content animate">
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><i
+                        class="fa-solid fa-chevron-right"></i><span>Tin Tức</span></div>
+                <h1>Tin Tức & Kiến Thức</h1>
+                <p>Cập nhật kiến thức chuyên sâu về thi công trần vách, hướng dẫn chọn vật liệu và bí quyết từ chuyên
+                    gia</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- MAIN CONTENT -->
+                <div class="blog-main">
+
+                    <div class="post-featured animate">
+                        <div class="post-featured-tag"><i class="fa-solid fa-fire"></i> Bài viết nổi bật</div>
+                        <h2>Trần Thạch Cao Bị Nứt – Nguyên Nhân & Cách Khắc Phục Triệt Để</h2>
+                        <p>Nứt trần thạch cao là vấn đề nhiều chủ nhà gặp phải sau vài năm. Bài viết này giải thích chi
+                            tiết nguyên nhân và cách xử lý đúng kỹ thuật để trần không tái nứt.</p>
+                        <a href="#" class="btn btn-accent btn-sm"><i class="fa-solid fa-book-open"></i> Đọc ngay</a>
+                    </div>
+
+                    <div class="article-card animate delay-1">
+                        <div class="article-img-wrap"><img
+                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
+                                alt="Trần thạch cao" class="article-img"></div>
+                        <div class="article-body">
+                            <div class="article-meta">
+                                <span class="article-cat"><i class="fa-solid fa-layer-group"></i> Kiến Thức</span>
+                                <span class="article-date"><i class="fa-solid fa-calendar"></i> 05/03/2025</span>
+                            </div>
+                            <h2><a href="#">5 Loại Trần Thạch Cao Phổ Biến Nhất 2025 – Ưu Nhược Điểm Từng Loại</a></h2>
+                            <p>Từ trần phẳng đơn giản đến trần giật cấp phức tạp – mỗi loại có điểm mạnh riêng phù hợp
+                                với từng không gian và ngân sách. Cùng tìm hiểu để chọn đúng nhất!</p>
+                            <div class="article-footer">
+                                <a href="#" class="article-read">Đọc bài viết <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="article-read-time"><i class="fa-solid fa-clock"></i> 8 phút đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card animate delay-2">
+                        <div class="article-img-wrap"><img
+                                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                                alt="Vật liệu thạch cao" class="article-img"></div>
+                        <div class="article-body">
+                            <div class="article-meta">
+                                <span class="article-cat" style="background:rgba(249,115,22,.1);color:#F97316"><i
+                                        class="fa-solid fa-lightbulb"></i> Hướng Dẫn</span>
+                                <span class="article-date"><i class="fa-solid fa-calendar"></i> 28/02/2025</span>
+                            </div>
+                            <h2><a href="#">Cách Chọn Tấm Thạch Cao Phù Hợp Cho Từng Không Gian</a></h2>
+                            <p>Thạch cao thường, chống ẩm (lõi xanh) hay thạch cao chống cháy? Đừng mua sai – bài viết
+                                này giúp bạn hiểu rõ và chọn đúng loại cho từng vị trí trong nhà.</p>
+                            <div class="article-footer">
+                                <a href="#" class="article-read">Đọc bài viết <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="article-read-time"><i class="fa-solid fa-clock"></i> 6 phút đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card animate delay-3">
+                        <div class="article-img-wrap"><img
+                                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop"
+                                alt="Vách ngăn văn phòng" class="article-img"></div>
+                        <div class="article-body">
+                            <div class="article-meta">
+                                <span class="article-cat" style="background:rgba(22,163,74,.1);color:#16a34a"><i
+                                        class="fa-solid fa-tags"></i> Báo Giá</span>
+                                <span class="article-date"><i class="fa-solid fa-calendar"></i> 20/02/2025</span>
+                            </div>
+                            <h2><a href="#">Bảng Giá Thi Công Trần Thạch Cao Mới Nhất 2025 Tại Quảng Ninh</a></h2>
+                            <p>Cập nhật bảng giá thi công trần vách thạch cao khu vực Quảng Ninh năm 2025. Bao gồm đơn
+                                giá vật tư, nhân công và các yếu tố ảnh hưởng đến chi phí thực tế.</p>
+                            <div class="article-footer">
+                                <a href="#" class="article-read">Đọc bài viết <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="article-read-time"><i class="fa-solid fa-clock"></i> 5 phút đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card animate">
+                        <div class="article-img-wrap"><img
+                                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop"
+                                alt="Vách compact" class="article-img"></div>
+                        <div class="article-body">
+                            <div class="article-meta">
+                                <span class="article-cat"><i class="fa-solid fa-layer-group"></i> Kiến Thức</span>
+                                <span class="article-date"><i class="fa-solid fa-calendar"></i> 15/02/2025</span>
+                            </div>
+                            <h2><a href="#">Vách Compact HPL Là Gì? Tại Sao Nên Dùng Cho Nhà Vệ Sinh?</a></h2>
+                            <p>Compact HPL (High Pressure Laminate) đang dần thay thế vách nhôm truyền thống trong nhiều
+                                công trình. Tìm hiểu ưu điểm vượt trội và chi phí thực tế.</p>
+                            <div class="article-footer">
+                                <a href="#" class="article-read">Đọc bài viết <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="article-read-time"><i class="fa-solid fa-clock"></i> 7 phút đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card animate delay-1">
+                        <div class="article-img-wrap"><img
+                                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                                alt="Thi công trần" class="article-img"></div>
+                        <div class="article-body">
+                            <div class="article-meta">
+                                <span class="article-cat" style="background:rgba(249,115,22,.1);color:#F97316"><i
+                                        class="fa-solid fa-lightbulb"></i> Hướng Dẫn</span>
+                                <span class="article-date"><i class="fa-solid fa-calendar"></i> 10/02/2025</span>
+                            </div>
+                            <h2><a href="#">10 Sai Lầm Khi Thi Công Trần Thạch Cao Làm Giảm Tuổi Thọ Công Trình</a></h2>
+                            <p>Nhiều công trình trần thạch cao bị nứt, oằn, hoặc ẩm mốc chỉ sau 2-3 năm chỉ vì những lỗi
+                                kỹ thuật cơ bản. Bài viết tổng hợp 10 sai lầm phổ biến nhất cần tránh.</p>
+                            <div class="article-footer">
+                                <a href="#" class="article-read">Đọc bài viết <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="article-read-time"><i class="fa-solid fa-clock"></i> 10 phút đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SIDEBAR -->
+                <div class="blog-sidebar">
+
+                    <div class="sidebar-cta animate">
+                        <h3>🎯 Cần Tư Vấn?</h3>
+                        <p>Gọi ngay để được chuyên gia tư vấn và báo giá miễn phí</p>
+                        <a href="tel:0837811188" class="btn btn-lg"
+                            style="background:#fff;color:#F97316;width:100%;justify-content:center"><i
+                                class="fa-solid fa-phone"></i> 0837.811.188</a>
+                    </div>
+
+                    <div class="sidebar-widget animate delay-1">
+                        <h3>📰 Bài Viết Mới Nhất</h3>
+                        <div class="sidebar-post">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=150&auto=format&fit=crop"
+                                class="sidebar-post-img" alt="">
+                            <div class="sidebar-post-info">
+                                <h4><a href="#">5 Loại Trần Thạch Cao Phổ Biến Nhất 2025</a></h4><span>05/03/2025 · 8
+                                    phút đọc</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-post">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=150&auto=format&fit=crop"
+                                class="sidebar-post-img" alt="">
+                            <div class="sidebar-post-info">
+                                <h4><a href="#">Cách Chọn Tấm Thạch Cao Phù Hợp</a></h4><span>28/02/2025 · 6 phút
+                                    đọc</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-post">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=150&auto=format&fit=crop"
+                                class="sidebar-post-img" alt="">
+                            <div class="sidebar-post-info">
+                                <h4><a href="#">Bảng Giá Thi Công Trần Thạch Cao 2025</a></h4><span>20/02/2025 · 5 phút
+                                    đọc</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-post">
+                            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=150&auto=format&fit=crop"
+                                class="sidebar-post-img" alt="">
+                            <div class="sidebar-post-info">
+                                <h4><a href="#">Vách Compact HPL – Ưu Điểm Vượt Trội</a></h4><span>15/02/2025 · 7 phút
+                                    đọc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget animate delay-2">
+                        <h3>🏷️ Chủ Đề</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-item">Trần thạch cao</a>
+                            <a href="#" class="tag-item">Vách thạch cao</a>
+                            <a href="#" class="tag-item">Giá thi công</a>
+                            <a href="#" class="tag-item">Phòng sạch</a>
+                            <a href="#" class="tag-item">Vách compact</a>
+                            <a href="#" class="tag-item">Khung xương</a>
+                            <a href="#" class="tag-item">Vĩnh Tường</a>
+                            <a href="#" class="tag-item">Sơn bả</a>
+                            <a href="#" class="tag-item">Thi công nội thất</a>
+                            <a href="#" class="tag-item">Báo giá 2025</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget animate delay-3">
+                        <h3>📊 Thống Kê</h3>
+                        <div style="display:flex;flex-direction:column;gap:12px">
+                            <div
+                                style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F1F5F9">
+                                <span style="font-size:14px;color:#334155"><i class="fa-solid fa-newspaper"
+                                        style="color:#0B3D8E;width:20px"></i> Bài viết</span>
+                                <strong style="color:#0B3D8E">24 bài</strong>
+                            </div>
+                            <div
+                                style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F1F5F9">
+                                <span style="font-size:14px;color:#334155"><i class="fa-solid fa-eye"
+                                        style="color:#0B3D8E;width:20px"></i> Lượt xem</span>
+                                <strong style="color:#0B3D8E">12.4K</strong>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0">
+                                <span style="font-size:14px;color:#334155"><i class="fa-solid fa-users"
+                                        style="color:#0B3D8E;width:20px"></i> Đọc giả</span>
+                                <strong style="color:#0B3D8E">3.2K/tháng</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget animate delay-4" style="background:#F8FAFC">
+                        <h3>🏗️ Dịch Vụ Nhanh</h3>
+                        <div style="display:flex;flex-direction:column;gap:10px">
+                            <a href="thi-cong-tran-thach-cao.html"
+                                style="display:flex;align-items:center;gap:10px;padding:12px;background:#fff;border-radius:10px;border:1px solid #E2E8F0;font-size:13px;font-weight:600;color:#0F172A;transition:all .2s"
+                                onmouseover="this.style.borderColor='#0B3D8E';this.style.color='#0B3D8E'"
+                                onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0F172A'"><i
+                                    class="fa-solid fa-layer-group" style="color:#0B3D8E;width:18px"></i> Trần Thạch
+                                Cao</a>
+                            <a href="thi-cong-vach-thach-cao.html"
+                                style="display:flex;align-items:center;gap:10px;padding:12px;background:#fff;border-radius:10px;border:1px solid #E2E8F0;font-size:13px;font-weight:600;color:#0F172A;transition:all .2s"
+                                onmouseover="this.style.borderColor='#0B3D8E';this.style.color='#0B3D8E'"
+                                onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0F172A'"><i
+                                    class="fa-solid fa-border-all" style="color:#0B3D8E;width:18px"></i> Vách Thạch
+                                Cao</a>
+                            <a href="phao-chi-pu.html"
+                                style="display:flex;align-items:center;gap:10px;padding:12px;background:#fff;border-radius:10px;border:1px solid #E2E8F0;font-size:13px;font-weight:600;color:#0F172A;transition:all .2s"
+                                onmouseover="this.style.borderColor='#0B3D8E';this.style.color='#0B3D8E'"
+                                onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0F172A'"><i
+                                    class="fa-solid fa-building-user" style="color:#0B3D8E;width:18px"></i> Panel &
+                                Phòng Sạch</a>
+                            <a href="vach-compact.html"
+                                style="display:flex;align-items:center;gap:10px;padding:12px;background:#fff;border-radius:10px;border:1px solid #E2E8F0;font-size:13px;font-weight:600;color:#0F172A;transition:all .2s"
+                                onmouseover="this.style.borderColor='#0B3D8E';this.style.color='#0B3D8E'"
+                                onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0F172A'"><i
+                                    class="fa-solid fa-restroom" style="color:#0B3D8E;width:18px"></i> Vách Compact
+                                WC</a>
+                            <a href="bao-gia-chi-tiet.html"
+                                style="display:flex;align-items:center;gap:10px;padding:12px;background:#0B3D8E;border-radius:10px;font-size:13px;font-weight:700;color:#fff"><i
+                                    class="fa-solid fa-file-invoice" style="width:18px"></i> Xem Bảng Báo Giá →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Vẫn Còn Thắc Mắc?</h2>
+                    <p>Đội ngũ chuyên gia sẵn sàng giải đáp mọi câu hỏi của bạn</p>
+                </div>
+                <div class="cta-btns">
+                    <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a>
+                    <a href="lien-he.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
+                            class="fa-solid fa-envelope"></i> Gửi Câu Hỏi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                        <div class="footer-logo-text"><span class="name">Trần Vách Quảng Ninh</span><span
+                                class="sub">Thi Công Chuyên Nghiệp</span></div>
+                    </div>
+                    <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh.</p>
+                    <div class="footer-socials"><a href="#" class="footer-social"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Dịch Vụ</h4>
+                    <div class="footer-links"><a href="thi-cong-tran-thach-cao.html"><i
+                                class="fa-solid fa-chevron-right"></i> Trần Thạch Cao</a><a
+                            href="thi-cong-vach-thach-cao.html"><i class="fa-solid fa-chevron-right"></i> Vách Thạch
+                            Cao</a><a href="phao-chi-pu.html"><i class="fa-solid fa-chevron-right"></i> Panel & Phòng
+                            Sạch</a><a href="vach-compact.html"><i class="fa-solid fa-chevron-right"></i> Vách Compact
+                            WC</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <div class="footer-links"><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Trang
+                            Chủ</a><a href="gioi-thieu.html"><i class="fa-solid fa-chevron-right"></i> Giới Thiệu</a><a
+                            href="du-an.html"><i class="fa-solid fa-chevron-right"></i> Dự Án</a><a
+                            href="bao-gia-chi-tiet.html"><i class="fa-solid fa-chevron-right"></i> Báo Giá</a><a
+                            href="lien-he.html"><i class="fa-solid fa-chevron-right"></i> Liên Hệ</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i>
+                        <div><a href="tel:0837811188">0837.811.188</a></div>
+                    </div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Tổ 77B, Khu 5B, P.
+                            Hồng Gai, TP. Hạ Long, QN</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Trần Vách Quảng Ninh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="float-phone">
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
+            style="font-size:14px;font-weight:900">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+            class="fa-solid fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Thi Công | Trần Vách Quảng Ninh</title>
+    <meta name="description"
+        content="Thi công trần thạch cao, vách thạch cao, trần trang trí, panel phòng sạch, vách compact WC chuyên nghiệp tại Quảng Ninh. Bảo hành 10 năm.">
+    <link rel="icon" href="/assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* SERVICE DETAIL CARDS */
+        .srv-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .srv-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .srv-block.reverse {}
+
+        .srv-img {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .srv-img img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .srv-img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 61, 142, .9), transparent);
+            padding: 28px 24px;
+        }
+
+        .srv-img-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .srv-img-price {
+            font-size: 22px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .srv-img-price span {
+            font-size: 13px;
+            font-weight: 400;
+            opacity: .8;
+        }
+
+        .srv-content {}
+
+        .srv-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 3.5vw, 36px);
+            margin: 16px 0 14px;
+            line-height: 1.25;
+        }
+
+        .srv-content>p {
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        .srv-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .srv-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .srv-feature i {
+            color: #16a34a;
+            font-size: 16px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .srv-feature div strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 2px;
+        }
+
+        .srv-feature div span {
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        .srv-btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* PRICE TABLE */
+        .price-area {
+            background: #F1F5F9;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 100px;
+        }
+
+        .price-area h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: #0F172A;
+        }
+
+        .price-area>p {
+            color: #64748B;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .price-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+        }
+
+        .price-tbl th {
+            background: #0B3D8E;
+            color: #fff;
+            padding: 14px 18px;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .price-tbl td {
+            padding: 13px 18px;
+            font-size: 14px;
+            border-bottom: 1px solid #F1F5F9;
+            color: #334155;
+        }
+
+        .price-tbl tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-tbl tr:hover td {
+            background: #F8FAFC;
+        }
+
+        .price-hl {
+            font-weight: 700;
+            color: #F97316;
+        }
+
+        /* PROCESS (compact) */
+        .proc-compact {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .proc-compact::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, #0B3D8E, #F97316);
+        }
+
+        .proc-c-item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 8px;
+        }
+
+        .proc-c-num {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #0B3D8E;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            box-shadow: 0 4px 16px rgba(11, 61, 142, .3);
+        }
+
+        .proc-c-item h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .proc-c-item p {
+            font-size: 11px;
+            color: #64748B;
+        }
+
+        /* WHY COMPACT */
+        .why-compact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-c-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .why-c-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #0B3D8E;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .why-c-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .why-c-item p {
+            font-size: 12px;
+            color: #64748B;
+        }
+
+        @media(max-width:1024px) {
+            .srv-block {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .proc-compact {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .proc-compact::before {
+                display: none;
+            }
+        }
+
+        @media(max-width:768px) {
+            .why-compact {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .price-tbl {
+                font-size: 12px;
+            }
+
+            .price-tbl th,
+            .price-tbl td {
+                padding: 10px 12px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .why-compact {
+                grid-template-columns: 1fr;
+            }
+
+            .srv-btns {
+                flex-direction: column;
+            }
+
+            .proc-compact {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="/assets/images/logo.jpg" alt="Logo">
+                    <div class="nav-logo-text"><span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng
+                            Ninh</span><span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Trang Chủ</a>
+                    <a href="gioi-thieu.html" class="nav-link">Giới Thiệu</a>
+                    <a href="dich-vu.html" class="nav-link active">Dịch Vụ</a>
+                    <a href="du-an.html" class="nav-link">Dự Án</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-link">Báo Giá</a>
+                    <a href="tin-tuc.html" class="nav-link">Tin Tức</a>
+                    <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> 0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="nav-btn">Nhận Báo Giá</a>
+                </div>
+                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
+                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+            Trang Chủ</a>
+        <a href="gioi-thieu.html" class="mobile-nav-link"><i class="fa-solid fa-building"
+                style="color:#0B3D8E;width:20px"></i> Giới Thiệu</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+            Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+            Dự Án</a>
+        <a href="bao-gia-chi-tiet.html" class="mobile-nav-link"><i class="fa-solid fa-file-invoice"
+                style="color:#0B3D8E;width:20px"></i> Báo Giá</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
+                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
+                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+    </div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content animate">
+                <div class="breadcrumb"><a href="index.html">Trang chủ</a><i
+                        class="fa-solid fa-chevron-right"></i><span>Dịch Vụ</span></div>
+                <h1>Dịch Vụ Thi Công</h1>
+                <p>Cung cấp giải pháp toàn diện về trần vách – Từ dân dụng đến công nghiệp – Chất lượng tiêu chuẩn quốc
+                    tế</p>
+                <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px">
+                    <a href="#tran-thach-cao" class="btn btn-accent"><i class="fa-solid fa-layer-group"></i> Trần Thạch
+                        Cao</a>
+                    <a href="#vach-thach-cao" class="btn btn-outline"><i class="fa-solid fa-border-all"></i> Vách Thạch
+                        Cao</a>
+                    <a href="#tran-trang-tri" class="btn btn-outline"><i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Trần Trang Trí</a>
+                    <a href="#phong-sach" class="btn btn-outline"><i class="fa-solid fa-building-user"></i> Panel &
+                        Phòng Sạch</a>
+                    <a href="#vach-compact" class="btn btn-outline"><i class="fa-solid fa-restroom"></i> Vách Compact
+                        WC</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES -->
+    <section class="section">
+        <div class="container">
+
+            <!-- 1. TRẦN THẠCH CAO -->
+            <div class="srv-block" id="tran-thach-cao">
+                <div class="srv-img animate">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
+                        alt="Thi công trần thạch cao Quảng Ninh">
+                    <div class="srv-img-overlay">
+                        <div class="srv-img-badge"><i class="fa-solid fa-fire"></i> Dịch vụ phổ biến nhất</div>
+                        <div class="srv-img-price">Từ 155.000đ <span>/m²</span></div>
+                    </div>
+                </div>
+                <div class="srv-content animate delay-2">
+                    <div class="section-tag">Dịch vụ 01</div>
+                    <h2>Thi Công <span style="color:#0B3D8E">Trần Thạch Cao</span></h2>
+                    <p>Chúng tôi cung cấp dịch vụ thi công trần thạch cao toàn diện – từ trần phẳng đơn giản đến trần
+                        giật cấp phức tạp. Sử dụng 100% vật liệu chính hãng Vĩnh Tường, Gyproc đảm bảo độ bền và thẩm mỹ
+                        cao nhất.</p>
+                    <div class="srv-features">
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Trần phẳng – Trần chìm</strong><span>Phù hợp nhà phố, chung cư, văn phòng. Đơn
+                                    giản, hiện đại, tiết kiệm chi phí</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Trần giật cấp – Trần hộp lồng đèn</strong><span>Tạo điểm nhấn kiến trúc, lắp
+                                    đặt hệ đèn LED nội trú đẹp sang trọng</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Trần thạch cao chống ẩm (lõi xanh)</strong><span>Dành cho khu bếp, nhà vệ sinh,
+                                    hành lang ngoài trời</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Khung xương Vĩnh Tường chính hãng</strong><span>Khoảng cách tiêu chuẩn
+                                    80-100cm, đúng kỹ thuật, không oằn võng</span></div>
+                        </div>
+                    </div>
+                    <div class="srv-btns">
+                        <a href="bao-gia-chi-tiet.html" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i>
+                            Xem Bảng Giá</a>
+                        <a href="tel:0837811188" class="btn btn-outline-dark"><i class="fa-solid fa-phone"></i> Tư Vấn
+                            Ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. VÁCH THẠCH CAO -->
+            <div class="srv-block" id="vach-thach-cao" style="direction:rtl">
+                <div class="srv-img animate" style="direction:ltr">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop"
+                        alt="Thi công vách thạch cao">
+                    <div class="srv-img-overlay">
+                        <div class="srv-img-badge"><i class="fa-solid fa-dollar-sign"></i> Tiết kiệm chi phí</div>
+                        <div class="srv-img-price">Từ 180.000đ <span>/m²</span></div>
+                    </div>
+                </div>
+                <div class="srv-content animate delay-2" style="direction:ltr">
+                    <div class="section-tag orange">Dịch vụ 02</div>
+                    <h2>Thi Công <span style="color:#F97316">Vách Thạch Cao</span></h2>
+                    <p>Giải pháp ngăn phòng linh hoạt, nhanh chóng và tiết kiệm hơn nhiều so với xây tường gạch truyền
+                        thống. Cách âm tốt, dễ sửa chữa, đáp ứng mọi thiết kế kiến trúc hiện đại.</p>
+                    <div class="srv-features">
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Vách ngăn đơn – đôi lớp thạch cao</strong><span>Linh hoạt tùy yêu cầu về độ dày
+                                    và cách âm</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Vách lửng – vách tường thông tầng</strong><span>Giải pháp sáng tạo cho không
+                                    gian mở, thông thoáng</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Tích hợp bông thủy tinh cách âm</strong><span>Giảm ồn 40-50dB, cải thiện đáng
+                                    kể chất lượng âm thanh</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Xử lý nối + sơn bả hoàn chỉnh</strong><span>Bề mặt phẳng mịn, sẵn sàng sơn
+                                    trang trí</span></div>
+                        </div>
+                    </div>
+                    <div class="srv-btns">
+                        <a href="bao-gia-chi-tiet.html" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i>
+                            Xem Bảng Giá</a>
+                        <a href="tel:0837811188" class="btn btn-outline-dark"><i class="fa-solid fa-phone"></i> Tư Vấn
+                            Ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. TRẦN TRANG TRÍ -->
+            <div class="srv-block" id="tran-trang-tri">
+                <div class="srv-img animate">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                        alt="Trần trang trí cao cấp">
+                    <div class="srv-img-overlay">
+                        <div class="srv-img-badge"><i class="fa-solid fa-crown"></i> Cao cấp – Sang trọng</div>
+                        <div class="srv-img-price">Báo giá theo thiết kế</div>
+                    </div>
+                </div>
+                <div class="srv-content animate delay-2">
+                    <div class="section-tag">Dịch vụ 03</div>
+                    <h2>Trần <span style="color:#0B3D8E">Trang Trí Cao Cấp</span></h2>
+                    <p>Thiết kế và thi công trần tân cổ điển, hiện đại kết hợp phào chỉ PU/PS. Biến không gian sống
+                        thành kiệt tác kiến trúc thể hiện đẳng cấp và gu thẩm mỹ của gia chủ.</p>
+                    <div class="srv-features">
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Phào chỉ PU – PS – thạch cao đúc sẵn</strong><span>Hoa văn tinh xảo, bền bỉ
+                                    theo thời gian, không co ngót</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Trần tân cổ điển – trần châu Âu</strong><span>Kết hợp hệ đèn chùm, đèn trần âm
+                                    đẹp mắt</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Tư vấn thiết kế miễn phí</strong><span>Đội ngũ thiết kế nội thất hỗ trợ chọn
+                                    mẫu phù hợp</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Thi công tỉ mỉ từng chi tiết</strong><span>Đảm bảo sự hoàn hảo trong từng đường
+                                    nét hoa văn</span></div>
+                        </div>
+                    </div>
+                    <div class="srv-btns">
+                        <a href="bao-gia-chi-tiet.html" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i>
+                            Nhận Báo Giá</a>
+                        <a href="lien-he.html" class="btn btn-outline-dark"><i class="fa-solid fa-message"></i> Gửi Yêu
+                            Cầu</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. PANEL & PHÒNG SẠCH -->
+            <div class="srv-block" id="phong-sach" style="direction:rtl">
+                <div class="srv-img animate" style="direction:ltr">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                        alt="Vách panel phòng sạch">
+                    <div class="srv-img-overlay">
+                        <div class="srv-img-badge"><i class="fa-solid fa-industry"></i> Tiêu chuẩn công nghiệp</div>
+                        <div class="srv-img-price">Báo giá theo dự án</div>
+                    </div>
+                </div>
+                <div class="srv-content animate delay-2" style="direction:ltr">
+                    <div class="section-tag orange">Dịch vụ 04</div>
+                    <h2>Vách Panel & <span style="color:#F97316">Phòng Sạch</span></h2>
+                    <p>Cung cấp và lắp đặt hệ thống trần vách Panel sandwich cho nhà máy sản xuất, kho lạnh, bệnh viện,
+                        phòng mổ theo tiêu chuẩn GMP, ISO quốc tế đòi hỏi môi trường sạch kiểm soát nghiêm ngặt.</p>
+                    <div class="srv-features">
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Panel EPS – PU – Rockwool</strong><span>Cách nhiệt, cách âm vượt trội, chống
+                                    cháy theo tiêu chuẩn</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Phòng sạch cấp ISO 5, 6, 7, 8</strong><span>Thiết kế và thi công đạt chuẩn GMP
+                                    WHO, EU GMP</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Hệ thống kho lạnh – kho mát</strong><span>Panel cách nhiệt dày 50-200mm, đảm
+                                    bảo nhiệt độ ổn định</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Thi công trọn gói</strong><span>Từ thiết kế, cung cấp vật tư đến lắp đặt hoàn
+                                    chỉnh</span></div>
+                        </div>
+                    </div>
+                    <div class="srv-btns">
+                        <a href="lien-he.html" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Gửi Yêu Cầu
+                            Dự Án</a>
+                        <a href="tel:0837811188" class="btn btn-outline-dark"><i class="fa-solid fa-phone"></i> Hotline
+                            Dự Án</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. VÁCH COMPACT WC -->
+            <div class="srv-block" id="vach-compact">
+                <div class="srv-img animate">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop"
+                        alt="Vách compact WC">
+                    <div class="srv-img-overlay">
+                        <div class="srv-img-badge"><i class="fa-solid fa-shield-halved"></i> Siêu bền – Chịu nước 100%
+                        </div>
+                        <div class="srv-img-price">Báo giá theo thiết kế</div>
+                    </div>
+                </div>
+                <div class="srv-content animate delay-2">
+                    <div class="section-tag">Dịch vụ 05</div>
+                    <h2>Vách Compact <span style="color:#0B3D8E">Nhà Vệ Sinh</span></h2>
+                    <p>Thi công vách ngăn compact HPL (High Pressure Laminate) – giải pháp hoàn hảo cho nhà vệ sinh
+                        thương mại và công cộng. Chịu nước tuyệt đối, chống va đập, bề mặt không thấm vi khuẩn.</p>
+                    <div class="srv-features">
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Tấm compact HPL cao áp nhiệt</strong><span>Dày 13mm, chịu nước 100%, bề mặt
+                                    chống trầy xước</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Đa dạng mẫu mã – màu sắc</strong><span>Hơn 50 mẫu texture và 200 màu sắc lựa
+                                    chọn</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Phụ kiện inox 304 cao cấp</strong><span>Bản lề, chốt cửa, móc áo chống gỉ bền
+                                    đẹp lâu dài</span></div>
+                        </div>
+                        <div class="srv-feature"><i class="fa-solid fa-check-circle"></i>
+                            <div><strong>Phù hợp mọi công trình</strong><span>Trường học, bệnh viện, nhà hàng, trung tâm
+                                    thương mại</span></div>
+                        </div>
+                    </div>
+                    <div class="srv-btns">
+                        <a href="bao-gia-chi-tiet.html" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i>
+                            Nhận Báo Giá</a>
+                        <a href="tel:0837811188" class="btn btn-outline-dark"><i class="fa-solid fa-phone"></i> Tư Vấn
+                            Ngay</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </section>
+
+    <!-- BẢNG GIÁ THAM KHẢO -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Bảng giá</div>
+                <h2>Bảng Giá <span>Tham Khảo 2025</span></h2>
+                <p>Giá trọn gói bao gồm vật tư + nhân công + bảo hành. Đơn giá áp dụng cho công trình &gt;30m²</p>
+            </div>
+            <div class="price-area animate">
+                <h3>📋 Trần Thạch Cao</h3>
+                <p>Đơn giá chưa bao gồm sơn bả. VAT chưa tính.</p>
+                <table class="price-tbl">
+                    <thead>
+                        <tr>
+                            <th>Loại Trần</th>
+                            <th>Khung Xương</th>
+                            <th>Tấm Thạch Cao</th>
+                            <th>Giá /m²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trần phẳng</td>
+                            <td>Hà Nội / Vĩnh Tường Eco</td>
+                            <td>Gyproc 9mm Tiêu Chuẩn</td>
+                            <td class="price-hl">155.000 – 165.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Trần phẳng</td>
+                            <td>Vĩnh Tường (Basi/Tika)</td>
+                            <td>Gyproc 9mm Tiêu Chuẩn</td>
+                            <td class="price-hl">175.000 – 185.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Trần giật cấp</td>
+                            <td>Vĩnh Tường (Basi/Tika)</td>
+                            <td>Gyproc 9mm Tiêu Chuẩn</td>
+                            <td class="price-hl">185.000 – 200.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Trần chống ẩm</td>
+                            <td>Vĩnh Tường (Basi/Tika)</td>
+                            <td>Gyproc lõi xanh 9mm</td>
+                            <td class="price-hl">200.000 – 220.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Trần thả (60x60)</td>
+                            <td>Vĩnh Tường TopLine</td>
+                            <td>Tấm phủ nhựa PVC</td>
+                            <td class="price-hl">150.000 – 165.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price-area animate delay-1" style="margin-bottom:0">
+                <h3>🎨 Sơn Bả Hoàn Thiện (Cộng Thêm)</h3>
+                <p>Giá sơn bả tính thêm vào đơn giá trần thô phía trên</p>
+                <table class="price-tbl">
+                    <thead>
+                        <tr>
+                            <th>Loại Sơn</th>
+                            <th>Vật Tư</th>
+                            <th>Giá /m²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sơn kinh tế</td>
+                            <td>Bột bả thạch cao + Maxilite/Vatex trắng</td>
+                            <td class="price-hl">60.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Sơn cao cấp</td>
+                            <td>Bột bả + Dulux/Jotun trắng</td>
+                            <td class="price-hl">80.000 – 90.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Sơn màu cao cấp</td>
+                            <td>Bột bả + Dulux/Jotun màu theo yêu cầu</td>
+                            <td class="price-hl">90.000 – 110.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUY TRÌNH -->
+    <section class="section" style="background:linear-gradient(135deg,#0B3D8E,#061d4a)">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag" style="background:rgba(249,115,22,.2);color:#fb923c">Quy trình</div>
+                <h2 style="color:#fff">Quy Trình 6 Bước <span style="color:#fb923c">Chuẩn Hóa</span></h2>
+            </div>
+            <div class="proc-compact">
+                <div class="proc-c-item animate delay-1">
+                    <div class="proc-c-num">1</div>
+                    <h4 style="color:#fff">Khảo Sát</h4>
+                    <p style="color:rgba(255,255,255,.6)">Miễn phí tận nơi</p>
+                </div>
+                <div class="proc-c-item animate delay-2">
+                    <div class="proc-c-num">2</div>
+                    <h4 style="color:#fff">Ký HĐ</h4>
+                    <p style="color:rgba(255,255,255,.6)">Rõ ràng, minh bạch</p>
+                </div>
+                <div class="proc-c-item animate delay-3">
+                    <div class="proc-c-num">3</div>
+                    <h4 style="color:#fff">Bật Mực</h4>
+                    <p style="color:rgba(255,255,255,.6)">Laser 12 tia</p>
+                </div>
+                <div class="proc-c-item animate delay-4">
+                    <div class="proc-c-num">4</div>
+                    <h4 style="color:#fff">Khung Xương</h4>
+                    <p style="color:rgba(255,255,255,.6)">Vĩnh Tường chính hãng</p>
+                </div>
+                <div class="proc-c-item animate delay-5">
+                    <div class="proc-c-num">5</div>
+                    <h4 style="color:#fff">Bắn Tấm</h4>
+                    <p style="color:rgba(255,255,255,.6)">3 lớp bột bả</p>
+                </div>
+                <div class="proc-c-item animate delay-5">
+                    <div class="proc-c-num">6</div>
+                    <h4 style="color:#fff">Bàn Giao</h4>
+                    <p style="color:rgba(255,255,255,.6)">Phiếu bảo hành 10 năm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE (compact) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title animate">
+                <div class="section-tag">Cam kết</div>
+                <h2>Cam Kết Khi Chọn <span>Chúng Tôi</span></h2>
+            </div>
+            <div class="why-compact">
+                <div class="why-c-item animate delay-1">
+                    <div class="why-c-icon"><i class="fa-solid fa-tags"></i></div>
+                    <div>
+                        <h4>Giá Trọn Gói – Không Phát Sinh</h4>
+                        <p>Cam kết giá theo hợp đồng, không có chi phí phát sinh bất ngờ</p>
+                    </div>
+                </div>
+                <div class="why-c-item animate delay-2">
+                    <div class="why-c-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h4>Bảo Hành 10 Năm Bằng Văn Bản</h4>
+                        <p>Phiếu bảo hành có giá trị pháp lý, chúng tôi chịu trách nhiệm hoàn toàn</p>
+                    </div>
+                </div>
+                <div class="why-c-item animate delay-3">
+                    <div class="why-c-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Đúng Tiến Độ Cam Kết</h4>
+                        <p>Hoàn thành đúng thời hạn, nếu trễ chúng tôi bồi thường theo hợp đồng</p>
+                    </div>
+                </div>
+                <div class="why-c-item animate delay-1">
+                    <div class="why-c-icon"><i class="fa-solid fa-box"></i></div>
+                    <div>
+                        <h4>Vật Liệu 100% Chính Hãng</h4>
+                        <p>Chứng từ hóa đơn đầy đủ, kiểm tra nguồn gốc xuất xứ rõ ràng</p>
+                    </div>
+                </div>
+                <div class="why-c-item animate delay-2">
+                    <div class="why-c-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div>
+                        <h4>Hỗ Trợ 24/7 Sau Bàn Giao</h4>
+                        <p>Đội kỹ thuật hỗ trợ xử lý sự cố trong 24h, ngay cả sau bảo hành</p>
+                    </div>
+                </div>
+                <div class="why-c-item animate delay-3">
+                    <div class="why-c-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div>
+                        <h4>Khảo Sát & Tư Vấn Miễn Phí</h4>
+                        <p>Không mất bất kỳ chi phí nào từ bước khảo sát đến lúc nhận báo giá</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Bạn Cần Thi Công Dịch Vụ Nào?</h2>
+                    <p>Gọi ngay hoặc để lại thông tin – Chúng tôi phản hồi trong 5 phút!</p>
+                </div>
+                <div class="cta-btns">
+                    <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
+                        0837.811.188</a>
+                    <a href="bao-gia-chi-tiet.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
+                            class="fa-solid fa-file-invoice"></i> Nhận Báo Giá</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="/assets/images/logo.jpg" alt="Logo">
+                        <div class="footer-logo-text"><span class="name">Trần Vách Quảng Ninh</span><span
+                                class="sub">Thi Công Chuyên Nghiệp</span></div>
+                    </div>
+                    <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh. Bảo
+                        hành 10 năm.</p>
+                    <div class="footer-socials"><a href="#" class="footer-social"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Dịch Vụ</h4>
+                    <div class="footer-links"><a href="#tran-thach-cao"><i class="fa-solid fa-chevron-right"></i> Trần
+                            Thạch Cao</a><a href="#vach-thach-cao"><i class="fa-solid fa-chevron-right"></i> Vách Thạch
+                            Cao</a><a href="#tran-trang-tri"><i class="fa-solid fa-chevron-right"></i> Trần Trang
+                            Trí</a><a href="#phong-sach"><i class="fa-solid fa-chevron-right"></i> Panel & Phòng
+                            Sạch</a><a href="#vach-compact"><i class="fa-solid fa-chevron-right"></i> Vách Compact
+                            WC</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <div class="footer-links"><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Trang
+                            Chủ</a><a href="gioi-thieu.html"><i class="fa-solid fa-chevron-right"></i> Giới Thiệu</a><a
+                            href="du-an.html"><i class="fa-solid fa-chevron-right"></i> Dự Án</a><a
+                            href="bao-gia-chi-tiet.html"><i class="fa-solid fa-chevron-right"></i> Báo Giá</a><a
+                            href="tin-tuc.html"><i class="fa-solid fa-chevron-right"></i> Tin Tức</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i>
+                        <div><a href="tel:0837811188">0837.811.188</a><a href="tel:0912345678">0912.345.678</a></div>
+                    </div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Tổ 77B, Khu 5B, P.
+                            Hồng Gai, TP. Hạ Long, QN</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Trần Vách Quảng Ninh. All rights reserved.</p>
+                <p><a href="index.html">Trang chủ</a> | <a href="lien-he.html">Liên hệ</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="float-phone">
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
+            style="font-size:14px;font-weight:900">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+            class="fa-solid fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
