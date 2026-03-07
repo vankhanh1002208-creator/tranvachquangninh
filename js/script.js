@@ -330,3 +330,22 @@ window.reattachFormHandlers = function () {
 };
 
 console.log('[Script.js] All handlers initialized. Autonomous helpers ready.');
+
+// Animate on scroll logic
+const getScrollObserver = () => {
+    return new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -50px 0px' });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = getScrollObserver();
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+});

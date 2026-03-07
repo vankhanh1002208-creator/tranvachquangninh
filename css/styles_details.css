@@ -1,0 +1,123 @@
+/* Detail Pages Styles */
+.page-header {
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Overlay for readability */
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.8);
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Background Variations */
+.bg-hero {
+    background-image: url('../assets/images/hero.png');
+}
+
+.bg-project1 {
+    background-image: url('../assets/images/project1.png');
+}
+
+.bg-project2 {
+    background-image: url('../assets/images/project2.png');
+}
+
+.detail-content {
+    padding: 2rem 0;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .service-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-text h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.service-text p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.service-features i {
+    color: var(--success);
+}
+
+.service-img img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Pricing Page Specifics */
+.pricing-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-note {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary);
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+
+.pricing-cta-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-back-link {
+    color: white;
+    text-decoration: underline;
+}

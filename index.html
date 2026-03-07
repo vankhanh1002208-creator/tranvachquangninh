@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thi Công Trần & Vách Thạch Cao Chuyên Nghiệp | Báo Giá Mới Nhất 2024</title>
+    <title>Thi Công Trần Vách Thạch Cao, Panel, Phòng Sạch, Compact WC</title>
     <meta name="description"
-        content="Chuyên thi công trần thạch cao, vách ngăn thạch cao bền đẹp, giá tốt. Cam kết đúng tiến độ, bảo hành uy tín. Nhận báo giá miễn phí ngay!">
+        content="Chuyên thi công trần vách thạch cao, trần trang trí, trần vách Panel, phòng sạch, vách compact wc chuyên nghiệp, giá tốt.">
     <meta name="keywords"
-        content="thi công trần thạch cao, vách thạch cao, trần chìm, trần giật cấp, sửa chữa trần, thi công nội thất">
+        content="thi công trần thạch cao, vách thạch cao, trần trang trí, trần vách panel, phòng sạch, vách compact wc">
     <meta property="og:title" content="Thi Công Trần & Vách Thạch Cao Chuyên Nghiệp">
     <meta property="og:description" content="Bền Đẹp – Giá Tốt – Đúng Tiến Độ. Bảo hành 5 năm, không phát sinh">
     <meta property="og:type" content="website">
@@ -25,10 +25,16 @@
     <!-- Performance: warm up font origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://plus.unsplash.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/theme.css?v=2">
 
     <!-- LocalBusiness schema (fill real data before deploy) -->
     <script type="application/ld+json">
@@ -56,8 +62,8 @@
             <a href="#" class="logo-modern">
                 <div class="logo-icon">🏗️</div>
                 <div class="logo-text">
-                    <span class="logo-brand">Pro Build</span>
-                    <span class="logo-tagline">Thạch Cao Chuyên Nghiệp</span>
+                    <span class="logo-brand">Văn Tiến Hùng Provipp</span>
+                    <span class="logo-tagline">Thạch Cao, Panel & Compact</span>
                 </div>
             </a>
             <div class="header-right">
@@ -72,18 +78,17 @@
                         <span class="hotline-number">0912.345.678</span>
                     </div>
                 </a>
-                <a href="#bao-gia" class="btn btn-primary">Nhận Báo Giá</a>
+                <a href="bao-gia-chi-tiet.html" class="btn btn-primary">Nhận Báo Giá</a>
             </div>
         </div>
     </header>
 
     <!-- Promotional Banner -->
     <div class="promo-banner" id="promoBanner">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="container promo-content">
             <span>🎉 <strong>KHUYẾN MÃI THÁNG 2:</strong> Giảm 15% cho diện tích trên 50m² - Chỉ còn <span
                     id="promoTimer">3 ngày</span></span>
-            <button onclick="closeBanner()"
-                style="background:none;border:none;color:white;cursor:pointer;font-size:1.5rem;">&times;</button>
+            <button onclick="closeBanner()" class="promo-close-btn">&times;</button>
         </div>
     </div>
 
@@ -91,7 +96,9 @@
     <section class="hero-modern">
         <div class="container hero-content">
             <div class="hero-main">
-                <h1>Thi Công Trần & Vách Thạch Cao<br>Chuyên Nghiệp Tại TP.HCM</h1>
+                <h1><span class="hero-subtitle">Đơn Vị Thi Công Bền Vững & Chuyên Nghiệp</span>
+                    <span class="text-gradient">Thạch Cao, Panel, Phòng Sạch & Compact WC</span>
+                </h1>
                 <div class="hero-usps">
                     <span class="usp-item">
                         <i class="fa-solid fa-check-circle"></i>
@@ -116,7 +123,7 @@
                             <span class="btn-sublabel">0912.345.678</span>
                         </span>
                     </a>
-                    <a href="#bao-gia" class="btn btn-accent btn-lg">
+                    <a href="bao-gia-chi-tiet.html" class="btn btn-accent btn-lg">
                         <i class="fa-solid fa-file-invoice"></i>
                         NHẬN BÁO GIÁ CHI TIẾT
                     </a>
@@ -181,23 +188,23 @@
     <!-- Intro -->
     <section class="intro">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>VỀ CHÚNG TÔI</h2>
                 <p>Đơn vị thi công uy tín với hơn 10 năm kinh nghiệm • Hơn <strong>500+ công trình hoàn thành</strong>
                 </p>
             </div>
             <div class="intro-grid">
-                <div class="intro-item">
+                <div class="intro-item animate-on-scroll delay-100">
                     <div class="intro-icon"><i class="fa-solid fa-medal"></i></div>
                     <h3>10+ Năm Kinh Nghiệm</h3>
                     <p>Đội ngũ thợ lành nghề, thi công hàng nghìn công trình lớn nhỏ.</p>
                 </div>
-                <div class="intro-item">
+                <div class="intro-item animate-on-scroll delay-200">
                     <div class="intro-icon"><i class="fa-solid fa-map-location-dot"></i></div>
                     <h3>Phủ Sóng Rộng Khắp</h3>
                     <p>Thi công nhanh chóng tại TP.HCM và các tỉnh lân cận.</p>
                 </div>
-                <div class="intro-item">
+                <div class="intro-item animate-on-scroll delay-300">
                     <div class="intro-icon"><i class="fa-solid fa-handshake"></i></div>
                     <h3>Cam Kết Vàng</h3>
                     <p>Không phát sinh chi phí - Bảo hành dài hạn bằng văn bản.</p>
@@ -209,37 +216,96 @@
     <!-- Services -->
     <section class="services" id="dich-vu">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>DỊCH VỤ CUNG CẤP</h2>
             </div>
             <div class="service-grid">
                 <!-- Service 1 -->
-                <div class="service-card">
+                <div class="service-card animate-on-scroll delay-100">
                     <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3>Trần Thạch Cao</h3>
-                    <p>Thi công trần chìm, trần giật cấp cho nhà phố, chung cư, biệt thự. Mẫu mã đa dạng, hiện đại.</p>
-                    <a href="#bao-gia" class="service-cta">Xem Mẫu & Báo Giá <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3>Trần, Vách Thạch Cao</h3>
+                    <p>Thi công trần chìm, trần giật cấp, vách ngăn cho nhà phố, chung cư, biệt thự. Mẫu mã hiện đại.
+                    </p>
+                    <a href="thi-cong-tran-thach-cao.html" class="service-cta">Xem Trọn Gói <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
-                    <h3>Vách Ngăn Thạch Cao</h3>
-                    <p>Giải pháp phân chia không gian tối ưu cho văn phòng, phòng ngủ. Cách âm, chống cháy tốt.</p>
-                    <a href="#bao-gia" class="service-cta">Tính Chi Phí Ngay <i class="fa-solid fa-calculator"></i></a>
+                <div class="service-card animate-on-scroll delay-200">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Trần Trang Trí</h3>
+                    <p>Trần thạch cao tân cổ điển, hiện đại kết hợp phào chỉ PU/PS, mang lại vẻ đẹp đẳng cấp cho không
+                        gian.</p>
+                    <a href="phao-chi-pu.html" class="service-cta">Xem Chi Tiết <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-table-cells"></i></div>
-                    <h3>Trần Thả / Trần Nổi</h3>
-                    <p>Thi công nhanh, giá rẻ, dễ dàng sửa chữa hệ thống điện nước. Phù hợp văn phòng, kiot.</p>
-                    <a href="#bao-gia" class="service-cta">Nhận Tư Vấn Miễn Phí <i class="fa-solid fa-comments"></i></a>
+                <div class="service-card animate-on-scroll delay-300">
+                    <div class="service-icon"><i class="fa-solid fa-building-user"></i></div>
+                    <h3>Trần Vách Panel & Phòng Sạch</h3>
+                    <p>Cung cấp giải pháp thi công Panel cách âm, cách nhiệt, phòng sạch tiêu chuẩn cho nhà máy, bệnh
+                        viện.</p>
+                    <a href="tel:0912345678" class="service-cta">Tư Vấn Chuyên Sâu <i class="fa-solid fa-phone"></i></a>
                 </div>
                 <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h3>Sửa Chữa - Cải Tạo</h3>
-                    <p>Xử lý trần thấm nước, nứt vỡ, thay tấm thạch cao cũ, sơn bả lại trần vách.</p>
-                    <a href="tel:0912345678" class="service-cta">Gọi Hotline 24/7 <i class="fa-solid fa-phone"></i></a>
+                <div class="service-card animate-on-scroll delay-100">
+                    <div class="service-icon"><i class="fa-solid fa-restroom"></i></div>
+                    <h3>Vách Compact WC</h3>
+                    <p>Thi công vách ngăn vệ sinh Compact HPL siêu bền, chịu nước 100%, thiết kế thẩm mỹ cho công trình.
+                    </p>
+                    <a href="tel:0912345678" class="service-cta">Gọi Hotline <i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Standards (New) -->
+
+    <section class="standards">
+        <div class="container">
+            <div class="section-title">
+                <h2>TIÊU CHUẨN THI CÔNG & VẬT TƯ</h2>
+                <p>Chúng tôi chỉ sử dụng vật liệu chính hãng và tuân thủ quy trình kỹ thuật nghiêm ngặt</p>
+            </div>
+            <div class="standards-grid">
+                <div class="standard-item">
+                    <div class="standard-icon-wrapper">
+                        <i class="fa-solid fa-ruler-combined fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3>Đo Đạc Laser Chính Xác</h3>
+                        <p>Sử dụng máy cân bằng laser 12 tia để xác định cốt trần, đảm bảo độ phẳng tuyệt đối 100%.</p>
+                    </div>
+                </div>
+                <div class="standard-item">
+                    <div class="standard-icon-wrapper">
+                        <i class="fa-solid fa-layer-group fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3>Khung Xương Vĩnh Tường</h3>
+                        <p>Cam kết sử dụng khung xương Vĩnh Tường (BASI, TIKA, ECO) hoặc Hà Nội chính hãng. Không pha
+                            trộn hàng kém chất lượng.</p>
+                    </div>
+                </div>
+                <div class="standard-item">
+                    <div class="standard-icon-wrapper">
+                        <i class="fa-solid fa-screwdriver fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3>Khoảng Cách Tiêu Chuẩn</h3>
+                        <p>Khoảng cách ty treo: 80cm - 100cm. Khoảng cách xương chính: 80cm. Khoảng cách xương phụ:
+                            40cm.</p>
+                    </div>
+                </div>
+                <div class="standard-item">
+                    <div class="standard-icon-wrapper">
+                        <i class="fa-solid fa-paint-roller fa-xl"></i>
+                    </div>
+
+                    <div>
+                        <h3>Xử Lý Mối Nối Đỉnh Cao</h3>
+                        <p>Dán băng keo lưới chuyên dụng và xử lý 3 lớp bột bả tại các mối nối, cam kết không nứt trần
+                            sau thời gian sử dụng.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -248,33 +314,45 @@
     <!-- Process -->
     <section class="process">
         <div class="container">
-            <div class="section-title">
-                <h2>QUY TRÌNH THI CÔNG</h2>
+            <div class="section-title animate-on-scroll">
+                <h2>QUY TRÌNH THI CÔNG CHI TIẾT</h2>
+                <p>6 Bước chuẩn hóa để tạo nên một công trình hoàn hảo</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item left" data-step="1">
-                    <div class="timeline-content">
-                        <h3>Khảo Sát & Tư Vấn</h3>
-                        <p>Tiếp nhận yêu cầu, đến tận nơi đo đạc và tư vấn giải pháp phù hợp nhất.</p>
-                    </div>
+            <div class="process-grid">
+                <div class="process-card animate-on-scroll delay-100">
+                    <div class="process-step">1</div>
+                    <h3><i class="fa-solid fa-compass-drafting"></i> Khảo Sát & Tư Vấn</h3>
+                    <p>Đến tận nơi đo đạc, tư vấn mẫu mã, giải pháp vật tư (chống ẩm, tiêu âm) phù hợp ngân sách.</p>
                 </div>
-                <div class="timeline-item right" data-step="2">
-                    <div class="timeline-content">
-                        <h3>Báo Giá Chi Tiết</h3>
-                        <p>Gửi bảng giá minh bạch, liệt kê rõ vật tư và nhân công. Không phí ẩn.</p>
-                    </div>
+                <div class="process-card animate-on-scroll delay-200">
+                    <div class="process-step">2</div>
+                    <h3><i class="fa-solid fa-crosshairs"></i> Cân Chỉnh Cốt Trần</h3>
+                    <p>Xác định độ cao trần bằng máy Laser, bật mực tường, khoan định vị và lắp đặt hệ ty treo chịu lực.
+                    </p>
                 </div>
-                <div class="timeline-item left" data-step="3">
-                    <div class="timeline-content">
-                        <h3>Thi Công & Lắp Đặt</h3>
-                        <p>Triển khai đúng kỹ thuật, che chắn cẩn thận, đảm bảo vệ sinh và tiến độ.</p>
-                    </div>
+                <div class="process-card animate-on-scroll delay-300">
+                    <div class="process-step">3</div>
+                    <h3><i class="fa-solid fa-hammer"></i> Lắp Đặt Khung Xương</h3>
+                    <p>Lắp đặt thanh chính, thanh phụ theo khoảng cách tiêu chuẩn (800-1000mm). Căn chỉnh khung xương
+                        phẳng tuyệt đối.</p>
                 </div>
-                <div class="timeline-item right" data-step="4">
-                    <div class="timeline-content">
-                        <h3>Nghiệm Thu & Bảo Hành</h3>
-                        <p>Bàn giao công trình, thanh toán và kích hoạt chế độ bảo hành uy tín.</p>
-                    </div>
+                <div class="process-card animate-on-scroll delay-100">
+                    <div class="process-step">4</div>
+                    <h3><i class="fa-solid fa-vector-square"></i> Bắn Tấm Thạch Cao</h3>
+                    <p>Lắp đặt tấm trần (Gyproc/Boral 9mm) lên khung xương. Các tấm lắp so le nhau để tăng khả năng chịu
+                        lực và chống nứt.</p>
+                </div>
+                <div class="process-card animate-on-scroll delay-200">
+                    <div class="process-step">5</div>
+                    <h3><i class="fa-solid fa-fill-drip"></i> Xử Lý Nối & Sơn Bả</h3>
+                    <p>Dán băng keo lưới, trét bột xử lý mối nối. Tiến hành bả matit 2 lớp và sơn hoàn thiện
+                        (Dulux/Jotun/Maxilite).</p>
+                </div>
+                <div class="process-card animate-on-scroll delay-300">
+                    <div class="process-step">6</div>
+                    <h3><i class="fa-solid fa-clipboard-check"></i> Nghiệm Thu & Bàn Giao</h3>
+                    <p>Vệ sinh sạch sẽ, kiểm tra độ phẳng, độ đều màu sơn. Bàn giao công trình và phiếu bảo hành cho gia
+                        chủ.</p>
                 </div>
             </div>
         </div>
@@ -283,21 +361,24 @@
     <!-- Projects (Gallery) -->
     <section class="gallery">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>CÔNG TRÌNH TIÊU BIỂU</h2>
             </div>
             <div class="gallery-grid">
                 <!-- Using placeholders/generated images. Since I have 3 generated, I'll repeat or use placeholders for others -->
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="assets/images/project2.png" alt="Thi công trần phòng ngủ" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                        alt="Thi công trần phòng ngủ" loading="lazy" decoding="async">
                     <div class="gallery-caption">Trần Giật Cấp - Phòng Ngủ Master</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="assets/images/project1.png" alt="Vách ngăn văn phòng">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop"
+                        alt="Vách ngăn văn phòng">
                     <div class="gallery-caption">Vách Ngăn Kính & Thạch Cao - Văn Phòng Quận 1</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="assets/images/hero.png" alt="Trần thạch cao phòng khách">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
+                        alt="Trần thạch cao phòng khách">
                     <div class="gallery-caption">Trần Tân Cổ Điển - Biệt Thự Quận 7</div>
                 </div>
                 <!-- Repeats for demo purposes in a real list I'd use unique ones -->
@@ -323,23 +404,24 @@
     <!-- Video Section -->
     <section class="video-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>XEM QUY TRÌNH THI CÔNG THỰC TỂ</h2>
                 <p>Video 360° thi công thực tế tại công trường</p>
             </div>
             <div class="video-wrapper">
-                <div class="video-placeholder" onclick="playVideo()">
-                    <img src="assets/images/hero.png" alt="Video thumbnail">
+                <div class="video-placeholder animate-on-scroll delay-100" onclick="playVideo()">
+                    <img src="https://plus.unsplash.com/premium_photo-1682145181754-019685db5774?q=80&w=800&auto=format&fit=crop"
+                        alt="Video thumbnail">
                     <div class="play-button">
                         <i class="fa-solid fa-play"></i>
                     </div>
                 </div>
-                <div id="videoModal" class="video-modal" style="display:none;">
+                <div id="videoModal" class="video-modal hidden">
                     <div class="video-modal-content">
                         <span class="close-video" onclick="closeVideo()">&times;</span>
                         <iframe id="videoFrame" width="100%" height="100%" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen title="Video thi công thực tế"></iframe>
                     </div>
                 </div>
             </div>
@@ -349,11 +431,11 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
             </div>
             <div class="testimonial-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-on-scroll delay-100">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p>"Đội thi công rất chuyên nghiệp, làm việc sạch sẽ. Trần nhà em làm xong đẹp hơn mong đợi. Giá cả
                         hợp lý, không phát sinh."</p>
@@ -362,7 +444,7 @@
                         <small>Chung cư Vinhomes, Q.9</small>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-on-scroll delay-200">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p>"Tư vấn nhiệt tình, báo giá rõ ràng. Thi công đúng tiến độ cam kết. Văn phòng mình làm vách ngăn
                         cách âm rất tốt."</p>
@@ -371,7 +453,7 @@
                         <small>Văn phòng Quận 1</small>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-on-scroll delay-300">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p>"Từ khảo sát đến hoàn thiện đều ổn. Thợ tay nghề cao, sửa chữa trần cũ thành trần mới đẹp lung
                         linh. Rất hài lòng!"</p>
@@ -387,27 +469,27 @@
     <!-- Why Choose Us -->
     <section class="why-us">
         <div class="container">
-            <div class="section-title">
-                <h2 style="color: white;">TẠI SAO CHỌN CHÚNG TÔI?</h2>
+            <div class="section-title animate-on-scroll">
+                <h2>TẠI SAO CHỌN CHÚNG TÔI?</h2>
             </div>
             <div class="why-grid">
-                <div class="why-item">
-                    <i class="fa-solid fa-tags fa-3x" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                <div class="why-item animate-on-scroll delay-100">
+                    <i class="fa-solid fa-tags fa-3x why-icon"></i>
                     <h4>Giá Cả Rõ Ràng</h4>
                     <p>Báo giá trọn gói, cam kết không phát sinh chi phí sau khi chốt.</p>
                 </div>
-                <div class="why-item">
-                    <i class="fa-solid fa-helmet-safety fa-3x" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                <div class="why-item animate-on-scroll delay-200">
+                    <i class="fa-solid fa-helmet-safety fa-3x why-icon"></i>
                     <h4>Thợ Tay Nghề Cao</h4>
                     <p>Đội ngũ thợ giàu kinh nghiệm, thi công tỉ mỉ, sắc nét từng chi tiết.</p>
                 </div>
-                <div class="why-item">
-                    <i class="fa-solid fa-clock fa-3x" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                <div class="why-item animate-on-scroll delay-300">
+                    <i class="fa-solid fa-clock fa-3x why-icon"></i>
                     <h4>Đúng Tiến Độ</h4>
                     <p>Cam kết hoàn thành đúng thời hạn đã thỏa thuận trong hợp đồng.</p>
                 </div>
-                <div class="why-item">
-                    <i class="fa-solid fa-file-contract fa-3x" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                <div class="why-item animate-on-scroll delay-100">
+                    <i class="fa-solid fa-file-contract fa-3x why-icon"></i>
                     <h4>Bảo Hành Uy Tín</h4>
                     <p>Bảo hành công trình lên đến 5 năm, hỗ trợ kỹ thuật 24/7.</p>
                 </div>
@@ -418,87 +500,108 @@
     <!-- Pricing -->
     <section class="pricing">
         <div class="container">
-            <div class="section-title">
-                <h2>BẢNG BÁO GIÁ THI CÔNG TRẦN THẠCH CAO</h2>
+            <div class="section-title animate-on-scroll">
+                <h2>BẢNG BÁO GIÁ THI CÔNG TRẦN THẠCH CAO 2024</h2>
                 <p class="pricing-subtitle">DỊCH VỤ CHUYÊN NGHIỆP – GIÁ CẢ CẠNH TRANH</p>
             </div>
 
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Hạng Mục</th>
-                        <th>Khung Xương</th>
-                        <th>Đơn Giá (VNĐ/m²)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Trần thạch cao phẳng</strong></td>
-                        <td>Vĩnh Tường</td>
-                        <td class="price-highlight">180.000 - 200.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trần thạch cao giật 1 cấp</strong></td>
-                        <td>Vĩnh Tường</td>
-                        <td class="price-highlight">230.000 - 260.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trần thạch cao giật 2 cấp</strong></td>
-                        <td>Vĩnh Tường</td>
-                        <td class="price-highlight">280.000 - 320.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trần thạch cao thả</strong></td>
-                        <td>Vĩnh Tường</td>
-                        <td class="price-highlight">160.000 - 190.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vách thạch cao 1 mặt</strong></td>
-                        <td>Vĩnh Tường / Hà Nội</td>
-                        <td class="price-highlight">160.000 - 180.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vách thạch cao 2 mặt</strong></td>
-                        <td>Vĩnh Tường / Hà Nội</td>
-                        <td class="price-highlight">250.000 - 280.000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vách chống ẩm (nhà bếp, WC)</strong></td>
-                        <td>Vĩnh Tường cao cấp</td>
-                        <td class="price-highlight">270.000 - 300.000</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Tab Switching (Simple implementation via CSS/Radio or just two tables. For now, separate tables) -->
+
+            <h3 class="pricing-header animate-on-scroll delay-100">1. Báo Giá Phần Thô (Chưa Sơn Bả)</h3>
+            <div class="pricing-table-wrapper animate-on-scroll delay-100">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Loại Trần</th>
+                            <th>Khung Xương</th>
+                            <th>Tấm Thạch Cao</th>
+                            <th>Đơn Giá / m²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2"><strong>Trần phẳng</strong></td>
+                            <td>Hà Nội / Vĩnh Tường Eco</td>
+                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
+                            <td class="price-highlight">155.000đ - 165.000đ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
+                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
+                            <td class="price-highlight">175.000đ - 185.000đ</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>Trần giật cấp</strong></td>
+                            <td>Hà Nội / Vĩnh Tường Eco</td>
+                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
+                            <td class="price-highlight">165.000đ - 175.000đ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vĩnh Tường (Basi/Tika)</strong></td>
+                            <td>Gyproc 9mm (Tiêu Chuẩn)</td>
+                            <td class="price-highlight">185.000đ - 195.000đ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trần thả (60x60)</strong></td>
+                            <td>Vĩnh Tường (TopLINE)</td>
+                            <td>Tấm phủ nhựa PVC</td>
+                            <td class="price-highlight">150.000đ - 165.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="pricing-header-secondary animate-on-scroll delay-200">2. Báo Giá Sơn Bả Hoàn Thiện (Cộng thêm)
+            </h3>
+            <div class="pricing-table-wrapper animate-on-scroll delay-200">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Hạng Mục</th>
+                            <th>Vật Tư Sơn</th>
+                            <th>Đơn Giá / m²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sơn Kinh Tế</strong></td>
+                            <td>Bột bả thạch cao + Sơn Maxilite/Vatex (Trắng)</td>
+                            <td class="price-highlight">60.000đ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sơn Cao Cấp</strong></td>
+                            <td>Bột bả thạch cao + Sơn Dulux/Jotun (Trắng)</td>
+                            <td class="price-highlight">80.000đ - 90.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="pricing-notes">
                 <h3><i class="fa-solid fa-info-circle"></i> Lưu Ý Quan Trọng:</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Đơn giá trên <strong>đã bao gồm vật tư + nhân công + sơn hoàn
-                            thiện</strong></li>
-                    <li><i class="fa-solid fa-check"></i> Khi chúng tôi chuyển vật tư đến, quý khách <strong>tạm ứng
-                            50%</strong> giá trị</li>
-                    <li><i class="fa-solid fa-check"></i> 50% còn lại thanh toán khi xong và nhận bàn giao công trình
-                    </li>
-                    <li><i class="fa-solid fa-check"></i> Giá cuối cùng tính theo <strong>khối lượng đo thực tế</strong>
-                        tại công trình</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Bảo hành:</strong> Khung xương Vĩnh Tường 8 năm /
-                        Khung Hà Nội 5 năm</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Tấm chống ẩm</strong> (Gyproc Xanh): Cộng thêm
+                        20.000đ/m²</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Tấm siêu bảo vệ/chống cháy</strong>: Báo giá riêng
+                        theo thực tế.</li>
+                    <li><i class="fa-solid fa-check"></i> Đơn giá áp dụng cho công trình >30m². Dưới 30m² thỏa thep thực
+                        tế.</li>
+                    <li><i class="fa-solid fa-check"></i> Giá đã bao gồm vận chuyển và thi công lắp đặt tại TP.HCM.</li>
+                    <li><i class="fa-solid fa-check"></i> Bảo hành khung xương Vĩnh Tường <strong>10 năm</strong>.</li>
                 </ul>
                 <div class="pricing-cta">
                     <p class="pricing-incentive">
                         <i class="fa-solid fa-gift"></i>
-                        <strong>Ưu đãi đặc biệt:</strong> Giảm ngay 10% cho diện tích trên 100m²
+                        <strong>Ưu đãi:</strong> Giảm 5% tổng giá trị hợp đồng cho khách hàng chốt lịch online hôm nay!
                     </p>
                     <a href="tel:0912345678" class="btn btn-primary btn-lg">
                         <i class="fa-solid fa-phone"></i>
-                        GỌI NGAY ĐỂ NHẬN GIÁ TỐT NHẤT
+                        GỌI TƯ VẤN NGAY
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Đặt Lịch Khảo Sát Section -->
 
     <!-- Đặt Lịch Khảo Sát Section -->
     <section id="dat-lich-khao-sat" class="survey-booking">
@@ -565,8 +668,8 @@
                             </div>
                         </div>
                         <!-- Honeypot -->
-                        <input type="text" name="website" id="survey-website" style="display:none" tabindex="-1"
-                            autocomplete="off">
+                        <input type="text" name="website" id="survey-website" class="hidden" tabindex="-1"
+                            autocomplete="off" aria-label="Bot field">
                         <button type="submit" class="btn btn-primary btn-block">
                             Đặt Lịch Miễn Phí
                         </button>
@@ -588,19 +691,26 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item">
+                    <h3>Trần thạch cao có bị nứt không? <i class="fa-solid fa-chevron-down"></i></h3>
+                    <p class="faq-answer">Trần thạch cao có thể bị nứt ở mối nối nếu thi công không đúng kỹ thuật. Chúng
+                        tôi sử dụng băng keo lưới chuyên dụng và xử lý mối nối 3 lớp bột bả, cùng hệ khung xương Vĩnh
+                        Tường chắc chắn để triệt tiêu nguy cơ này. Cam kết bảo hành nứt trần.</p>
+                </div>
+                <div class="faq-item">
                     <h3>Có phát sinh chi phí không? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p style="display: none; margin-top: 1rem;">Chúng tôi cam kết KHÔNG phát sinh chi phí nếu không có
-                        thay đổi từ phía chủ nhà. Báo giá ban đầu là trọn gói.</p>
+                    <p class="faq-answer">Chúng tôi cam kết KHÔNG phát sinh chi phí nếu không có thay đổi từ phía chủ
+                        nhà. Báo giá ban đầu là trọn gói theo khối lượng thực tế.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Trần thạch cao có chịu nước không? <i class="fa-solid fa-chevron-down"></i></h3>
+                    <p class="faq-answer">Thạch cao tiêu chuẩn kỵ nước. Với khu vực ẩm thấp (nhà vệ sinh, bếp), chúng
+                        tôi tư vấn sử dụng <strong>Tấm thạch cao chịu ẩm (lõi xanh)</strong> hoặc tấm Duraflex chịu nước
+                        tuyệt đối để đảm bảo độ bền.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Thi công trong bao lâu thì xong? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p style="display: none; margin-top: 1rem;">Tùy vào diện tích. Ví dụ: Phòng khách 30m2 thường hoàn
-                        thiện phần thô trong 1 ngày và sơn bả trong 1 ngày tiếp theo.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Có bảo hành không? <i class="fa-solid fa-chevron-down"></i></h3>
-                    <p style="display: none; margin-top: 1rem;">Có. Chúng tôi bảo hành khung xương 5-10 năm và tấm thạch
-                        cao 2 năm theo tiêu chuẩn nhà sản xuất + bảo hành kỹ thuật 2 năm.</p>
+                    <p class="faq-answer">Tùy vào diện tích. Ví dụ: Phòng khách 30m2 thường hoàn thiện phần thô trong 1
+                        ngày và sơn bả trong 1 ngày tiếp theo (chờ bột khô).</p>
                 </div>
             </div>
         </div>
@@ -610,8 +720,8 @@
     <section class="contact-section" id="bao-gia">
         <div class="container">
             <div class="section-title">
-                <h2 style="color: white;">ĐĂNG KÝ NHẬN BÁO GIÁ</h2>
-                <p style="color: #cbd5e1;">Để lại thông tin, kỹ thuật viên sẽ gọi lại tư vấn trong 5-10 phút.</p>
+                <h2 class="text-white">ĐĂNG KÝ NHẬN BÁO GIÁ</h2>
+                <p class="text-light-gray">Để lại thông tin, kỹ thuật viên sẽ gọi lại tư vấn trong 5-10 phút.</p>
             </div>
             <div class="form-container">
                 <form id="quoteForm">
@@ -629,9 +739,9 @@
                             placeholder="VD: Trần phòng khách 30m² | Vách ngăn phòng ngủ"></textarea>
                     </div>
                     <!-- Honeypot anti-spam -->
-                    <input type="text" name="website" id="website" style="display:none" tabindex="-1"
-                        autocomplete="off">
-                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Nhận Tư Vấn & Báo
+                    <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off"
+                        aria-label="Bot field">
+                    <button type="submit" class="btn btn-primary btn-full-width">Nhận Tư Vấn & Báo
                         Giá</button>
                 </form>
             </div>
@@ -643,17 +753,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>THẠCH CAO PRO BUILD</h3>
+                    <h3>CÔNG TY TNHH XD & TM DL QUẢNG NINH</h3>
                     <p class="footer-tagline">"KIẾN TẠO KHÔNG GIAN - MANG LẠI HẠNH PHÚC"</p>
-                    <p class="footer-description">
-                        Đơn vị thi công trần vách thạch cao uy tín, chất lượng tại TP.HCM.
-                        Hơn 10 năm kinh nghiệm với 500+ công trình hoàn thành.
-                    </p>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-user-tie"></i>
+                            <div>
+                                <strong>Đại diện:</strong> Bà Nguyễn Thị Bích Hằng (Giám đốc)
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Mã số thuế:</strong> 5702148694
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-building-columns"></i>
+                            <div>
+                                <strong>Tài khoản:</strong> 5702148694<br>EXIMBANK – CN Quảng Ninh
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>LIÊN HỆ</h4>
                     <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Địa chỉ:</strong><br>
+                                Tổ 77B, khu 5B, phường Hồng Gai, tỉnh Quảng Ninh
+                            </div>
+                        </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
                             <div>
@@ -669,36 +802,22 @@
                                 <a href="mailto:contact@thachcaopro.vn">contact@thachcaopro.vn</a>
                             </div>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <strong>Địa chỉ:</strong><br>
-                                123 Đường ABC, Quận 10, TP.HCM
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-clock"></i>
-                            <div>
-                                <strong>Giờ làm việc:</strong><br>
-                                T2-T7: 8:00 - 18:00 | CN: 8:00 - 12:00
-                            </div>
-                        </li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>DỊCH VỤ</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">Thi công trần thạch cao</a></li>
-                        <li><a href="#services">Thi công vách thạch cao</a></li>
-                        <li><a href="#services">Phào chỉ PU</a></li>
-                        <li><a href="#bao-gia">Báo giá chi tiết</a></li>
+                        <li><a href="thi-cong-tran-thach-cao.html">Thi công trần, vách thạch cao</a></li>
+                        <li><a href="phao-chi-pu.html">Trần trang trí</a></li>
+                        <li><a href="tel:0912345678">Trần vách Panel, phòng sạch</a></li>
+                        <li><a href="tel:0912345678">Vách compact wc</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Thạch Cao Pro Build. All rights reserved.</p>
+                <p>&copy; 2024 Văn Tiến Hùng Provipp. All rights reserved.</p>
                 <p class="footer-disclaimer">
                     Website đang trong giai đoạn hoàn thiện. Thông tin có thể thay đổi.
                 </p>
@@ -709,17 +828,17 @@
     <!-- Mobile Bottom Bar -->
     <div class="mobile-bottom-bar">
         <a href="tel:0912345678" class="btn btn-primary"><i class="fa-solid fa-phone"></i> GỌI</a>
-        <a href="https://zalo.me/0912345678" target="_blank" class="btn" style="background:#0068FF;color:white;"><i
+        <a href="https://zalo.me/0912345678" target="_blank" rel="noopener" class="btn btn-zalo-mobile"><i
                 class="fa-brands fa-yahoo"></i> ZALO</a>
         <a href="#bao-gia" class="btn btn-success"><i class="fa-regular fa-comment-dots"></i> BÁO GIÁ</a>
     </div>
 
     <!-- Floating Contact Buttons (Desktop) -->
     <div class="floating-contacts">
-        <a href="https://wa.me/84912345678" target="_blank" class="whatsapp-float" title="Chat WhatsApp">
+        <a href="https://wa.me/84912345678" target="_blank" rel="noopener" class="whatsapp-float" title="Chat WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="https://zalo.me/0912345678" target="_blank" class="zalo-float" title="Chat Zalo">
+        <a href="https://zalo.me/0912345678" target="_blank" rel="noopener" class="zalo-float" title="Chat Zalo">
             <i class="fa-brands fa-yahoo"></i>
         </a>
     </div>
@@ -730,7 +849,7 @@
     </button>
 
     <!-- Success Modal -->
-    <div id="successModal" class="success-modal" style="display:none;">
+    <div id="successModal" class="success-modal hidden">
         <div class="success-modal-content">
             <div class="success-icon">
                 <i class="fa-solid fa-circle-check"></i>
@@ -761,11 +880,9 @@
     </div>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox"
-        style="display:none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
-        <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 3rem; cursor: pointer;"
-            onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" style="max-width: 90%; max-height: 80vh; border: 2px solid white;">
+    <div id="lightbox" class="lightbox-overlay">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" class="lightbox-image" alt="Lightbox Image">
     </div>
 
     <script src="js/autonomous-agent.js"></script>

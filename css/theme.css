@@ -1,0 +1,502 @@
+/* MODERN ARCHITECTURAL & CLEAN ROOM THEME */
+:root {
+    /* New Fresh Color System */
+    --primary: #0F172A;
+    /* Slate 900 */
+    --primary-light: #1E293B;
+    /* Slate 800 */
+    --accent: #0EA5E9;
+    /* Sky Blue - Fresh, Clean, Tech */
+    --accent-hover: #0284C7;
+    /* Darker Sky Blue */
+    --accent-secondary: #059669;
+    /* Emerald Green */
+
+    /* Dynamic Gradients */
+    --master-gradient: linear-gradient(135deg, #0EA5E9 0%, #3B82F6 100%);
+    --bg-gradient: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+
+    /* Modern Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px -10px rgba(14, 165, 233, 0.25);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+    --radius: 16px;
+    /* softer rounded corners */
+}
+
+/* Base resets & typography */
+body {
+    background: var(--bg-gradient);
+    color: #334155;
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+/* Gradient Text Emphasize with Animation */
+.text-gradient {
+    background: linear-gradient(270deg, #0EA5E9, #3B82F6, #10B981, #0EA5E9);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: gradientFlow 6s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* -------------------------------------
+   Modern Header Glassmorphism
+-------------------------------------- */
+.header-modern {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-glass);
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+    filter: drop-shadow(0 4px 6px rgba(14, 165, 233, 0.3));
+    color: var(--accent);
+}
+
+.logo-brand {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1px;
+}
+
+/* -------------------------------------
+   Hero Refresh: More Dynamic & Clean
+-------------------------------------- */
+.hero-modern {
+    position: relative;
+    padding: 10rem 0 6rem;
+    background: none;
+    /* remove old inline bg */
+    overflow: hidden;
+}
+
+/* Modern Background implementation */
+.hero-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Use a very modern, architectural photo for the hero background */
+    background-image: url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+/* Overlay that adds a primary color tint */
+.hero-modern::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
+    z-index: -1;
+}
+
+.hero-modern h1 {
+    font-size: 3.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Accent Line in Hero */
+.hero-modern h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--master-gradient);
+    margin: 30px auto;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+}
+
+.hero-subtitle {
+    font-size: 0.5em;
+    color: #e2e8f0;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.hero-usps {
+    font-size: 1.15rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.usp-item i {
+    color: var(--accent);
+}
+
+.hero-btns {
+    opacity: 0;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Hero Trust Bar Re-invented */
+.hero-trust-bar {
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-glass);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    opacity: 0;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+.trust-badge-item i {
+    color: var(--accent);
+    /* Vibrant blue */
+    filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.5));
+}
+
+/* -------------------------------------
+   Buttons: Sleek & Energetic
+-------------------------------------- */
+.btn-primary {
+    background: var(--master-gradient);
+    color: white;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Shiny hover effect */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+    color: white;
+}
+
+.btn-accent {
+    background: white;
+    color: var(--primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-accent:hover {
+    background: #f1f5f9;
+    color: var(--accent);
+    box-shadow: var(--shadow-hover);
+}
+
+/* -------------------------------------
+   Cards (Services & Intro) - Floating Layout
+-------------------------------------- */
+.service-card,
+.intro-item,
+.faq-item {
+    background: white;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Top border accent on hover */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--master-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.service-card:hover::after {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+}
+
+.service-icon,
+.intro-icon {
+    width: 70px;
+    height: 70px;
+    background: #F0F9FF;
+    /* very light blue */
+    color: var(--accent);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: var(--master-gradient);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* -------------------------------------
+   Why Us & Modern Accents
+-------------------------------------- */
+.why-us {
+    background: var(--bg-light);
+    position: relative;
+}
+
+.why-item {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.why-item h4 {
+    color: var(--accent);
+}
+
+/* -------------------------------------
+   Testimonials Enhancement
+-------------------------------------- */
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+}
+
+.section-title h2 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1px;
+}
+
+.section-title h2::after {
+    background: var(--master-gradient);
+    height: 4px;
+}
+
+/* -------------------------------------
+   Pricing Table Refresh
+-------------------------------------- */
+.price-table {
+    box-shadow: var(--shadow-soft);
+    border: 1px solid #e2e8f0;
+}
+
+.price-table thead th {
+    background: var(--primary-light);
+    color: white;
+    border-bottom: 3px solid var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.price-highlight {
+    color: var(--accent);
+    font-size: 1.15rem;
+}
+
+/* -------------------------------------
+   Footer Enhancement
+-------------------------------------- */
+.footer {
+    background: var(--primary);
+    border-top: 4px solid var(--accent);
+}
+
+.footer-tagline {
+    color: var(--accent);
+}
+
+.footer-contact i {
+    color: var(--accent);
+}
+
+/* Custom Scrollbar update */
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+    .hero-modern h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+/* Process Grid layout */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-card {
+    background: white;
+    padding: 2.5rem 2rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.process-step {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--master-gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
+    z-index: 2;
+}
+
+.process-card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.process-card h3 i {
+    color: var(--accent);
+}

@@ -1,0 +1,62 @@
+/* Technical Standards Section */
+.standards {
+    background: white;
+    padding: 5rem 0;
+}
+
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.standard-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: var(--radius);
+    transition: transform 0.3s ease;
+}
+
+.standard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.standard-icon-wrapper {
+    background: rgba(37, 99, 235, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.standard-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.standard-content p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Enhanced Timeline */
+.timeline-item h3 i {
+    color: var(--accent);
+    margin-right: 0.5rem;
+}
+
+/* Pricing Enhancements */
+.price-table td {
+    vertical-align: middle;
+}
+
+.price-table td[rowspan] {
+    background: #f8fafc;
+}

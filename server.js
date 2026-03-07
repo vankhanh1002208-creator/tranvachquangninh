@@ -14,6 +14,7 @@ const nodemailer = require('nodemailer');
 const https = require('https');
 const path = require('path');
 const fs = require('fs');
+const compression = require('compression');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -26,8 +27,13 @@ const MAX_SUBMISSIONS = 3; // Max 3 submissions per minute per IP
 
 // Middleware
 app.use(cors());
+app.use(compression()); // Enable GZIP compression
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '.'))); // Serve static files
+// Serve static files with caching
+app.use(express.static(path.join(__dirname, '.'), {
+    maxAge: '1d', // Cache for 1 day
+    etag: true
+}));
 
 // Health check endpoint for autonomous agent
 app.head('/api/health', (req, res) => {
