@@ -23,8 +23,6 @@
             align-items: start;
         }
 
-        .pricing-content {}
-
         .pricing-sidebar {
             position: sticky;
             top: 96px;
@@ -238,6 +236,123 @@
             color: #64748B;
         }
 
+        /* PAGE-SPECIFIC UTILITY CLASSES (replaces inline styles) */
+        .guarantee-bar {
+            background: #0F172A;
+            padding: 40px 0;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .hero-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, .85);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .icon-green {
+            color: #4ade80;
+        }
+
+        .form-group-sm {
+            margin-bottom: 12px;
+        }
+
+        .form-label-xs {
+            font-size: 12px;
+        }
+
+        .form-label-sm {
+            font-size: 13px;
+        }
+
+        .calc-note {
+            font-size: 11px;
+            opacity: .7;
+        }
+
+        .textarea-quote {
+            min-height: 90px;
+        }
+
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .sidebar-actions {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .btn-zalo {
+            background: #0068FF;
+            color: #fff;
+            justify-content: center;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 1px solid #E2E8F0;
+            border-radius: 14px;
+            padding: 20px 24px;
+        }
+
+        .faq-question {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0B3D8E;
+            margin-bottom: 8px;
+        }
+
+        .faq-question i {
+            margin-right: 8px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: #64748B;
+            line-height: 1.7;
+        }
+
+        .btn-cta-white {
+            background: #fff;
+            color: var(--accent);
+        }
+
+        .float-zalo-text {
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .nav-toggle-bar {
+            background: #0F172A;
+        }
+
+        .nav-icon-primary {
+            color: #0B3D8E;
+            width: 20px;
+        }
+
         @media(max-width:1024px) {
             .pricing-layout {
                 grid-template-columns: 1fr;
@@ -277,8 +392,8 @@
         <div class="container">
             <div class="navbar-inner">
                 <a href="index.html" class="nav-logo"><img src="/assets/images/logo.jpg" alt="Logo">
-                    <div class="nav-logo-text"><span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng
-                            Ninh</span><span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    <div class="nav-logo-text"><span class="nav-logo-name">Trần Vách Quảng
+                            Ninh</span><span class="nav-logo-sub">Thi Công Chuyên Nghiệp</span>
                     </div>
                 </a>
                 <div class="nav-links">
@@ -292,22 +407,21 @@
                 </div>
                 <div class="nav-cta"><a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i>
                         0837.811.188</a><a href="#form-baogía" class="nav-btn">Nhận Báo Giá</a></div>
-                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
-                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
+                <div class="menu-toggle" id="menuToggle"><span class="nav-toggle-bar"></span><span
+                        class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></div>
             </div>
         </div>
     </nav>
     <div class="mobile-nav" id="mobileNav">
-        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house nav-icon-primary"></i>
             Trang Chủ</a>
-        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list nav-icon-primary"></i>
             Dịch Vụ</a>
-        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images nav-icon-primary"></i>
             Dự Án</a>
-        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
-                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
-        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
-                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone nav-icon-primary"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent btn-full"><i
+                    class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
     </div>
 
     <section class="page-hero">
@@ -317,24 +431,23 @@
                         class="fa-solid fa-chevron-right"></i><span>Báo Giá</span></div>
                 <h1>Bảng Báo Giá 2025</h1>
                 <p>Đơn giá rõ ràng – Trọn gói vật tư & nhân công – Không phát sinh – Bảo hành 10 năm</p>
-                <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:24px">
-                    <div
-                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
-                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Giá cập nhật tháng 3/2025</div>
-                    <div
-                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
-                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Áp dụng tại Quảng Ninh & lân cận
+                <div class="hero-badges">
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-check-circle icon-green"></i> Giá cập nhật tháng 3/2025
                     </div>
-                    <div
-                        style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600">
-                        <i class="fa-solid fa-check-circle" style="color:#4ade80"></i> Tư vấn và báo giá miễn phí</div>
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-check-circle icon-green"></i> Áp dụng tại Quảng Ninh & lân cận
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-check-circle icon-green"></i> Tư vấn và báo giá miễn phí
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- GUARANTEE -->
-    <div style="background:#0F172A;padding:40px 0">
+    <div class="guarantee-bar">
         <div class="container">
             <div class="guarantee-grid">
                 <div class="guarantee-item animate delay-1"><i class="fa-solid fa-tags"></i>
@@ -561,15 +674,16 @@
 
                         <!-- QUICK CALCULATOR -->
                         <div class="calc-box">
-                            <h4><i class="fa-solid fa-calculator" style="color:#0B3D8E"></i> Ước Tính Nhanh</h4>
-                            <div class="form-group" style="margin-bottom:12px">
-                                <label class="form-label" style="font-size:12px">Diện tích (m²)</label>
+                            <h4><i class="fa-solid fa-calculator text-primary"></i> Ước Tính Nhanh</h4>
+                            <div class="form-group form-group-sm">
+                                <label class="form-label form-label-xs" for="calcArea">Diện tích (m²)</label>
                                 <input type="number" id="calcArea" class="form-control" placeholder="Vd: 50" min="1"
-                                    oninput="calcPrice()">
+                                    oninput="calcPrice()" aria-label="Diện tích m²">
                             </div>
-                            <div class="form-group" style="margin-bottom:12px">
-                                <label class="form-label" style="font-size:12px">Loại trần</label>
-                                <select id="calcType" class="form-control" onchange="calcPrice()">
+                            <div class="form-group form-group-sm">
+                                <label class="form-label form-label-xs" for="calcType">Loại trần</label>
+                                <select id="calcType" class="form-control" onchange="calcPrice()"
+                                    aria-label="Chọn loại trần">
                                     <option value="0">-- Chọn loại --</option>
                                     <option value="160">Trần phẳng (Eco)</option>
                                     <option value="180">Trần phẳng (Basi/Tika)</option>
@@ -581,23 +695,24 @@
                             <div id="calcResult" class="calc-result">
                                 <span>Ước tính chi phí</span>
                                 <strong id="calcValue">0đ</strong>
-                                <span style="font-size:11px;opacity:.7">*Chưa tính sơn bả. Chỉ mang tính tham
-                                    khảo</span>
+                                <span class="calc-note">*Chưa tính sơn bả. Chỉ mang tính tham khảo</span>
                             </div>
                         </div>
 
                         <form id="quoteForm">
                             <div class="form-group">
-                                <label class="form-label" style="font-size:13px">Họ và Tên <span>*</span></label>
-                                <input type="text" id="name" class="form-control" placeholder="Nguyễn Văn A" required>
+                                <label class="form-label form-label-sm" for="name">Họ và Tên <span>*</span></label>
+                                <input type="text" id="name" class="form-control" placeholder="Nguyễn Văn A" required
+                                    aria-label="Họ và tên">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" style="font-size:13px">Số Điện Thoại <span>*</span></label>
-                                <input type="tel" id="phone" class="form-control" placeholder="0912 345 678" required>
+                                <label class="form-label form-label-sm" for="phone">Số Điện Thoại <span>*</span></label>
+                                <input type="tel" id="phone" class="form-control" placeholder="0912 345 678" required
+                                    aria-label="Số điện thoại">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" style="font-size:13px">Dịch Vụ Cần Báo Giá</label>
-                                <select id="service" class="form-control">
+                                <label class="form-label form-label-sm" for="service">Dịch Vụ Cần Báo Giá</label>
+                                <select id="service" class="form-control" aria-label="Chọn dịch vụ cần báo giá">
                                     <option value="">-- Chọn dịch vụ --</option>
                                     <option>Trần thạch cao</option>
                                     <option>Vách thạch cao</option>
@@ -608,21 +723,21 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" style="font-size:13px">Mô tả công trình</label>
-                                <textarea id="message" class="form-control" style="min-height:90px"
-                                    placeholder="Diện tích, địa chỉ, yêu cầu đặc biệt..."></textarea>
+                                <label class="form-label form-label-sm" for="message">Mô tả công trình</label>
+                                <textarea id="message" class="form-control textarea-quote"
+                                    placeholder="Diện tích, địa chỉ, yêu cầu đặc biệt..."
+                                    aria-label="Mô tả công trình"></textarea>
                             </div>
                             <input type="text" name="website" id="website" class="hidden" tabindex="-1"
-                                autocomplete="off">
-                            <button type="submit" class="btn btn-primary btn-lg"
-                                style="width:100%;justify-content:center"><i class="fa-solid fa-paper-plane"></i> Gửi
+                                autocomplete="off" aria-hidden="true" title="Không điền vào trường này">
+                            <button type="submit" class="btn btn-primary btn-lg btn-full"><i
+                                    class="fa-solid fa-paper-plane"></i> Gửi
                                 Yêu Cầu Báo Giá</button>
                         </form>
-                        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
-                            <a href="tel:0837811188" class="btn btn-accent" style="justify-content:center"><i
-                                    class="fa-solid fa-phone"></i> Gọi Ngay: 0837.811.188</a>
-                            <a href="https://zalo.me/0837811188" class="btn"
-                                style="background:#0068FF;color:#fff;justify-content:center"><i
+                        <div class="sidebar-actions">
+                            <a href="tel:0837811188" class="btn btn-accent btn-full"><i class="fa-solid fa-phone"></i>
+                                Gọi Ngay: 0837.811.188</a>
+                            <a href="https://zalo.me/0837811188" class="btn btn-zalo"><i
                                     class="fa-brands fa-rocketchat"></i> Chat Zalo Ngay</a>
                         </div>
                     </div>
@@ -639,40 +754,31 @@
                 <div class="section-tag">Giải đáp</div>
                 <h2>Câu Hỏi Thường Gặp Về <span>Báo Giá</span></h2>
             </div>
-            <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px">
-                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
-                    class="animate delay-1">
-                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
-                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Đơn giá đã bao gồm những
-                        gì?</h4>
-                    <p style="font-size:14px;color:#64748B;line-height:1.7">Đơn giá trọn gói bao gồm: toàn bộ vật tư
+            <div class="faq-list">
+                <div class="faq-item animate delay-1">
+                    <h4 class="faq-question"><i class="fa-solid fa-circle-question"></i>Đơn giá đã bao gồm những gì?
+                    </h4>
+                    <p class="faq-answer">Đơn giá trọn gói bao gồm: toàn bộ vật tư
                         (khung xương, tấm thạch cao, đinh vít, keo), nhân công thi công, bảo hành 10 năm. Không bao gồm
                         sơn bả (có bảng giá riêng) và đèn chiếu sáng.</p>
                 </div>
-                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
-                    class="animate delay-2">
-                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
-                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Công trình nhỏ hơn 30m² có
-                        được thi công không?</h4>
-                    <p style="font-size:14px;color:#64748B;line-height:1.7">Có! Nhưng đơn giá sẽ chênh hơn một chút do
+                <div class="faq-item animate delay-2">
+                    <h4 class="faq-question"><i class="fa-solid fa-circle-question"></i>Công trình nhỏ hơn 30m² có được
+                        thi công không?</h4>
+                    <p class="faq-answer">Có! Nhưng đơn giá sẽ chênh hơn một chút do
                         chi phí vận chuyển và thiết lập công trình không đổi. Liên hệ để được báo giá cụ thể theo thực
                         tế.</p>
                 </div>
-                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
-                    class="animate delay-3">
-                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
-                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Thanh toán theo tiến độ như
-                        thế nào?</h4>
-                    <p style="font-size:14px;color:#64748B;line-height:1.7">Thông thường: <strong>30%</strong> khi ký
+                <div class="faq-item animate delay-3">
+                    <h4 class="faq-question"><i class="fa-solid fa-circle-question"></i>Thanh toán theo tiến độ như thế
+                        nào?</h4>
+                    <p class="faq-answer">Thông thường: <strong>30%</strong> khi ký
                         hợp đồng, <strong>50%</strong> khi hoàn thành 60% khối lượng, <strong>20%</strong> khi nghiệm
                         thu bàn giao. Có thể thỏa thuận linh hoạt.</p>
                 </div>
-                <div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 24px;"
-                    class="animate delay-4">
-                    <h4 style="font-size:15px;font-weight:700;color:#0B3D8E;margin-bottom:8px"><i
-                            class="fa-solid fa-circle-question" style="margin-right:8px"></i>Báo giá có mất phí không?
-                    </h4>
-                    <p style="font-size:14px;color:#64748B;line-height:1.7">HOÀN TOÀN MIỄN PHÍ. Khảo sát + tư vấn + báo
+                <div class="faq-item animate delay-4">
+                    <h4 class="faq-question"><i class="fa-solid fa-circle-question"></i>Báo giá có mất phí không?</h4>
+                    <p class="faq-answer">HOÀN TOÀN MIỄN PHÍ. Khảo sát + tư vấn + báo
                         giá đều không tốn bất kỳ chi phí nào. Chúng tôi chỉ nhận tiền khi bạn chính thức đồng ý ký hợp
                         đồng thi công.</p>
                 </div>
@@ -690,8 +796,8 @@
                 <div class="cta-btns">
                     <a href="tel:0837811188" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone-volume"></i>
                         0837.811.188</a>
-                    <a href="lien-he.html" class="btn btn-lg" style="background:#fff;color:var(--accent)"><i
-                            class="fa-solid fa-envelope"></i> Gửi Yêu Cầu</a>
+                    <a href="lien-he.html" class="btn btn-lg btn-cta-white"><i class="fa-solid fa-envelope"></i> Gửi Yêu
+                        Cầu</a>
                 </div>
             </div>
         </div>
@@ -707,10 +813,10 @@
                     </div>
                     <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh. Bảo
                         hành 10 năm.</p>
-                    <div class="footer-socials"><a href="#" class="footer-social"><i
-                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
-                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
-                                class="fa-brands fa-youtube"></i></a></div>
+                    <div class="footer-socials"><a href="#" class="footer-social" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"
+                            aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"
+                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div>
                 </div>
                 <div class="footer-col">
                     <h4>Dịch Vụ</h4>
@@ -745,12 +851,13 @@
     </footer>
 
     <div class="float-phone">
-        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
-            style="font-size:14px;font-weight:900">Zalo</a>
-        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn float-zalo-text"
+            aria-label="Chat Zalo">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn" aria-label="Gọi điện: 0837.811.188"><i
+                class="fa-solid fa-phone"></i></a>
     </div>
-    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
-            class="fa-solid fa-chevron-up"></i></button>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Cuộn lên đầu trang"><i class="fa-solid fa-chevron-up"></i></button>
     <script src="js/main.js"></script>
     <script>
         function calcPrice() {

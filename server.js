@@ -20,6 +20,19 @@ const PORT = process.env.PORT || 8080;
 app.set('trust proxy', 1);
 
 // =============================================================
+// 🔒 TẦNG 0: BẮT BUỘC SỬ DỤNG HTTPS (Force HTTPS)
+// Tránh hiện cảnh báo "Không bảo mật" khi khách truy cập HTTP
+// =============================================================
+app.use((req, res, next) => {
+    // Trên Render / Cloudflare, header này cho biết phương thức gốc của client
+    if (req.headers['x-forwarded-proto'] && req.headers['x-forwarded-proto'] === 'http') {
+        console.log(`[Redirect] Đã chuyển hướng yêu cầu HTTP sang HTTPS: ${req.url}`);
+        return res.redirect(301, `https://${req.headers.host}${req.url}`);
+    }
+    next();
+});
+
+// =============================================================
 // 🔒 TẦNG 1: BẢo MẬT HTTP HEADERS (Helmet)
 // Tự động gắn các HTTP Header bảo mật, chặn Clickjacking,
 // XSS qua header, MIME Sniffing, v.v.
@@ -34,6 +47,7 @@ app.use(helmet({
             fontSrc: ["'self'", "fonts.gstatic.com", "cdnjs.cloudflare.com"],
             connectSrc: ["'self'"],
             frameAncestors: ["'none'"], // Chặn Clickjacking
+            upgradeInsecureRequests: [], // 🔒 Ép trình duyệt nâng cấp HTTP -> HTTPS
         },
     },
     crossOriginEmbedderPolicy: false, // Tắt để không ảnh hưởng đến ảnh/font bên ngoài
@@ -362,5 +376,18 @@ app.use((req, res) => {
 // Start Server
 app.listen(PORT, () => {
     console.log(`🚀 Server is running at http://localhost:${PORT}`);
-    console.log(`🔒 Security layers: Helmet, Rate Limit, Slow Down, HPP, XSS Clean, CORS, Bot Blocker`);
+    console.log(`🔒 Security layers: HTTPS Force, Helmet, Rate Limit, Slow Down...`);
 });
+
+// =============================================================
+// ⏱️ KEEP-ALIVE (Chống ngủ đông cho free host như Render)
+// Gửi ping mỗi 14 phút để luôn giữ website sẵn sàng hoạt động
+// =============================================================
+const KEEP_ALIVE_URL = process.env.RENDER_EXTERNAL_URL || 'https://tranvachquangninh.onrender.com';
+setInterval(() => {
+    https.get(KEEP_ALIVE_URL + '/api/health', (res) => {
+        console.log(`[Keep-Alive] Đã gửi request giữ website luôn thức đến ${KEEP_ALIVE_URL} - Status: ${res.statusCode}`);
+    }).on('error', (err) => {
+        console.error('[Keep-Alive] Lỗi gửi request ping:', err.message);
+    });
+}, 14 * 60 * 1000); // 14 phút (Render ngủ sau 15 phút không có request/truy cập)

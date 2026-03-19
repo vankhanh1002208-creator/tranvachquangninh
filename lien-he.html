@@ -245,8 +245,8 @@
             <div class="navbar-inner">
                 <a href="index.html" class="nav-logo">
                     <img src="/assets/images/logo.jpg" alt="Trần Vách Quảng Ninh">
-                    <div class="nav-logo-text"><span class="nav-logo-name" style="color:#0F172A">Trần Vách Quảng
-                            Ninh</span><span class="nav-logo-sub" style="color:#64748B">Thi Công Chuyên Nghiệp</span>
+                    <div class="nav-logo-text"><span class="nav-logo-name">Trần Vách Quảng
+                            Ninh</span><span class="nav-logo-sub">Thi Công Chuyên Nghiệp</span>
                     </div>
                 </a>
                 <div class="nav-links">
@@ -262,26 +262,22 @@
                     <a href="tel:0837811188" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> 0837.811.188</a>
                     <a href="bao-gia-chi-tiet.html" class="nav-btn">Nhận Báo Giá</a>
                 </div>
-                <div class="menu-toggle" id="menuToggle"><span style="background:#0F172A"></span><span
-                        style="background:#0F172A"></span><span style="background:#0F172A"></span></div>
+                <div class="menu-toggle" id="menuToggle"><span class="nav-toggle-bar"></span><span
+                        class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></div>
             </div>
         </div>
     </nav>
     <div class="mobile-nav" id="mobileNav">
-        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="color:#0B3D8E;width:20px"></i>
-            Trang Chủ</a>
-        <a href="gioi-thieu.html" class="mobile-nav-link"><i class="fa-solid fa-building"
-                style="color:#0B3D8E;width:20px"></i> Giới Thiệu</a>
-        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list" style="color:#0B3D8E;width:20px"></i>
-            Dịch Vụ</a>
-        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images" style="color:#0B3D8E;width:20px"></i>
-            Dự Án</a>
-        <a href="bao-gia-chi-tiet.html" class="mobile-nav-link"><i class="fa-solid fa-file-invoice"
-                style="color:#0B3D8E;width:20px"></i> Báo Giá</a>
-        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone"
-                style="color:#0B3D8E;width:20px"></i> Liên Hệ</a>
-        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent"
-                style="width:100%;justify-content:center"><i class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house nav-icon-primary"></i> Trang Chủ</a>
+        <a href="gioi-thieu.html" class="mobile-nav-link"><i class="fa-solid fa-building nav-icon-primary"></i> Giới
+            Thiệu</a>
+        <a href="dich-vu.html" class="mobile-nav-link"><i class="fa-solid fa-list nav-icon-primary"></i> Dịch Vụ</a>
+        <a href="du-an.html" class="mobile-nav-link"><i class="fa-solid fa-images nav-icon-primary"></i> Dự Án</a>
+        <a href="bao-gia-chi-tiet.html" class="mobile-nav-link"><i
+                class="fa-solid fa-file-invoice nav-icon-primary"></i> Báo Giá</a>
+        <a href="lien-he.html" class="mobile-nav-link"><i class="fa-solid fa-phone nav-icon-primary"></i> Liên Hệ</a>
+        <div class="mobile-nav-cta"><a href="tel:0837811188" class="btn btn-accent btn-full"><i
+                    class="fa-solid fa-phone"></i> Gọi: 0837.811.188</a></div>
     </div>
 
     <!-- HERO -->
@@ -338,8 +334,8 @@
                     </div>
 
                     <!-- FAQ -->
-                    <div style="margin-top:8px">
-                        <h3 style="font-size:18px;font-weight:700;color:#0F172A;margin-bottom:4px">Câu Hỏi Thường Gặp
+                    <div class="faq-section-head">
+                        <h3 class="faq-section-title">Câu Hỏi Thường Gặp</h3>
                         </h3>
                         <div class="faq-wrap">
                             <div class="faq-q">
@@ -381,8 +377,8 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label">Dịch Vụ Cần Tư Vấn</label>
-                                <select id="service" class="form-control">
+                                <label class="form-label" for="service">Dịch Vụ Cần Tư Vấn</label>
+                                <select id="service" class="form-control" aria-label="Chọn dịch vụ cần tư vấn">
                                     <option value="">-- Chọn dịch vụ --</option>
                                     <option>Trần thạch cao</option>
                                     <option>Vách thạch cao</option>
@@ -404,18 +400,19 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Mô Tả Yêu Cầu</label>
-                            <textarea id="message" class="form-control" style="min-height:120px"
+                            <textarea id="message" class="form-control textarea-lg"
                                 placeholder="Mô tả chi tiết công trình của bạn, yêu cầu đặc biệt (nếu có)..."></textarea>
                         </div>
-                        <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off">
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-                            <button type="submit" class="btn btn-primary btn-lg" style="justify-content:center"><i
+                        <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off"
+                            aria-hidden="true" title="Không điền vào ô này">
+                        <div class="form-btn-grid">
+                            <button type="submit" class="btn btn-primary btn-lg btn-full"><i
                                     class="fa-solid fa-paper-plane"></i> Gửi Yêu Cầu</button>
-                            <a href="tel:0837811188" class="btn btn-accent btn-lg" style="justify-content:center"><i
+                            <a href="tel:0837811188" class="btn btn-accent btn-lg btn-full"><i
                                     class="fa-solid fa-phone"></i> Gọi Ngay</a>
                         </div>
-                        <p style="margin-top:14px;font-size:12px;color:#94a3b8;text-align:center"><i
-                                class="fa-solid fa-lock"></i> Thông tin được bảo mật tuyệt đối. Không spam.</p>
+                        <p class="form-note-sm"><i class="fa-solid fa-lock"></i> Thông tin được bảo mật tuyệt đối. Không
+                            spam.</p>
                     </form>
                 </div>
             </div>
@@ -452,12 +449,12 @@
         <div class="map-wrapper animate">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29729.28498826538!2d106.97508!3d20.95992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a5765a9b659b7%3A0x4f92a4de12c1a26b!2zUGjGsOG7nW5nIEjhu5NuZyBHYWksIEjhuqEgTG9uZywgUXXhuqNuZyBOaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1709800000000!5m2!1svi!2s"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ Trần Vách Quảng Ninh">
+                loading="lazy" title="Bản đồ Trần Vách Quảng Ninh">
             </iframe>
         </div>
     </div>
 
-    <div style="padding-bottom:80px"></div>
+    <div class="spacer-80"></div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -469,10 +466,10 @@
                                 class="sub">Thi Công Chuyên Nghiệp</span></div>
                     </div>
                     <p class="footer-desc">Đơn vị thi công trần thạch cao, vách thạch cao uy tín số 1 Quảng Ninh.</p>
-                    <div class="footer-socials"><a href="#" class="footer-social"><i
-                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"><i
-                                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"><i
-                                class="fa-brands fa-youtube"></i></a></div>
+                    <div class="footer-socials"><a href="#" class="footer-social" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer-social"
+                            aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" class="footer-social"
+                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div>
                 </div>
                 <div class="footer-col">
                     <h4>Dịch Vụ</h4>
@@ -508,12 +505,13 @@
     </footer>
 
     <div class="float-phone">
-        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn"
-            style="font-size:14px;font-weight:900">Zalo</a>
-        <a href="tel:0837811188" class="float-btn float-phone-btn"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://zalo.me/0837811188" class="float-btn float-zalo-btn float-zalo-text"
+            aria-label="Chat Zalo">Zalo</a>
+        <a href="tel:0837811188" class="float-btn float-phone-btn" aria-label="Gọi điện: 0837.811.188"><i
+                class="fa-solid fa-phone"></i></a>
     </div>
-    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
-            class="fa-solid fa-chevron-up"></i></button>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Cuộn lên đầu trang"><i class="fa-solid fa-chevron-up"></i></button>
 
     <script src="js/main.js"></script>
     <script>

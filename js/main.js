@@ -1,3 +1,76 @@
+// ===== ACCESSIBILITY AUTO-FIX (Global) =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Scroll-top button
+    const scrollTopBtn = document.getElementById('scrollTop');
+    if (scrollTopBtn && !scrollTopBtn.getAttribute('aria-label')) {
+        scrollTopBtn.setAttribute('aria-label', 'Lên đầu trang');
+        scrollTopBtn.setAttribute('title', 'Lên đầu trang');
+    }
+
+    // Float phone buttons
+    document.querySelectorAll('.float-phone-btn').forEach(btn => {
+        if (!btn.getAttribute('aria-label')) btn.setAttribute('aria-label', 'Gọi điện tư vấn');
+    });
+    document.querySelectorAll('.float-zalo-btn').forEach(btn => {
+        if (!btn.getAttribute('aria-label')) btn.setAttribute('aria-label', 'Chat Zalo');
+    });
+
+    // Social links in footer (icon-only links)
+    document.querySelectorAll('.footer-social').forEach(link => {
+        if (!link.getAttribute('aria-label') && !link.getAttribute('title')) {
+            const icon = link.querySelector('i');
+            if (icon) {
+                const cls = icon.className;
+                if (cls.includes('facebook')) link.setAttribute('aria-label', 'Facebook');
+                else if (cls.includes('tiktok')) link.setAttribute('aria-label', 'TikTok');
+                else if (cls.includes('youtube')) link.setAttribute('aria-label', 'YouTube');
+                else if (cls.includes('instagram')) link.setAttribute('aria-label', 'Instagram');
+                else link.setAttribute('aria-label', 'Mạng xã hội');
+            } else if (link.textContent.trim()) {
+                link.setAttribute('aria-label', link.textContent.trim());
+            }
+        }
+    });
+
+    // Select elements without accessible name
+    document.querySelectorAll('select.form-control, select').forEach(sel => {
+        if (!sel.getAttribute('aria-label') && !sel.getAttribute('title') && !sel.id) return;
+        if (!sel.getAttribute('aria-label')) {
+            const label = document.querySelector(`label[for="${sel.id}"]`);
+            if (!label) {
+                const placeholder = sel.options[0]?.text || 'Chọn';
+                sel.setAttribute('aria-label', placeholder);
+            }
+        }
+    });
+    // Explicitly label known selects
+    ['service', 'calcType', 'calcArea'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && !el.getAttribute('aria-label')) {
+            const labels = { service: 'Chọn dịch vụ', calcType: 'Chọn loại trần', calcArea: 'Diện tích m²' };
+            el.setAttribute('aria-label', labels[id] || 'Chọn');
+        }
+    });
+
+    // Textarea without placeholder (honeypot & area inputs)
+    const areaInput = document.getElementById('area');
+    if (areaInput && !areaInput.getAttribute('aria-label')) areaInput.setAttribute('aria-label', 'Diện tích công trình (m²)');
+    const addrInput = document.getElementById('address');
+    if (addrInput && !addrInput.getAttribute('aria-label')) addrInput.setAttribute('aria-label', 'Địa chỉ công trình');
+    const msgInput = document.getElementById('message');
+    if (msgInput && !msgInput.getAttribute('aria-label')) msgInput.setAttribute('aria-label', 'Mô tả công trình');
+    // Honeypot input – mark as hidden from AT
+    document.querySelectorAll('input[name="website"]').forEach(el => {
+        el.setAttribute('aria-hidden', 'true');
+        el.setAttribute('tabindex', '-1');
+    });
+
+    // Lightbox nav buttons
+    document.querySelectorAll('.lightbox-close').forEach(b => { if (!b.getAttribute('aria-label')) b.setAttribute('aria-label', 'Đóng'); });
+    document.querySelectorAll('.lightbox-prev').forEach(b => { if (!b.getAttribute('aria-label')) b.setAttribute('aria-label', 'Ảnh trước'); });
+    document.querySelectorAll('.lightbox-next').forEach(b => { if (!b.getAttribute('aria-label')) b.setAttribute('aria-label', 'Ảnh tiếp theo'); });
+});
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 if (navbar) {
