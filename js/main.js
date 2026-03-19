@@ -154,7 +154,7 @@ if (quoteForm) {
         const data = {
             name: document.getElementById('name')?.value || '',
             phone: document.getElementById('phone')?.value || '',
-            message: (document.getElementById('service')?.value || '') + ' – ' + (document.getElementById('message')?.value || ''),
+            message: `Đối tượng: ${document.getElementById('role')?.value || 'Chưa chọn'}\nDịch vụ: ${document.getElementById('service')?.value || 'Không chọn'}\nYêu cầu: ${document.getElementById('message')?.value || ''}`.trim(),
             website: document.getElementById('website')?.value || ''
         };
 
